@@ -1104,7 +1104,7 @@ function AIChatbot() {
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div className="font-display" style={{ fontSize: 13, fontWeight: 700, color: t.darkText }}>Parthi · portfolio assistant</div>
-              <div className="font-mono" style={{ fontSize: 10, color: t.auroraBright, marginTop: 2 }}>● online · Google Gemini</div>
+              <div className="font-mono" style={{ fontSize: 10, color: t.auroraBright, marginTop: 2 }}>● online · Cloudflare AI</div>
             </div>
             <button onClick={() => setOpen(false)} aria-label="Close"
               style={{ background: "transparent", border: "none", color: t.darkSoft, cursor: "pointer", padding: 6, borderRadius: 6, display: "flex", alignItems: "center", transition: "background 0.15s" }}

@@ -1,0 +1,7 @@
+name = "parthibakannan-portfolio"
+compatibility_date = "2025-06-14"
+
+# Cloudflare Workers AI binding — the chat function reads `env.AI`.
+# No API key required; auth is handled internally by Cloudflare.
+[ai]
+binding = "AI"

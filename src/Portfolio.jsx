@@ -279,7 +279,8 @@ const productionWork = [
 const hackathonWork = [
   { title: "TheraBot", icon: Heart, accent: "iris",
     desc: "Mental-wellness companion with mood-aware responses. A sentiment classifier gates the conversation tone — supportive when distress is detected, conversational otherwise. Secure session tracking on Cosmos DB.",
-    tech: ["FastAPI", "React", "Azure OpenAI", "Sentiment Analysis", "Cosmos DB", "Google OAuth"] },
+    tech: ["FastAPI", "React", "Azure OpenAI", "Sentiment Analysis", "Cosmos DB", "Google OAuth"],
+    videoUrl: "https://drive.google.com/file/d/1N5gZzYloBTSR6ikDFGc8NInlk8w0Cofm/preview" },
   { title: "BikeRideShare", icon: Bike, accent: "aurora",
     desc: "A two-wheeler ride-sharing app with an LLM intent layer that turns fuzzy ride requests into structured booking calls.",
     tech: ["Python", "React", "Azure OpenAI", "Cosmos DB"] },
@@ -934,6 +935,18 @@ function Builds() {
                   </div>
                   <h3 className="font-display" style={{ fontSize: 20, fontWeight: 700, color: t.ink, margin: "0 0 10px" }}>{h.title}</h3>
                   <p style={{ fontSize: 14, color: t.inkSoft, lineHeight: 1.6, margin: "0 0 16px" }}>{h.desc}</p>
+                  {h.videoUrl && (
+                    <div style={{ marginBottom: 16, borderRadius: 10, overflow: "hidden", border: `1px solid ${accent}44` }}>
+                      <iframe
+                        src={h.videoUrl}
+                        width="100%"
+                        height="200"
+                        allow="autoplay"
+                        style={{ display: "block", border: "none" }}
+                        title={`${h.title} demo`}
+                      />
+                    </div>
+                  )}
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>{h.tech.map(tech => <span key={tech} className="chip">{tech}</span>)}</div>
                 </div>
               </Reveal>

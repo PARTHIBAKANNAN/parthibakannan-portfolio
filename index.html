@@ -6,14 +6,33 @@
     <title>Parthibakannan S — Gen AI Engineer</title>
     <meta
       name="description"
-      content="Microsoft-certified Azure AI Engineer building production RAG systems, AI agents, and full-stack .NET / Python / React applications."
+      content="Microsoft- and Anthropic-certified Gen AI Engineer building production RAG systems, AI agents, and full-stack .NET / Python / React applications."
     />
     <meta property="og:title" content="Parthibakannan S — Gen AI Engineer" />
     <meta
       property="og:description"
-      content="Production RAG, AI agents, and full-stack engineering. Microsoft-certified across Azure AI."
+      content="Production RAG, AI agents, and full-stack engineering. Certified across Azure AI and Claude."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="/portrait.jpg" />
+    <meta name="theme-color" content="#6A43E0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      // Set the theme before React mounts so there's no flash of the wrong palette.
+      (function () {
+        try {
+          var stored = localStorage.getItem("portfolio-theme");
+          var theme = stored === "light" || stored === "dark"
+            ? stored
+            : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

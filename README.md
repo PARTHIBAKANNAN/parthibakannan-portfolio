@@ -1,10 +1,12 @@
 # Parthibakannan S — Portfolio
 
-A single-page portfolio (React + Vite) with a built-in AI assistant. The assistant
-runs on **Cloudflare Workers AI** (Llama 3.3 70B), called through a **Cloudflare Pages
-Function** — no external API keys, no third-party billing, free-tier eligible.
+A single-page portfolio (React + Vite) with a built-in AI assistant and a light/dark
+theme. The assistant runs on **Cloudflare Workers AI** (Llama 3.3 70B), called through a
+**Cloudflare Pages Function** — no external API keys, no third-party billing, free-tier
+eligible.
 
-- Frontend: React 18 + Vite, one component (`src/Portfolio.jsx`).
+- Frontend: React 18 + Vite, composed from `src/Portfolio.jsx` + `src/components/*.jsx`,
+  with content in `src/data/*.js` and the theme system in `src/lib/*.js`.
 - Assistant: `functions/api/chat.js` → Workers AI via the `AI` binding.
 - Assets: `public/portrait.jpg`, `public/resume.pdf` (swap these to update them).
 - Hosting: Cloudflare Pages (free, unlimited bandwidth).
@@ -102,13 +104,18 @@ it's optional — the `.pages.dev` URL is free forever.
 
 ## Updating the site later
 
-- **Text / projects / styling:** edit `src/Portfolio.jsx`, commit, push — Cloudflare
-  redeploys automatically.
+- **Projects / experience / stack / awards:** edit the arrays in `src/data/content.js`
+  and `src/data/projects.js` — no component code needed for text changes.
+- **A section's layout:** edit the matching file in `src/components/`.
+- **Theme colors:** edit the light/dark variable blocks in `src/lib/theme.js`.
 - **Photo:** replace `public/portrait.jpg` (keep the name).
 - **Résumé:** replace `public/resume.pdf` (keep the name).
-- **Assistant's knowledge:** edit `SYSTEM_PROMPT` in `functions/api/chat.js`.
+- **Assistant's knowledge:** edit `SYSTEM_PROMPT` in `functions/api/chat.js` — keep it in
+  sync with `src/data/*.js` so the chatbot doesn't contradict the page.
 - **AI model:** change `MODEL` in `functions/api/chat.js` to any model from
   https://developers.cloudflare.com/workers-ai/models/. Redeploy.
+
+Commit and push — Cloudflare redeploys automatically.
 
 ---
 
@@ -118,16 +125,27 @@ it's optional — the `.pages.dev` URL is free forever.
 .
 ├── functions/
 │   └── api/
-│       └── chat.js        # POST /api/chat  → Workers AI (via env.AI binding)
+│       └── chat.js          # POST /api/chat  → Workers AI (via env.AI binding)
 ├── public/
-│   ├── portrait.jpg       # headshot
-│   └── resume.pdf         # downloadable résumé
+│   ├── portrait.jpg         # headshot
+│   ├── resume.pdf           # downloadable résumé
+│   └── favicon.svg          # monogram favicon
 ├── src/
-│   ├── Portfolio.jsx      # the whole site
-│   └── main.jsx           # React entry
+│   ├── Portfolio.jsx        # composition — renders every section in order + global styles
+│   ├── main.jsx             # React entry
+│   ├── lib/
+│   │   ├── theme.js         # design tokens `t` + the light/dark CSS variable block
+│   │   ├── useThemeToggle.js
+│   │   └── motion.js        # prefers-reduced-motion flag
+│   ├── data/
+│   │   ├── content.js       # experience, stack, certifications, awards, leadership, …
+│   │   └── projects.js      # production work, hackathon builds, college work, personal R&D
+│   └── components/          # one file per section (Nav, Hero, Credentials, Achievements,
+│                             # Experience, SelectedWork, Builds, Foundations, Leadership,
+│                             # AfterHours, AIChatbot, Stack, Contact, Footer, …)
 ├── index.html
 ├── package.json
 ├── vite.config.js
-├── wrangler.toml          # Cloudflare config — declares the AI binding
-└── .nvmrc                 # Node 20 for the Cloudflare build
+├── wrangler.toml            # Cloudflare config — declares the AI binding
+└── .nvmrc                   # Node 20 for the Cloudflare build
 ```

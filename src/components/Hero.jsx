@@ -21,11 +21,11 @@ export function Hero() {
             </div>
 
             <h1 className="font-display" style={{ fontSize: "clamp(34px, 5.6vw, 62px)", fontWeight: 700, lineHeight: 1.06, margin: "0 0 22px", color: t.ink }}>
-              I build AI products<br />that <span style={{ background: `linear-gradient(120deg, ${t.iris}, ${t.auroraBright})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>make it to production.</span>
+              2+ years shipping<br /><span style={{ background: `linear-gradient(120deg, ${t.iris}, ${t.auroraBright})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Generative AI to production.</span>
             </h1>
 
             <p style={{ fontSize: 17, lineHeight: 1.6, color: t.inkSoft, maxWidth: 540, margin: "0 0 34px" }}>
-              Microsoft-certified Azure AI Engineer with experience in RAG, AI agents, and full-stack development across .NET, Python, and React.
+              Microsoft-certified Azure AI Engineer building RAG pipelines, autonomous agents, and full-stack systems — live in an enterprise healthcare platform serving CVS Health.
             </p>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 40 }}>

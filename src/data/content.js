@@ -1,26 +1,25 @@
 import { Building2, Briefcase, Users, GraduationCap, Mic } from "lucide-react";
 
-export const aboutSummary = "Microsoft-certified Azure AI Engineer and Gen AI Developer at Cognizant with 1.5+ years building and deploying Azure OpenAI–powered solutions for enterprise healthcare. I've designed RAG pipelines that index and query 10L+ documents, built agentic AI workflows, and integrated LLM features into production .NET MVC systems serving CVS Health — full-stack across Python (FastAPI, Flask) and .NET (C#, MVC, Web API), with hands-on Azure deployment. IIT Madras Diploma in Programming.";
+export const aboutSummary = "Microsoft-certified Azure AI Engineer and Gen AI Developer at Cognizant with 2+ years building and deploying Azure OpenAI–powered solutions for enterprise healthcare. I've designed RAG pipelines that index and query 10L+ documents, built agentic AI workflows, and integrated LLM features into production .NET MVC systems serving CVS Health — full-stack across Python (FastAPI, Flask) and .NET (C#, MVC, Web API), with hands-on Azure deployment. IIT Madras Diploma in Programming.";
 
 export const experience = [
   {
     company: "Cognizant Technology Solutions", role: "Gen AI Developer · .NET Developer",
     period: "Oct 2024 – Present", location: "Chennai", current: true, icon: Building2,
     points: [
-      "Design and deploy Generative & Agentic AI PoCs using Azure OpenAI, Python, and React for a healthcare platform serving CVS Health.",
-      "Build RAG pipelines with Azure AI Search and vector embeddings for semantic retrieval across 10L+ enterprise documents.",
-      "Integrate LLM features — smart automation, document understanding, conversational workflows, reporting — into a production .NET MVC app without disrupting core architecture.",
-      "Ship on Azure App Service with a Cosmos DB backend; handle debugging, NUnit testing, and Snyk security-vulnerability remediation.",
-      "Manage Git branching, TeamCity CI, and Octopus Deploy / GitHub Actions release management.",
+      "Shipped 3 production Generative AI systems on Azure OpenAI — contract search, a RAG chatbot, and a PDF-compare agent — live on a healthcare platform serving CVS Health.",
+      "Engineered a hybrid (BM25 + vector) RAG pipeline on Azure AI Search that indexes 10L+ enterprise contracts and returns cited answers in seconds.",
+      "Embedded LLM-powered features — semantic search, document understanding, automated contract comparison — into a production .NET MVC app with zero disruption to existing architecture.",
+      "Own delivery end-to-end on Azure App Service + Cosmos DB: NUnit test coverage, Snyk vulnerability remediation, and release management via TeamCity, Octopus Deploy, and GitHub Actions.",
     ],
   },
   {
     company: "NEC Corporation India", role: "Automation Quality Analyst — Apprentice",
     period: "Apr 2024 – Oct 2024", location: "Chennai", current: false, icon: Briefcase,
     points: [
-      "Transitioned from QA to development within 3 months — contributing .NET API endpoints and JavaScript web features for the Bausch & Lomb client.",
-      "Built Power BI dashboards and analytical reports used by business teams for data-driven decisions.",
-      "Created Python automation scripts that streamlined internal testing and cut manual effort across QA cycles.",
+      "Fast-tracked from QA apprentice to developer in 3 months, shipping .NET Web API endpoints and JavaScript features for the Bausch & Lomb account.",
+      "Built Power BI dashboards that gave business stakeholders real-time visibility into product quality metrics.",
+      "Automated regression testing with Python scripts, cutting manual effort across QA cycles.",
     ],
   },
 ];

@@ -19,6 +19,11 @@ jobs:
           git config --global user.name "Parthibakannan"
           git config --global user.email "parthisivaram45@gmail.com"
 
+      - name: Debug - List Jules sources
+        run: |
+          curl -s 'https://jules.googleapis.com/v1alpha/sources' \
+            -H "X-Goog-Api-Key: ${{ secrets.JULES_API_KEY }}" | jq .
+
       - name: Run Jules Agent
         uses: google-labs-code/jules-action@v1.0.0
         with:

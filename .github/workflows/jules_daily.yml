@@ -1,0 +1,30 @@
+name: Daily Jules AI Maintenance
+
+on:
+  schedule:
+    # This tells GitHub to run the agent every day at 8:00 AM UTC
+    - cron: '0 8 * * *'
+  # Allows you to also trigger it manually from the Actions tab whenever you want
+  workflow_dispatch: 
+
+jobs:
+  run-jules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Configure Git Author
+        run: |
+          git config --global user.name "Parthibakannan"
+          git config --global user.email "parthisivaram45@gmail.com"
+
+      - name: Run Jules Agent
+        uses: google-labs-code/jules-action@v1
+        with:
+          jules_api_key: ${{ secrets.JULES_API_KEY }}
+          prompt: |
+            Analyze the codebase. Scan for any out-of-date patch dependencies, 
+            broken markdown links in the documentation, or potential minor bug fixes. 
+            If any improvements are found, modify the files, run your checks, 
+            and open a clear pull request detailing the changes.

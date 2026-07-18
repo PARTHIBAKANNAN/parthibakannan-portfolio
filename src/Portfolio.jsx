@@ -230,21 +230,43 @@ a { color: inherit; text-decoration: none; }
   transform: translateX(-50%) translateY(0);
 }
 
-/* Scroll reveal utility classes */
-.reveal {
-  opacity: 0;
+/* Scroll reveal utility classes - only hide if prefers-reduced-motion is NOT set */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+  }
+
+  .reveal-item {
+    opacity: 0;
+  }
 }
 
-.reveal-item {
-  opacity: 0;
+/* Ensure content is visible as fallback */
+.reveal, .reveal-item {
+  opacity: 1;
 }
 
-/* Hero entrance animations */
+/* GSAP will override this when animations are ready */
+.reveal[style*="opacity"], .reveal-item[style*="opacity"] {
+  opacity: inherit;
+}
+
+/* Hero entrance animations - default visible, GSAP will animate if enabled */
 .hero-title,
 .hero-subtitle,
 .hero-chip,
 .hero-image {
-  opacity: 0;
+  opacity: 1;
+}
+
+/* Only hide for animation if prefers-reduced-motion is not set */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-title,
+  .hero-subtitle,
+  .hero-chip,
+  .hero-image {
+    /* GSAP will set opacity: 0 initially */
+  }
 }
 
 /* Parallax float effect */

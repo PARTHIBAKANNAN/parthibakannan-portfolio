@@ -13,52 +13,65 @@ export const prefersReducedMotion = () => {
 export const animateHeroEntrance = (timelineRef) => {
   if (prefersReducedMotion()) return;
 
+  // Wait for DOM to be fully rendered before starting animations
   const tl = gsap.timeline();
 
   // Hero name/role entrance
-  tl.from('.hero-title', {
-    opacity: 0,
-    y: 20,
-    duration: 0.6,
-    ease: 'power2.out',
-  }, 0);
+  const titleEl = document.querySelector('.hero-title');
+  if (titleEl) {
+    tl.from(titleEl, {
+      opacity: 0,
+      y: 20,
+      duration: 0.6,
+      ease: 'power2.out',
+    }, 0);
+  }
 
   // Hero subtitle
-  tl.from(
-    '.hero-subtitle',
-    {
-      opacity: 0,
-      y: 16,
-      duration: 0.5,
-      ease: 'power2.out',
-    },
-    0.15
-  );
+  const subtitleEl = document.querySelector('.hero-subtitle');
+  if (subtitleEl) {
+    tl.from(
+      subtitleEl,
+      {
+        opacity: 0,
+        y: 16,
+        duration: 0.5,
+        ease: 'power2.out',
+      },
+      0.15
+    );
+  }
 
   // Hero stats/chips
-  tl.from(
-    '.hero-chip',
-    {
-      opacity: 0,
-      scale: 0.9,
-      duration: 0.4,
-      ease: 'back.out',
-      stagger: 0.08,
-    },
-    0.25
-  );
+  const chipEls = document.querySelectorAll('.hero-chip');
+  if (chipEls.length > 0) {
+    tl.from(
+      chipEls,
+      {
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.4,
+        ease: 'back.out',
+        stagger: 0.08,
+      },
+      0.25
+    );
+  }
 
   // Hero image float entrance
-  tl.from(
-    '.hero-image',
-    {
-      opacity: 0,
-      scale: 0.95,
-      duration: 0.7,
-      ease: 'power2.out',
-    },
-    0
-  );
+  const imageEl = document.querySelector('.hero-image');
+  if (imageEl) {
+    tl.from(
+      imageEl,
+      {
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.7,
+        ease: 'power2.out',
+      },
+      0
+    );
+  }
 
   if (timelineRef) timelineRef.current = tl;
   return tl;

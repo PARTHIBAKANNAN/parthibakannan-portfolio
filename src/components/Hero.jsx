@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ArrowRight, Bot, Download, MapPin, Award, Trophy } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { REDUCE } from "../lib/motion.js";
+import { animateHeroEntrance } from "../lib/animations.js";
 
 const PORTRAIT = "/portrait.jpg";
 const RESUME_PDF = "/resume.pdf";
 
 export function Hero() {
+  useEffect(() => {
+    animateHeroEntrance();
+  }, []);
+
   return (
     <section id="top" className="mesh-bg" style={{ paddingTop: 158, paddingBottom: 96, position: "relative", overflow: "hidden" }}>
       <div className="container">
@@ -14,17 +19,17 @@ export function Hero() {
           {/* Left */}
           <div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 24 }}>
-              <span className="chip chip-iris"><span style={{ width: 6, height: 6, borderRadius: 3, background: t.success, boxShadow: `0 0 8px ${t.success}` }} /> Available</span>
-              <span className="chip"><MapPin size={11} /> Chennai, India</span>
-              <span className="chip chip-aurora">Gen AI Engineer · Cognizant</span>
-              <span className="chip chip-amber"><Trophy size={11} /> Best GenC Star 2025</span>
+              <span className="chip chip-iris hero-chip"><span style={{ width: 6, height: 6, borderRadius: 3, background: t.success, boxShadow: `0 0 8px ${t.success}` }} /> Available</span>
+              <span className="chip hero-chip"><MapPin size={11} /> Chennai, India</span>
+              <span className="chip chip-aurora hero-chip">Gen AI Engineer · Cognizant</span>
+              <span className="chip chip-amber hero-chip"><Trophy size={11} /> Best GenC Star 2025</span>
             </div>
 
-            <h1 className="font-display" style={{ fontSize: "clamp(34px, 5.6vw, 62px)", fontWeight: 700, lineHeight: 1.06, margin: "0 0 22px", color: t.ink }}>
+            <h1 className="font-display hero-title" style={{ fontSize: "clamp(34px, 5.6vw, 62px)", fontWeight: 700, lineHeight: 1.06, margin: "0 0 22px", color: t.ink }}>
               2+ years shipping<br /><span style={{ background: `linear-gradient(120deg, ${t.iris}, ${t.auroraBright})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Generative AI to production.</span>
             </h1>
 
-            <p style={{ fontSize: 17, lineHeight: 1.6, color: t.inkSoft, maxWidth: 540, margin: "0 0 34px" }}>
+            <p className="hero-subtitle" style={{ fontSize: 17, lineHeight: 1.6, color: t.inkSoft, maxWidth: 540, margin: "0 0 34px" }}>
               Microsoft-certified Azure AI Engineer building RAG pipelines, autonomous agents, and full-stack systems — live in an enterprise healthcare platform serving CVS Health.
             </p>
 
@@ -49,7 +54,7 @@ export function Hero() {
           </div>
 
           {/* Right: portrait + floating trace card */}
-          <div className="hide-mobile" style={{ position: "relative", display: "flex", justifyContent: "center" }}>
+          <div className="hide-mobile hero-image" style={{ position: "relative", display: "flex", justifyContent: "center" }}>
             <div style={{ position: "relative", width: 320 }}>
               {/* glow */}
               <div style={{ position: "absolute", inset: -30, borderRadius: 32, background: `radial-gradient(circle at 30% 20%, rgba(124,92,255,0.35), transparent 60%), radial-gradient(circle at 80% 90%, rgba(31,199,192,0.3), transparent 60%)`, filter: "blur(28px)", zIndex: 0 }} />

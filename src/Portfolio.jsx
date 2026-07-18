@@ -170,6 +170,116 @@ a { color: inherit; text-decoration: none; }
 @keyframes shineSweep { 0% { transform: translateX(-130%) skewX(-18deg); } 60%,100% { transform: translateX(260%) skewX(-18deg); } }
 @keyframes popIn { 0% { opacity: 0; transform: translateY(12px) scale(0.96); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
 
+/* Premium glass effect enhancements */
+.glass-premium {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), 0 8px 32px rgba(0,0,0,0.1);
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.glass-premium:hover {
+  border-color: rgba(106,67,224,0.3);
+  box-shadow: var(--glass-shadow), 0 12px 48px rgba(106,67,224,0.15);
+}
+
+/* Enhanced project card glass effect */
+.project-card {
+  transition: all var(--duration-base) var(--ease-out);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(161,98,7,0.4);
+}
+
+/* Skill tag hover effect */
+.skill-tag {
+  transition: all var(--duration-fast) var(--ease-out);
+  cursor: pointer;
+  position: relative;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+  background: rgba(161,98,7,0.15);
+}
+
+/* Animated tooltip for skill tags */
+.skill-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--duration-base) var(--ease-out);
+  background: rgba(20,20,20,0.95);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.skill-tag:hover .skill-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Scroll reveal utility classes */
+.reveal {
+  opacity: 0;
+}
+
+.reveal-item {
+  opacity: 0;
+}
+
+/* Hero entrance animations */
+.hero-title,
+.hero-subtitle,
+.hero-chip,
+.hero-image {
+  opacity: 0;
+}
+
+/* Parallax float effect */
+.parallax-float {
+  will-change: transform;
+}
+
+/* Gradient shift animation for premium feel */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Smooth state transitions */
+* {
+  transition-duration: var(--duration-fast);
+  transition-timing-function: var(--ease-out);
+}
+
+/* Card lift effect on hover */
+.hover-lift {
+  transition: transform var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
 @media (max-width: 980px) { .proj-grid { grid-template-columns: 1fr !important; gap: 26px !important; } }
 @media (max-width: 880px) {
   .section { padding: 68px 0; }

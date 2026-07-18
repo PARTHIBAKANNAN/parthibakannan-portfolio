@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Award, ShieldCheck, Sparkles, GraduationCap, ArrowUpRight } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { REDUCE } from "../lib/motion.js";
+import { createScrollReveal } from "../lib/animations.js";
 import { certifications, education } from "../data/content.js";
 
 function CredCard({ icon: Icon, label, sub, subColor, iconBg, cardBg, cardBorder, cardShadow, shine, href }) {
   const Tag = href ? "a" : "div";
   const linkProps = href ? { href, target: "_blank", rel: "noopener noreferrer" } : {};
   return (
-    <Tag {...linkProps} className={`hover-card ${cardBg ? "" : "glass"}`} style={{
+    <Tag {...linkProps} className={`hover-card ${cardBg ? "" : "glass"} reveal`} style={{
       padding: "18px 20px", display: "flex", alignItems: "center", gap: 14,
       borderRadius: 16, position: "relative", overflow: "hidden", minHeight: 78,
       background: cardBg, border: cardBorder ? `1px solid ${cardBorder}` : undefined, boxShadow: cardShadow,
@@ -28,6 +29,27 @@ function CredCard({ icon: Icon, label, sub, subColor, iconBg, cardBg, cardBorder
 }
 
 export function Credentials() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const revealCards = containerRef.current.querySelectorAll('.reveal');
+      revealCards.forEach((card) => {
+        createScrollReveal(card, {
+          opacity: 0,
+          y: 12,
+          duration: 0.35,
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 90%',
+            toggleActions: 'play none none reverse',
+          },
+        });
+      });
+    }
+  }, []);
+
   const items = [
     ...certifications.map(c => {
       const isClaude = c.issuer === "Anthropic";
@@ -55,7 +77,7 @@ export function Credentials() {
     <section className="section-tight" style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
       <div className="container">
         <div className="section-eyebrow" style={{ marginBottom: 20, textAlign: "center" }}>Certifications &amp; Education</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 14 }}>
+        <div ref={containerRef} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 14 }}>
           {items.map(it => <CredCard key={it.key} {...it} />)}
         </div>
       </div>

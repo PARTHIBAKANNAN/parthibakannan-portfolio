@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Network } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { REDUCE } from "../lib/motion.js";
+import { cardHoverAnimation } from "../lib/animations.js";
 import { Reveal } from "./Reveal.jsx";
 import { ILLOS } from "./Illustrations.jsx";
 import { productionWork } from "../data/projects.js";
@@ -70,8 +71,16 @@ function ProjectTrace({ stages }) {
 
 export function SelectedWork() {
   const [active, setActive] = useState(productionWork[0].id);
+  const cardRef = useRef(null);
   const project = productionWork.find(p => p.id === active);
   const Illo = ILLOS[project.id];
+
+  useEffect(() => {
+    if (cardRef.current) {
+      cardHoverAnimation(cardRef.current);
+    }
+  }, [active]);
+
   return (
     <section id="work" className="section soft-bg">
       <div className="container">
@@ -98,7 +107,7 @@ export function SelectedWork() {
           })}
         </div>
 
-        <div className="glass-strong" style={{ overflow: "hidden" }}>
+        <div ref={cardRef} className="glass-strong hover-lift" style={{ overflow: "hidden" }}>
           {/* Cover illustration band */}
           <div style={{ position: "relative", background: "linear-gradient(120deg, rgba(124,92,255,0.10), rgba(31,199,192,0.08))", borderBottom: "1px solid var(--surface-border)", overflow: "hidden" }}>
             <Illo />

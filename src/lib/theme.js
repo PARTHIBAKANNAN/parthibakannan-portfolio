@@ -63,19 +63,6 @@ export const cssThemeBlock = `
   --scrollbar-thumb: rgba(106,67,224,0.28);
   --scrollbar-thumb-hover: rgba(106,67,224,0.45);
 
-  /* Glass effect tokens (light mode) */
-  --glass-bg: rgba(255,255,255,0.7);
-  --glass-border: rgba(20,24,42,0.08);
-  --glass-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
-  --glass-blur: 10px;
-
-  /* Animation tokens */
-  --duration-fast: 150ms;
-  --duration-base: 250ms;
-  --duration-slow: 350ms;
-  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
-
   color-scheme: light;
 }
 
@@ -106,19 +93,6 @@ export const cssThemeBlock = `
 
   --scrollbar-thumb: rgba(124,92,255,0.35);
   --scrollbar-thumb-hover: rgba(124,92,255,0.55);
-
-  /* Glass effect tokens (dark mode) */
-  --glass-bg: rgba(20,20,20,0.4);
-  --glass-border: rgba(255,255,255,0.08);
-  --glass-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  --glass-blur: 12px;
-
-  /* Animation tokens */
-  --duration-fast: 150ms;
-  --duration-base: 250ms;
-  --duration-slow: 350ms;
-  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
 
   color-scheme: dark;
 }

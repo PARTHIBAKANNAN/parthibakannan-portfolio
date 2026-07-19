@@ -36,7 +36,15 @@ export function Stack() {
             <Reveal key={g.group} delay={i * 70}>
               <div className="glass" style={{ padding: 20, height: "100%" }}>
                 <div className="font-mono" style={{ fontSize: 10.5, color: t.aurora, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 12 }}>{g.group}</div>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>{g.items.map(it => <span key={it} className="chip" style={{ fontSize: 11.5 }}>{it}</span>)}</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>{g.items.map(it => (
+                  <span key={it} className="chip skill-tag" style={{ fontSize: 11.5, position: "relative" }}>
+                    {it}
+                    <div className="skill-tooltip">
+                      <strong>{it}</strong>
+                      <p style={{ fontSize: '11px', margin: '4px 0 0 0' }}>Production experience</p>
+                    </div>
+                  </span>
+                ))}</div>
               </div>
             </Reveal>
           ))}

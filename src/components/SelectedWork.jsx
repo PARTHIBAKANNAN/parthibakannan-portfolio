@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Network } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { REDUCE } from "../lib/motion.js";
+import { cardHoverAnimation } from "../lib/animations.js";
 import { Reveal } from "./Reveal.jsx";
 import { ILLOS } from "./Illustrations.jsx";
 import { productionWork } from "../data/projects.js";
@@ -70,8 +71,16 @@ function ProjectTrace({ stages }) {
 
 export function SelectedWork() {
   const [active, setActive] = useState(productionWork[0].id);
+  const cardRef = useRef(null);
   const project = productionWork.find(p => p.id === active);
   const Illo = ILLOS[project.id];
+
+  useEffect(() => {
+    if (cardRef.current) {
+      cardHoverAnimation(cardRef.current);
+    }
+  }, [active]);
+
   return (
     <section id="work" className="section soft-bg">
       <div className="container">

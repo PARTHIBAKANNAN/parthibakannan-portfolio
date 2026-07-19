@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Award, ShieldCheck, Sparkles, GraduationCap, ArrowUpRight } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { REDUCE } from "../lib/motion.js";
@@ -29,6 +29,27 @@ function CredCard({ icon: Icon, label, sub, subColor, iconBg, cardBg, cardBorder
 }
 
 export function Credentials() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const revealCards = containerRef.current.querySelectorAll('.reveal');
+      revealCards.forEach((card) => {
+        createScrollReveal(card, {
+          opacity: 0,
+          y: 12,
+          duration: 0.35,
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 90%',
+            toggleActions: 'play none none reverse',
+          },
+        });
+      });
+    }
+  }, []);
+
   const items = [
     ...certifications.map(c => {
       const isClaude = c.issuer === "Anthropic";

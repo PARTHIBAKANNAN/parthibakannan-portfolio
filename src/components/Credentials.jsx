@@ -2,6 +2,7 @@ import React from "react";
 import { Award, ShieldCheck, Sparkles, GraduationCap, ArrowUpRight } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { REDUCE } from "../lib/motion.js";
+import { Reveal } from "./Reveal.jsx";
 import { certifications, education } from "../data/content.js";
 
 function CredCard({ icon: Icon, label, sub, subColor, iconBg, cardBg, cardBorder, cardShadow, shine, href }) {
@@ -9,7 +10,7 @@ function CredCard({ icon: Icon, label, sub, subColor, iconBg, cardBg, cardBorder
   const linkProps = href ? { href, target: "_blank", rel: "noopener noreferrer" } : {};
   return (
     <Tag {...linkProps} className={`hover-card ${cardBg ? "" : "glass"}`} style={{
-      padding: "18px 20px", display: "flex", alignItems: "center", gap: 14,
+      padding: "18px 20px", display: "flex", alignItems: "center", gap: 14, height: "100%", boxSizing: "border-box",
       borderRadius: 16, position: "relative", overflow: "hidden", minHeight: 78,
       background: cardBg, border: cardBorder ? `1px solid ${cardBorder}` : undefined, boxShadow: cardShadow,
     }}>
@@ -54,9 +55,9 @@ export function Credentials() {
   return (
     <section className="section-tight" style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
       <div className="container">
-        <div className="section-eyebrow" style={{ marginBottom: 20, textAlign: "center" }}>Certifications &amp; Education</div>
+        <Reveal><div className="section-eyebrow" style={{ marginBottom: 20, textAlign: "center" }}>Certifications &amp; Education</div></Reveal>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 14 }}>
-          {items.map(it => <CredCard key={it.key} {...it} />)}
+          {items.map((it, i) => <Reveal key={it.key} delay={i * 60} style={{ height: "100%" }}><CredCard {...it} /></Reveal>)}
         </div>
       </div>
     </section>

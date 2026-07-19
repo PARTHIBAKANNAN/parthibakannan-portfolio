@@ -99,36 +99,38 @@ export function SelectedWork() {
         </div>
 
         <div className="glass-strong" style={{ overflow: "hidden" }}>
-          {/* Cover illustration band */}
-          <div style={{ position: "relative", background: "linear-gradient(120deg, rgba(124,92,255,0.10), rgba(31,199,192,0.08))", borderBottom: "1px solid var(--surface-border)", overflow: "hidden" }}>
-            <Illo />
-            <div style={{ position: "absolute", top: 16, right: 18 }}><StatusBadge status={project.status} /></div>
-            <div style={{ position: "absolute", left: 28, bottom: 16 }}>
-              <div className="section-eyebrow" style={{ color: t.iris, marginBottom: 4 }}>{project.eyebrow}</div>
-              <div className="font-display" style={{ fontSize: 24, fontWeight: 700, color: "#14182A" }}>{project.title}</div>
-            </div>
-          </div>
-
-          {/* Body */}
-          <div style={{ padding: 34 }}>
-            <p style={{ fontSize: 15.5, color: t.inkSoft, lineHeight: 1.55, marginBottom: 26, fontStyle: "italic", maxWidth: 760 }}>{project.tagline}</p>
-            <div className="proj-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28, alignItems: "start", marginBottom: 30 }}>
-              {[["Problem", project.problem], ["Approach", project.approach], ["Outcome", project.outcome]].map(([k, v]) => (
-                <div key={k}>
-                  <div className="font-mono" style={{ fontSize: 10.5, color: t.aurora, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>{k}</div>
-                  <p style={{ fontSize: 14, color: t.inkSoft, lineHeight: 1.6, margin: 0 }}>{v}</p>
-                </div>
-              ))}
-            </div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 26 }}>
-              {project.tech.map(tech => <span key={tech} className="chip">{tech}</span>)}
-            </div>
-            <div>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, paddingBottom: 12, borderBottom: "1px solid var(--line)" }}>
-                <Network size={14} color={t.aurora} />
-                <span className="font-mono" style={{ fontSize: 11, color: t.inkMuted, letterSpacing: "0.14em", textTransform: "uppercase" }}>Architecture · live trace</span>
+          <div key={project.id} style={{ animation: REDUCE ? "none" : "popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both" }}>
+            {/* Cover illustration band */}
+            <div style={{ position: "relative", background: "linear-gradient(120deg, rgba(124,92,255,0.10), rgba(31,199,192,0.08))", borderBottom: "1px solid var(--surface-border)", overflow: "hidden" }}>
+              <Illo />
+              <div style={{ position: "absolute", top: 16, right: 18 }}><StatusBadge status={project.status} /></div>
+              <div style={{ position: "absolute", left: 28, bottom: 16 }}>
+                <div className="section-eyebrow" style={{ color: t.iris, marginBottom: 4 }}>{project.eyebrow}</div>
+                <div className="font-display" style={{ fontSize: 24, fontWeight: 700, color: "#14182A" }}>{project.title}</div>
               </div>
-              <ProjectTrace stages={project.stages} />
+            </div>
+
+            {/* Body */}
+            <div style={{ padding: 34 }}>
+              <p style={{ fontSize: 15.5, color: t.inkSoft, lineHeight: 1.55, marginBottom: 26, fontStyle: "italic", maxWidth: 760 }}>{project.tagline}</p>
+              <div className="proj-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28, alignItems: "start", marginBottom: 30 }}>
+                {[["Problem", project.problem], ["Approach", project.approach], ["Outcome", project.outcome]].map(([k, v]) => (
+                  <div key={k}>
+                    <div className="font-mono" style={{ fontSize: 10.5, color: t.aurora, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>{k}</div>
+                    <p style={{ fontSize: 14, color: t.inkSoft, lineHeight: 1.6, margin: 0 }}>{v}</p>
+                  </div>
+                ))}
+              </div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 26 }}>
+                {project.tech.map(tech => <span key={tech} className="chip">{tech}</span>)}
+              </div>
+              <div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, paddingBottom: 12, borderBottom: "1px solid var(--line)" }}>
+                  <Network size={14} color={t.aurora} />
+                  <span className="font-mono" style={{ fontSize: 11, color: t.inkMuted, letterSpacing: "0.14em", textTransform: "uppercase" }}>Architecture · live trace</span>
+                </div>
+                <ProjectTrace stages={project.stages} />
+              </div>
             </div>
           </div>
         </div>

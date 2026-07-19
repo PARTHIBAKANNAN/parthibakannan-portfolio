@@ -123,9 +123,9 @@ body {
   letter-spacing: 0.2em; text-transform: uppercase; color: ${t.aurora}; font-weight: 500;
 }
 
-.hover-card { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+.hover-card { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease; will-change: transform; }
 .hover-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.015);
   border-color: rgba(124,92,255,0.3);
   box-shadow: inset 0 1px 0 var(--surface-sheen), 0 30px 60px -30px rgba(106,67,224,0.4);
 }
@@ -169,6 +169,17 @@ a { color: inherit; text-decoration: none; }
 .gear { transform-box: fill-box; transform-origin: center; animation: spin360 7s linear infinite; }
 @keyframes shineSweep { 0% { transform: translateX(-130%) skewX(-18deg); } 60%,100% { transform: translateX(260%) skewX(-18deg); } }
 @keyframes popIn { 0% { opacity: 0; transform: translateY(12px) scale(0.96); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes marqueeScroll { to { transform: translateX(-50%); } }
+
+.hero-title, .hero-subtitle, .hero-chip, .hero-image { opacity: 1; }
+
+/* Marquee strip (see Stack section) */
+.marquee-track { display: flex; width: max-content; animation: marqueeScroll 34s linear infinite; }
+.marquee-content {
+  display: flex; align-items: center; gap: 10px;
+  padding-right: 10px; white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
 @media (max-width: 980px) { .proj-grid { grid-template-columns: 1fr !important; gap: 26px !important; } }
 @media (max-width: 880px) {

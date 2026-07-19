@@ -1,6 +1,7 @@
 import React from "react";
 import { Mail, Phone, ArrowUpRight, Download, Linkedin, Github } from "lucide-react";
 import { t } from "../lib/theme.js";
+import { Reveal } from "./Reveal.jsx";
 
 const RESUME_PDF = "/resume.pdf";
 
@@ -8,7 +9,7 @@ export function Contact() {
   return (
     <section id="contact" className="section mesh-bg" style={{ borderTop: "1px solid var(--line)" }}>
       <div className="container">
-        <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
+        <Reveal style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
           <div className="section-eyebrow" style={{ marginBottom: 12 }}>Contact</div>
           <h2 className="font-display" style={{ fontSize: "clamp(32px, 4.6vw, 50px)", fontWeight: 700, color: t.ink, margin: "0 0 16px", lineHeight: 1.1 }}>Hiring for a Gen AI role?</h2>
           <p style={{ fontSize: 16, lineHeight: 1.65, color: t.inkSoft, margin: "0 0 36px" }}>I'm open to new opportunities. Send a note and I'll get back the same day.</p>
@@ -38,7 +39,7 @@ export function Contact() {
             <a href="https://github.com/PARTHIBAKANNAN" target="_blank" rel="noopener noreferrer" className="btn-ghost"><Github size={15} /> GitHub · main <ArrowUpRight size={13} /></a>
             <a href="https://github.com/parthicts07" target="_blank" rel="noopener noreferrer" className="btn-ghost"><Github size={15} /> GitHub · second <ArrowUpRight size={13} /></a>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

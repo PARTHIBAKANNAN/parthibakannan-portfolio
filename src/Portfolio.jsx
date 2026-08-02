@@ -18,7 +18,7 @@ import { Footer } from "./components/Footer.jsx";
 const globalStyles = `
 ${cssThemeBlock}
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Archivo+Black&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -33,101 +33,86 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-.font-display { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.025em; }
+.font-display { font-family: 'Archivo', sans-serif; letter-spacing: -0.02em; font-weight: 700; }
 .font-body { font-family: 'Inter', sans-serif; }
 .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Bold editorial headline treatment — tight leading, metallic gradient fill */
+.heading-huge {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--ink);
+}
 
 .mesh-bg {
   position: relative;
   background:
-    radial-gradient(ellipse 62% 55% at 6% -8%, rgba(124,92,255,0.20), transparent 56%),
-    radial-gradient(ellipse 58% 48% at 94% 6%, rgba(31,199,192,0.16), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 72% 108%, rgba(245,166,35,0.10), transparent 60%),
+    radial-gradient(ellipse 70% 55% at 50% -10%, var(--card-bg-strong), transparent 60%),
     ${t.bg};
 }
 .soft-bg {
-  background:
-    radial-gradient(ellipse 55% 60% at 90% 30%, rgba(31,199,192,0.07), transparent 62%),
-    radial-gradient(ellipse 55% 60% at 8% 60%, rgba(124,92,255,0.07), transparent 62%);
+  background: radial-gradient(ellipse 65% 60% at 50% 40%, var(--card-bg), transparent 68%);
 }
 
-.glass {
-  background: linear-gradient(180deg, var(--surface-from) 0%, var(--surface-to) 100%);
-  border: 1px solid var(--surface-border);
-  box-shadow:
-    inset 0 1px 0 var(--surface-sheen),
-    0 1px 2px rgba(20,24,42,0.04),
-    0 22px 48px -28px rgba(60,42,140,0.26);
-  border-radius: 16px;
+.glass, .glass-strong {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  border-radius: 14px;
   position: relative;
 }
-.glass-strong {
-  background: linear-gradient(180deg, var(--surface-strong-from) 0%, var(--surface-strong-to) 100%);
-  border: 1px solid var(--surface-border-strong);
-  box-shadow:
-    inset 0 1px 0 var(--surface-sheen),
-    0 2px 4px rgba(20,24,42,0.04),
-    0 36px 80px -34px rgba(60,42,140,0.32);
-  border-radius: 22px;
-  position: relative;
-}
-.glass::after, .glass-strong::after {
-  content: "";
-  position: absolute; inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(180deg, var(--surface-sheen), transparent 32%);
-  pointer-events: none;
-}
+.glass-strong { background: var(--card-bg-strong); border-radius: 16px; }
 
 .chip {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 5px 11px; border-radius: 999px;
-  background: var(--chip-bg);
+  padding: 6px 13px; border-radius: 999px;
+  background: transparent;
   border: 1px solid var(--chip-border);
-  font-size: 11.5px; color: var(--chip-text);
+  font-size: 11px; color: var(--ink-muted);
   font-family: 'JetBrains Mono', monospace; font-weight: 500;
   white-space: nowrap; line-height: 1.4;
 }
-.chip-iris   { background: rgba(124,92,255,0.10); border-color: rgba(124,92,255,0.22); color: ${t.irisDeep}; }
-.chip-aurora { background: rgba(31,199,192,0.10); border-color: rgba(31,199,192,0.26); color: #0A7F7A; }
-.chip-amber  { background: rgba(245,166,35,0.13); border-color: rgba(245,166,35,0.32); color: #A9650A; }
-:root[data-theme="dark"] .chip-iris   { color: #C7B8FF; }
-:root[data-theme="dark"] .chip-aurora { color: #6FE9E2; }
-:root[data-theme="dark"] .chip-amber  { color: #FFCB7A; }
+.chip-iris, .chip-aurora { background: transparent; border-color: var(--chip-border); color: var(--ink-muted); }
+.chip-amber { background: rgba(201,121,10,0.1); border-color: rgba(201,121,10,0.35); color: #A9650A; }
+:root[data-theme="dark"] .chip-amber { color: #E3A130; background: rgba(227,161,48,0.1); border-color: rgba(227,161,48,0.35); }
 
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 22px; border-radius: 12px;
-  background: linear-gradient(180deg, #8366FF 0%, #6A43E0 100%);
-  color: #fff; font-weight: 600; font-size: 14px; border: none; cursor: pointer;
+  padding: 12px 24px; border-radius: 999px;
+  background: var(--ink);
+  color: var(--ink-invert); font-weight: 600; font-size: 14px; border: none; cursor: pointer;
   font-family: 'Inter', sans-serif;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -1px 0 rgba(0,0,0,0.12), 0 14px 30px -10px rgba(106,67,224,0.5);
-  transition: transform 0.18s ease, box-shadow 0.22s ease;
+  transition: transform 0.18s ease, opacity 0.22s ease;
   text-decoration: none;
 }
-.btn-primary:hover { transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 18px 38px -10px rgba(106,67,224,0.6); }
+.btn-primary:hover { transform: translateY(-1px); opacity: 0.85; }
 
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 22px; border-radius: 12px;
+  padding: 12px 24px; border-radius: 999px;
   background: var(--ghost-bg); color: ${t.ink}; font-weight: 500; font-size: 14px;
   border: 1px solid var(--ghost-border); cursor: pointer;
   font-family: 'Inter', sans-serif; text-decoration: none;
-  box-shadow: 0 6px 16px -10px rgba(20,24,42,0.2);
   transition: all 0.2s ease;
 }
-.btn-ghost:hover { transform: translateY(-1px); border-color: rgba(106,67,224,0.35); box-shadow: 0 10px 24px -10px rgba(106,67,224,0.3); }
+.btn-ghost:hover { transform: translateY(-1px); border-color: var(--ink-dim); background: var(--chip-bg); }
 
 .section-eyebrow {
   font-family: 'JetBrains Mono', monospace; font-size: 11px;
-  letter-spacing: 0.2em; text-transform: uppercase; color: ${t.aurora}; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); font-weight: 500;
 }
 
 .hover-card { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease; will-change: transform; }
 .hover-card:hover {
-  transform: translateY(-4px) scale(1.015);
-  border-color: rgba(124,92,255,0.3);
-  box-shadow: inset 0 1px 0 var(--surface-sheen), 0 30px 60px -30px rgba(106,67,224,0.4);
+  transform: translateY(-4px);
+  border-color: var(--ink-dim);
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.25);
 }
 
 .section { padding: 108px 0; position: relative; }
@@ -145,7 +130,7 @@ a { color: inherit; text-decoration: none; }
 .skip-link:focus { top: 12px; }
 
 :focus-visible {
-  outline: 2px solid ${t.irisBright};
+  outline: 2px solid ${t.ink};
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -153,7 +138,7 @@ a { color: inherit; text-decoration: none; }
 .show-mobile { display: none; }
 
 .scroll-x::-webkit-scrollbar { height: 6px; }
-.scroll-x::-webkit-scrollbar-track { background: rgba(20,24,42,0.04); border-radius: 3px; }
+.scroll-x::-webkit-scrollbar-track { background: var(--chip-bg); border-radius: 3px; }
 .scroll-x::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: ${t.bgAlt}; }
@@ -173,6 +158,97 @@ a { color: inherit; text-decoration: none; }
 
 .hero-title, .hero-subtitle, .hero-chip, .hero-image { opacity: 1; }
 
+/* Masthead hero — a true fixed-viewport frame on desktop (everything inside is
+   position:absolute so nothing can push it taller and force a scroll before the
+   fold), collapsing to plain stacked flow on mobile where a single 100vh frame
+   can't fit the giant name + photo + chips without cramming. */
+.hero-mast { position: relative; height: 100vh; overflow: hidden; }
+
+.hero-meta-bar { position: absolute; top: 96px; left: 0; right: 0; z-index: 3; }
+.hero-meta-text { font-size: 13px; }
+
+.hero-ghost-name {
+  position: absolute; top: 82px; left: 0; right: 0; text-align: center;
+  transform: scaleY(3.3); transform-origin: top;
+  font-weight: 900; letter-spacing: -0.055em;
+  font-size: clamp(150px, min(56vh, 15vw), 560px);
+  line-height: 1; white-space: nowrap; pointer-events: none; z-index: 0; user-select: none;
+}
+
+.hero-edge-label { position: absolute; top: 30%; z-index: 3; font-size: 10.5px; }
+
+/* Desktop's photo is smaller relative to the letters behind it, so a fade
+   starting too early washes out most of the visible image, making the bold
+   ghost letters/buttons look harsh by contrast. Mobile's bigger photo needs
+   the earlier, longer fade to blend into the black background as requested. */
+.hero-portrait-mask {
+  mask-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,0) 100%);
+}
+
+.hero-portrait-wrap {
+  position: absolute; left: 0; right: 0; bottom: 0; margin: 0 auto;
+  width: fit-content; height: min(58vh, 540px); overflow: hidden; z-index: 2; pointer-events: none;
+}
+
+.hero-bottom-left { position: absolute; left: 32px; bottom: 34px; z-index: 3; }
+.hero-bottom-right { position: absolute; right: 32px; bottom: 34px; z-index: 3; }
+
+/* The ghost name now runs tall enough to pass directly behind the bottom chips/
+   CTA — fine, since it's decorative, EXCEPT that .chip and .btn-ghost are
+   deliberately transparent-background hairline pills everywhere else on the
+   page. Sitting on the letters, that transparency lets the letterforms show
+   straight through and clobber legibility. Give hero instances a real opaque
+   backing so they stay readable regardless of what's behind them. */
+.hero-solid { background: var(--bg) !important; }
+
+@media (max-width: 1100px) {
+  /* Mobile now mirrors the reference's actual composition: the photo is big,
+     bottom-anchored, and the chips/tagline/CTA overlay directly on its lower
+     portion (solid .hero-solid backgrounds keep them legible) — not a
+     separate stacked block underneath with a gap of dead space. */
+  .hero-mast { height: auto; min-height: 100vh; padding-top: 120px; overflow: hidden; }
+  /* A fixed, safely-narrow width decouples size from the height-driven photo —
+     the <img> renders at its natural undistorted width (from height alone,
+     confirmed adding max-width here would distort it) and gets centered +
+     clipped by this fixed-width box instead of dictating the box's width. */
+  .hero-portrait-wrap { height: min(60vh, 520px); width: min(80vw, 320px); }
+  .hero-bottom-left { position: absolute; left: 20px; right: 20px; bottom: 104px; max-width: none !important; }
+  .hero-bottom-right { display: none; }
+  .hero-mobile-cta { position: absolute; left: 20px; right: 20px; bottom: 24px; z-index: 4; }
+  /* Ghost name / meta bar / edge labels are no longer desktop-only — shown at a
+     scale that fits the stacked mobile layout instead of the fixed 100vh frame. */
+  /* .hero-mast's padding-top only shifts in-flow children — .hero-meta-bar
+     stays position:absolute even on mobile, so it needs its own explicit
+     clearance from the fixed nav rather than inheriting the section's padding. */
+  .hero-meta-bar { top: 88px; }
+  .hero-meta-text { font-size: 9px; letter-spacing: 0.14em !important; }
+  /* Fonts have real ink (cap height) covering only roughly half of a
+     line-height:1 box — the rest is invisible reserved ascent/descent space.
+     A moderate scaleY was leaving that invisible margin big enough to look
+     like a dead gap between the letters and the photo below. Anchoring
+     higher and stretching much further down closes that gap with real
+     visible ink, not just a bigger empty box. */
+  /* scaleX squeezes the letters horizontally, independent of the width-fit
+     font-size formula — it can't reintroduce the overflow bug, and it opens
+     up clear black margin at the edges for the vertical labels to sit in. */
+  /* Reaching all the way to shoulder level meant crossing directly through the
+     face/eyes, which reads as messy rather than intentional (unlike the
+     reference, where the head sits in the letters' negative space rather
+     than under a letter stroke). Pulling the reach back to roughly the
+     hairline keeps the overlap to a subtle accent instead of a collision. */
+  .hero-ghost-name { top: 130px; transform: scaleX(0.78) scaleY(9); font-size: clamp(60px, min(28vh, 15vw), 220px); }
+  .hero-edge-label { top: 22%; font-size: 8.5px; }
+  .hero-portrait-mask {
+    mask-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 48%, rgba(255,255,255,0) 100%);
+  }
+}
+@media (max-width: 420px) {
+  .hero-bottom-left, .hero-mobile-cta { padding: 0 16px; }
+  .hero-meta-text { font-size: 8px; }
+}
+
 /* Marquee strip (see Stack section) */
 .marquee-track { display: flex; width: max-content; animation: marqueeScroll 34s linear infinite; }
 .marquee-content {
@@ -182,13 +258,14 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 
 @media (max-width: 980px) { .proj-grid { grid-template-columns: 1fr !important; gap: 26px !important; } }
+@media (max-width: 1100px) {
+  .hide-mobile { display: none !important; }
+  .show-mobile { display: flex; }
+}
 @media (max-width: 880px) {
   .section { padding: 68px 0; }
   .section-tight { padding: 46px 0; }
   .container { padding: 0 20px; }
-  .hide-mobile { display: none !important; }
-  .show-mobile { display: flex; }
-  .hero-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
 }
 @media (max-width: 420px) {
   .container { padding: 0 16px; }

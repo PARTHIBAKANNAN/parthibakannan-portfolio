@@ -3,8 +3,6 @@ import { Mail, Menu, X } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { ThemeToggle } from "./ThemeToggle.jsx";
 
-const PORTRAIT = "/portrait.jpg";
-
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,11 +32,11 @@ export function Nav() {
       <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <a href="#top" style={{ display: "flex", alignItems: "center", gap: 11 }}>
           <div style={{
-            width: 34, height: 34, borderRadius: 999, overflow: "hidden",
-            border: "2px solid var(--surface-from)",
-            boxShadow: "0 4px 14px -4px rgba(106,67,224,0.5), 0 0 0 1.5px rgba(124,92,255,0.4)",
+            width: 34, height: 34, borderRadius: 999, flexShrink: 0,
+            border: "1px solid var(--chip-border)", background: "var(--chip-bg)",
+            display: "flex", alignItems: "center", justifyContent: "center",
           }}>
-            <img src={PORTRAIT} alt="Parthibakannan" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+            <span className="font-display" style={{ fontSize: 12.5, fontWeight: 800, color: t.ink, letterSpacing: "-0.02em" }}>PS</span>
           </div>
           <span className="font-display" style={{ fontSize: 15, fontWeight: 700, color: t.ink }}>Parthibakannan</span>
         </a>

@@ -79,7 +79,7 @@ export function SelectedWork() {
         <Reveal>
           <div style={{ marginBottom: 40, maxWidth: 720 }}>
             <div className="section-eyebrow" style={{ marginBottom: 12 }}>Selected work · Cognizant</div>
-            <h2 className="font-display" style={{ fontSize: "clamp(32px, 4.2vw, 44px)", fontWeight: 700, color: t.ink, margin: "0 0 16px", lineHeight: 1.1 }}>Production Gen AI systems.</h2>
+            <h2 className="font-display heading-huge" style={{ fontSize: "clamp(32px, 4.2vw, 44px)", margin: "0 0 16px" }}>Production Gen AI systems.</h2>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: t.inkMuted, margin: 0 }}>Built for a healthcare platform serving CVS Health — from an autonomous SDLC agent to contract retrieval at scale, with LLM features integrated into a production .NET MVC system. Each one is shown with the trace it actually runs as: the stages, the technology, and the flow of a request through the stack.</p>
           </div>
         </Reveal>
@@ -89,11 +89,10 @@ export function SelectedWork() {
             const isActive = p.id === active;
             return (
               <button key={p.id} onClick={() => setActive(p.id)} style={{
-                padding: "10px 18px", borderRadius: 11, cursor: "pointer", fontSize: 13.5, fontWeight: 600, transition: "all 0.18s",
-                border: isActive ? `1px solid ${t.iris}` : "1px solid var(--ghost-border)",
-                background: isActive ? "linear-gradient(180deg, #8366FF, #6A43E0)" : "var(--ghost-bg)",
-                color: isActive ? "#fff" : t.inkMuted,
-                boxShadow: isActive ? "inset 0 1px 0 rgba(255,255,255,0.3), 0 12px 26px -12px rgba(106,67,224,0.5)" : "0 4px 12px -8px rgba(20,24,42,0.2)",
+                padding: "10px 18px", borderRadius: 999, cursor: "pointer", fontSize: 13.5, fontWeight: 600, transition: "all 0.18s",
+                border: isActive ? `1px solid ${t.ink}` : "1px solid var(--ghost-border)",
+                background: isActive ? "var(--ink)" : "var(--ghost-bg)",
+                color: isActive ? "var(--ink-invert)" : t.inkMuted,
               }}>{p.title}</button>
             );
           })}
@@ -102,11 +101,11 @@ export function SelectedWork() {
         <div className="glass-strong" style={{ overflow: "hidden" }}>
           <div key={project.id} style={{ animation: REDUCE ? "none" : "popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both" }}>
             {/* Cover illustration band */}
-            <div style={{ position: "relative", background: "linear-gradient(120deg, rgba(124,92,255,0.10), rgba(31,199,192,0.08))", borderBottom: "1px solid var(--surface-border)", overflow: "hidden" }}>
+            <div style={{ position: "relative", background: "linear-gradient(120deg, #EFEEE9, #E7E6E0)", borderBottom: "1px solid var(--surface-border)", overflow: "hidden" }}>
               <Illo />
               <div style={{ position: "absolute", top: 16, right: 18 }}><StatusBadge status={project.status} /></div>
               <div style={{ position: "absolute", left: 28, bottom: 16 }}>
-                <div className="section-eyebrow" style={{ color: t.iris, marginBottom: 4 }}>{project.eyebrow}</div>
+                <div className="section-eyebrow" style={{ color: "#6B6B70", marginBottom: 4 }}>{project.eyebrow}</div>
                 <div className="font-display" style={{ fontSize: 24, fontWeight: 700, color: "#14182A" }}>{project.title}</div>
               </div>
             </div>

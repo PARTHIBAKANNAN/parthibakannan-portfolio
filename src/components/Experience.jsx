@@ -11,7 +11,7 @@ export function Experience() {
         <Reveal>
           <div style={{ marginBottom: 38, maxWidth: 780 }}>
             <div className="section-eyebrow" style={{ marginBottom: 12 }}>About · Experience</div>
-            <h2 className="font-display" style={{ fontSize: "clamp(28px, 3.6vw, 38px)", fontWeight: 700, color: t.ink, margin: "0 0 18px", lineHeight: 1.12 }}>Generative AI Developer, 2+ years in production.</h2>
+            <h2 className="font-display heading-huge" style={{ fontSize: "clamp(28px, 3.6vw, 38px)", margin: "0 0 18px" }}>Generative AI Developer, 2+ years in production.</h2>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: t.inkSoft, margin: 0 }}>{aboutSummary}</p>
           </div>
         </Reveal>

@@ -27,7 +27,7 @@ export function Stack() {
         <Reveal>
           <div style={{ marginBottom: 26, maxWidth: 720 }}>
             <div className="section-eyebrow" style={{ marginBottom: 12 }}>Tooling</div>
-            <h2 className="font-display" style={{ fontSize: "clamp(28px, 3.6vw, 36px)", fontWeight: 700, color: t.ink, margin: "0 0 12px", lineHeight: 1.15 }}>What I reach for.</h2>
+            <h2 className="font-display heading-huge" style={{ fontSize: "clamp(28px, 3.6vw, 36px)", margin: "0 0 12px" }}>What I reach for.</h2>
           </div>
         </Reveal>
         <StackMarquee />

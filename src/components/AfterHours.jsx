@@ -28,7 +28,7 @@ export function AfterHours() {
                     </div>
                   )}
                   <div style={{ padding: 22, display: "flex", gap: 14, alignItems: "flex-start", flex: 1 }}>
-                    <div style={{ width: 36, height: 36, borderRadius: 10, flexShrink: 0, background: "rgba(31,199,192,0.1)", border: "1px solid rgba(31,199,192,0.24)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div style={{ width: 36, height: 36, borderRadius: 10, flexShrink: 0, background: "var(--chip-bg)", border: "1px solid var(--chip-border)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <Icon size={16} color={t.aurora} strokeWidth={2.2} />
                     </div>
                     <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>

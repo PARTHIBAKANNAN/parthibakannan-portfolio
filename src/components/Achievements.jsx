@@ -12,7 +12,7 @@ export function Achievements() {
         <Reveal>
           <div style={{ marginBottom: 26, maxWidth: 720 }}>
             <div className="section-eyebrow" style={{ marginBottom: 12 }}>Achievements &amp; Awards</div>
-            <h2 className="font-display" style={{ fontSize: "clamp(24px, 3vw, 30px)", fontWeight: 700, color: t.ink, margin: 0, lineHeight: 1.15 }}>Recognized for the work, not just the title.</h2>
+            <h2 className="font-display heading-huge" style={{ fontSize: "clamp(24px, 3vw, 30px)", margin: 0 }}>Recognized for the work, not just the title.</h2>
           </div>
         </Reveal>
         {awards.map(a => (

@@ -3,7 +3,7 @@
   <!-- Header Cyber Banner -->
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24&height=220&section=header&text=Parthibakannan%20S&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Gen%20AI%20Developer%20%7C%20Quantitative%20Systems%20Architect%20%7C%20Azure%20AI%20Engineer&descFontSize=16&descAlignY=60&descAlign=50" width="100%" />
 
-  <!-- Status Badges -->
+  <!-- Action Badges -->
   <p align="center">
     <a href="https://parthibakannan-portfolio.pages.dev/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-parthibakannan--portfolio.pages.dev-7C5CFF?style=for-the-badge&logoColor=white" alt="Portfolio" /></a>
     <a href="https://www.linkedin.com/in/parthibakannan-s"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -33,7 +33,7 @@ Microsoft-certified **Azure AI Engineer**, **Gen AI Developer at Cognizant**, an
 
 ---
 
-### ⚡ Flagship Quantitative & AI Terminals (Live Systems)
+### ⚡ Flagship Quantitative & AI Platforms (Live Systems)
 
 <table>
   <tr>
@@ -74,6 +74,22 @@ Microsoft-certified **Azure AI Engineer**, **Gen AI Developer at Cognizant**, an
 
 ---
 
+### 📂 Curated Project Repositories
+
+| Project | Tech Stack | Key Architectural Highlights | Links |
+|:---|:---|:---|:---:|
+| [**PulseHunter (TradeDashBoard)**](https://github.com/PARTHIBAKANNAN/TradeDashBoard) | `FastAPI` `WebSockets` `Gemini 3.6 Flash` `React` `Canvas` | Institutional momentum scanner monitoring **210+ stocks & canvas charts** with 250ms binary delta streams and Gemini AI regime copilot. | [Live Terminal](https://trading-dashboard-1.duckdns.org/) · [Code](https://github.com/PARTHIBAKANNAN/TradeDashBoard) |
+| [**NUKEBOX (OptionsSimulator)**](https://github.com/PARTHIBAKANNAN/OptionsSimulator) | `Python` `FastAPI` `Black-Scholes` `Telegram` `Supabase` | Autonomous derivatives execution engine with **21 strategies**, 365-day 1-min backtest matrix, Greeks sensitivity, and risk controls. | [Live Terminal](https://trading-dashboard-1.duckdns.org/options-simulator/) · [Code](https://github.com/PARTHIBAKANNAN/OptionsSimulator) |
+| [**parthibakannan-portfolio**](https://github.com/PARTHIBAKANNAN/parthibakannan-portfolio) | `React` `Vite` `Cloudflare AI` `CSS3` `Canvas` | Interactive Awwwards-grade command center with real-time telemetry, Strategy Simulator, interactive CLI terminal, and ASUS-style AI Cyber-Pet. | [Live Site](https://parthibakannan-portfolio.pages.dev/) · [Code](https://github.com/PARTHIBAKANNAN/parthibakannan-portfolio) |
+| [**TheraBot**](https://github.com/PARTHIBAKANNAN/therabot) | `React` `FastAPI` `GPT-4o` `Cosmos DB` `TypeScript` | Therapeutic AI platform with real-time sentiment analysis adapting conversational tone upon distress detection with goal tracking. | [Video Demo](https://drive.google.com/file/d/1N5gZzYloBTSR6ikDFGc8NInlk8w0Cofm/preview) · [Code](https://github.com/PARTHIBAKANNAN/therabot) |
+| [**BikeRideShare**](https://github.com/PARTHIBAKANNAN/BikeRideShare) | `Flask` `SQLAlchemy` `GPT-4` `JWT` `Swagger` | Smart ride-sharing platform using GPT-4 to compute route segment overlaps for commuter cost optimization with deterministic fallback. | [Code](https://github.com/PARTHIBAKANNAN/BikeRideShare) |
+| [**SignLanguageRecognition**](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) | `MediaPipe` `scikit-learn` `OpenCV` `Python` | Real-time webcam sign-language interpreter for full A–Z alphabet using landmark vector extraction and Random Forest classification. | [Code](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) |
+| [**CrewFix-HomeServiceApp**](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) | `Flask` `Vue.js` `Twilio OTP` `Google Chat API` | End-to-end home services booking platform with scheduling calendars, technician dispatch, and automated SMS OTP notifications. | [Code](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) |
+| [**MusicStreamingApp**](https://github.com/PARTHIBAKANNAN/MusicStreamingApp) | `Flask` `Flask-Login` `Jinja2` `SQLite` | Full-stack audio streaming platform with user playlist management, rating algorithms, and creator album ingestion pipeline. | [Code](https://github.com/PARTHIBAKANNAN/MusicStreamingApp) |
+| [**FlightTicketBookingBot**](https://github.com/PARTHIBAKANNAN/FlightTicketBookingBot) | `Dialogflow` `Python` `REST APIs` | Conversational airline booking engine with natural language intent extraction, entity slot filling, and structured reservation flows. | [Code](https://github.com/PARTHIBAKANNAN/FlightTicketBookingBot) |
+
+---
+
 ### 🏢 Enterprise Gen AI Systems (Cognizant / Healthcare Platform)
 
 - **10L+ Enterprise Contract Search**: Hybrid RAG pipeline combining BM25 keyword search with Azure OpenAI vector embeddings on Azure AI Search. Sub-second queries with citation-backed snippets.
@@ -107,15 +123,6 @@ Microsoft-certified **Azure AI Engineer**, **Gen AI Developer at Cognizant**, an
 - 🎖️ **Microsoft**: [AI-900: Azure AI Fundamentals](https://learn.microsoft.com/api/credentials/share/en-us/PARTHIBAKANNANS-2282/41B9415EA58CF240?sharingId=F58BA09119E4B72E)
 - 🎖️ **Microsoft**: [AZ-900: Azure Fundamentals](https://learn.microsoft.com/api/credentials/share/en-us/PARTHIBAKANNANS-2282/9394338E42F3F76E?sharingId=F58BA09119E4B72E)
 - 🎓 **IIT Madras**: Diploma in Programming (Degree ID Verified)
-
----
-
-### 📊 GitHub Activity & Analytics
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=PARTHIBAKANNAN&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=7C5CFF&icon_color=1FC7C0&text_color=EAEEF7" height="165" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PARTHIBAKANNAN&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=7C5CFF&text_color=EAEEF7" height="165" alt="Top Languages" />
-</div>
 
 ---
 

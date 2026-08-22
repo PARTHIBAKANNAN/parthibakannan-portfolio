@@ -94,7 +94,7 @@ export function Hero() {
                 { n: "210+ Stocks", l: "PulseHunter Live Charts", accent: t.auroraBright },
                 { n: "21 Strategies", l: "NUKEBOX 365D Backtested", accent: t.irisBright },
                 { n: "10,00,000+", l: "Contracts Indexed", accent: t.amberBright },
-                { n: "54 Tests", l: "Automated PyTest Suites", accent: t.success },
+                { n: "4 Certs", l: "Microsoft · Anthropic", accent: t.success },
               ].map(s => (
                 <div key={s.l}>
                   <div className="font-display" style={{ fontSize: 18, fontWeight: 800, color: s.accent }}>{s.n}</div>

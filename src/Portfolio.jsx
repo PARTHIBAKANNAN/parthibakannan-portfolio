@@ -15,6 +15,7 @@ import { Foundations } from "./components/Foundations.jsx";
 import { Leadership } from "./components/Leadership.jsx";
 import { AfterHours } from "./components/AfterHours.jsx";
 import { AIChatbot } from "./components/AIChatbot.jsx";
+import { CyberPet } from "./components/CyberPet.jsx";
 import { Stack } from "./components/Stack.jsx";
 import { Contact } from "./components/Contact.jsx";
 import { Footer } from "./components/Footer.jsx";
@@ -232,6 +233,7 @@ export default function Portfolio() {
         <Contact />
       </main>
       <AIChatbot />
+      <CyberPet />
       <Footer />
     </div>
   );

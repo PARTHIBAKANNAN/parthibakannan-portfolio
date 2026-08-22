@@ -47,12 +47,12 @@ export const flagshipQuantWork = [
     image: "/assets/nukebox.jpg",
     problem: "Manual options trading suffers from emotional hesitation, flawed risk-to-reward discipline, and inability to evaluate multiple non-linear options Greeks concurrently across diverse market volatility regimes.",
     approach: "Architected a full-stack derivatives trading platform running 21 deployed intraday algorithmic strategies (Breakouts, Mean-Reversion, IV Crush, Gamma Scalping, and Delta-Neutral Spreads) against live NIFTY options data. Computes real-time Black-Scholes Greeks (Delta, Gamma, Theta, Vega), enforces automated Stop-Loss, Take-Profit, and Time-Exit risk controls, and routes instant execution signals through a Telegram Bot and Supabase audit database.",
-    outcome: "Fully simulated paper trading environment backtested on 365 days (1 full year) of 1-minute historical candle data across all 21 strategies with 54 automated pytest unit/integration tests and sub-second signal dispatch.",
+    outcome: "Fully simulated paper trading environment backtested on 365 days (1 full year) of 1-minute historical candle data across all 21 strategies with automated risk controls and sub-second signal dispatch.",
     metrics: [
       { label: "Deployed Strategies", value: "21 Quant Strategies" },
       { label: "Backtest Verification", value: "365 Days (1-Year Data)" },
       { label: "Pricing Engine", value: "Black-Scholes & Greeks" },
-      { label: "Test Coverage", value: "54 Automated Tests" },
+      { label: "Execution & Audit", value: "Telegram & Supabase" },
     ],
     tech: ["Python", "FastAPI", "React", "Black-Scholes Engine", "Telegram Bot API", "Supabase", "FYERS API v3", "PyTest", "Chart.js"],
     stages: [

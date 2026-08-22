@@ -69,7 +69,7 @@ export const animateHeroEntrance = (scope) => {
 
     // Cinematic zoom-out + fade as the hero scrolls past — scoped to the
     // same context so Hero.jsx's single ctx.revert() tears this down too.
-    const heroContent = document.querySelector('#top');
+    const heroContent = document.querySelector('#top .hero-grid');
     if (heroContent) {
       gsap.to(heroContent, {
         scale: 0.94,

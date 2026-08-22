@@ -1,6 +1,6 @@
-import { Building2, Briefcase, Users, GraduationCap, Mic, ShieldCheck, Zap, Server, BrainCircuit } from "lucide-react";
+import { Building2, Briefcase, Users, GraduationCap, Mic, ShieldCheck, Zap, Server, BrainCircuit, Trophy, Award, Gamepad2, Globe2 } from "lucide-react";
 
-export const aboutSummary = "Microsoft-certified Azure AI Engineer, Gen AI Developer at Cognizant, and Quantitative Systems Architect with 2+ years building enterprise RAG pipelines, autonomous agents, and low-latency algorithmic trading terminals. Designed enterprise systems indexing 10L+ contracts for healthcare (CVS Health) and architected real-time institutional trading terminals powered by Google Gemini 3.6 Flash and high-frequency WebSocket streams. Full-stack across Python (FastAPI, Flask) and .NET (C#, MVC, Web API) with hands-on Azure & Cloudflare deployment. IIT Madras Diploma in Programming.";
+export const aboutSummary = "Microsoft-certified Azure AI Engineer, Gen AI Developer at Cognizant, and Quantitative Systems Architect with 2+ years building enterprise RAG pipelines, autonomous agents, and low-latency algorithmic trading terminals. Designed enterprise systems indexing 10L+ contracts for healthcare (CVS Health) and architected real-time institutional trading terminals powered by Google Gemini 3.6 Flash and high-frequency WebSocket streams. Full-stack across Python (FastAPI, Flask) and .NET (C#, MVC, Web API) with hands-on Azure, Vercel & Cloudflare deployment. IIT Madras Diploma in Programming.";
 
 export const experience = [
   {
@@ -24,13 +24,41 @@ export const experience = [
   },
 ];
 
-export const languages = ["English — Fluent", "Tamil — Native", "Telugu — Native", "German — Beginner", "Japanese — Beginner"];
+export const languages = [
+  "English — Fluent",
+  "Tamil — Native",
+  "Telugu — Native",
+  "Japanese — Duolingo Learner (14,199 XP)",
+  "Hindi — Professional (10,812 XP)",
+  "German — Beginner (3,298 XP)"
+];
+
+export const duolingoStats = {
+  streak: "350 Day Streak 🔥",
+  totalXp: "53,132 XP",
+  league: "Diamond League 💎 (Week 2)",
+  topFinishes: "16 Top 3 Finishes 🥇",
+  chessElo: "710 Elo (24,077 XP)",
+};
+
+export const hackerRankStats = {
+  sql: "5-Star Gold Badge ★★★★★",
+  sqlCert: "Verified SQL (Basic) Certificate",
+  problemSolving: "3-Star Badge ★★★",
+  python: "2-Star Badge ★★",
+};
+
+export const gamingInterests = [
+  { name: "BGMI (Battlegrounds Mobile India)", detail: "Real-time squad communication, split-second reflexes & zone rotation strategy" },
+  { name: "GTA 5", detail: "Open-world systems simulation & tactical mission execution" },
+  { name: "Need for Speed: Most Wanted (NFS MW)", detail: "High-speed reflex conditioning & pursuit mechanics" },
+];
 
 export const stack = [
   { group: "Quant & Real-Time Trading", items: ["FYERS API v3", "WebSockets (ms binary)", "Google Gemini 3.6 Flash Copilot", "Black-Scholes & Greeks Engine", "Intraday Relative Strength (IRS)", "ORB Engines", "Supabase", "Telegram Bot API", "HTML5 Canvas Rendering"] },
   { group: "AI / LLM & RAG", items: ["Azure OpenAI", "GPT-4 / 5", "Claude", "Google Vertex AI", "AWS Bedrock", "RAG", "Embeddings", "Vector Search", "Agentic AI", "Prompt Engineering", "LangChain", "Ollama", "HuggingFace", "MediaPipe", "scikit-learn"] },
   { group: "AI coding tools", items: ["Cursor", "GitHub Copilot", "Claude Code", "Claude CLI", "Codex", "Gemini Code Assist"] },
-  { group: "Cloud & platforms", items: ["Azure App Service", "Azure AI Studio", "Azure Agents", "Azure AI Search", "Azure Service Bus", "Logic Apps", "Cloudflare Workers AI", "AKeyless", "Cosmos DB", "Google Agent Platform"] },
+  { group: "Cloud & platforms", items: ["Azure App Service", "Azure AI Studio", "Azure Agents", "Azure AI Search", "Azure Service Bus", "Vercel", "Render", "Cloudflare Workers AI", "AKeyless", "Cosmos DB"] },
   { group: "Backend", items: [".NET (C# · MVC · Web API)", "Python", "FastAPI", "Flask", "Node.js", "Core Java", "REST", "SSE", "WebSockets"] },
   { group: "Frontend", items: ["React", "Angular", "Vue.js", "HTML5 Canvas", "Jinja2", "TailwindCSS"] },
   { group: "Data & Persistence", items: ["SQL Server", "Cosmos DB", "Supabase (PostgreSQL)", "SQLite", "Vector indexes", "In-Memory Delta Caches"] },
@@ -79,6 +107,10 @@ export const certifications = [
   {
     code: "AZ-900", label: "Azure Fundamentals", issuer: "Microsoft",
     url: "https://learn.microsoft.com/api/credentials/share/en-us/PARTHIBAKANNANS-2282/9394338E42F3F76E?sharingId=F58BA09119E4B72E",
+  },
+  {
+    code: "HackerRank SQL", label: "5-Star Gold Badge & Verified SQL Skill", issuer: "HackerRank",
+    url: "https://www.hackerrank.com/profile/parthisivaram45",
   },
 ];
 

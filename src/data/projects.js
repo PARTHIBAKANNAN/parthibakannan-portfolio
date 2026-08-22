@@ -2,7 +2,7 @@ import {
   FileText, Layers, Database, Search, FileSearch, MessageCircle, Boxes, BrainCircuit,
   Send, Diff, Filter, ShieldCheck, Zap, Notebook, Workflow, Code2, FlaskConical,
   GitCommit, Heart, Bike, Hammer, Hand, Music, Activity, Plane, Wand2, LineChart, BarChart3,
-  Cpu, Terminal, Radio, Gauge
+  Cpu, Terminal, Radio, Gauge, Sparkles, Trophy, Gamepad2, Globe2, Compass
 } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -136,24 +136,58 @@ export const productionWork = [
 ];
 
 // ─────────────────────────────────────────────────────────────────────────
-// HACKATHON & RAPID INNOVATION BUILDS
+// HACKATHON & RAPID INNOVATION BUILDS (Deployed on Vercel + Render)
 // ─────────────────────────────────────────────────────────────────────────
 export const hackathonWork = [
-  { title: "TheraBot", icon: Heart, accent: "iris",
-    desc: "A full-stack therapeutic AI platform: GPT-4o conversations that stay aware of a user's goals, real-time sentiment analysis that adapts tone when distress is detected, and a goal-tracking/achievement system to keep progress visible. React SPA talks to a FastAPI backend backed by Azure Cosmos DB.",
-    tech: ["React", "FastAPI", "TypeScript", "Azure OpenAI (GPT-4o)", "Sentiment Analysis", "Cosmos DB"],
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=70",
+  {
+    title: "TheraBot",
+    subtitle: "AI Therapeutic Companion & Emotional Intelligence Platform",
+    icon: Heart,
+    accent: "iris",
+    status: "Live on Vercel + Render",
+    liveUrl: "https://therabot-beryl.vercel.app/",
     github: "https://github.com/PARTHIBAKANNAN/therabot",
-    videoUrl: "https://drive.google.com/file/d/1N5gZzYloBTSR6ikDFGc8NInlk8w0Cofm/preview" },
-  { title: "BikeRideShare", icon: Bike, accent: "aurora",
-    desc: "\"Smart Ride Matcher\" — a bike ride-sharing platform for Chennai commuters. GPT-4 analyzes any two routes (e.g. Pallavaram→Perungalathur vs Tambaram→Vandalur), finds overlapping segments, and suggests fair pickup points and cost-sharing — with a rule-based fallback when the LLM is unavailable.",
-    tech: ["Flask", "SQLAlchemy", "Azure OpenAI (GPT-4)", "JWT Auth", "Flask-RESTX / Swagger", "React"],
+    videoUrl: "https://drive.google.com/file/d/1N5gZzYloBTSR6ikDFGc8NInlk8w0Cofm/preview",
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=70",
+    desc: "A full-stack therapeutic AI platform featuring dynamic real-time sentiment analysis, adaptive conversational tone upon distress detection, goal tracking, and safety-first crisis mitigation. Powered by GPT-4o with long-term memory across sessions.",
+    agenticHighlights: [
+      "Real-Time Sentiment Classifier: Evaluates emotional valence and shifts system temperature for high empathy during acute distress.",
+      "Goal-Aware Memory Agent: Tracks multi-week wellness goals with Cosmos DB persistence and proactive check-in suggestions.",
+      "Crisis Mitigation Triage: Safety-first rule gate detecting self-harm cues to route instant emergency helpline resources.",
+    ],
+    tech: ["React (Vercel)", "FastAPI (Render)", "GPT-4o", "Azure Cosmos DB", "Sentiment Analysis", "TypeScript", "JWT Auth"],
+  },
+  {
+    title: "BikeRideShare",
+    subtitle: "Smart Commuter Ride Matcher & Autonomous Routing Platform",
+    icon: Bike,
+    accent: "aurora",
+    status: "Live on Vercel + Render",
+    liveUrl: "https://bike-ride-share.vercel.app/",
+    github: "https://github.com/PARTHIBAKANNAN/BikeRideShare",
     image: "https://images.unsplash.com/photo-1775127458582-7a601385d361?auto=format&fit=crop&w=800&q=70",
-    github: "https://github.com/PARTHIBAKANNAN/BikeRideShare" },
-  { title: "Home Service App", icon: Hammer, accent: "iris",
+    desc: "Autonomous bike ride-sharing optimizer for urban commuters. Uses GPT-4 spatial reasoning to analyze origin-destination corridor geometries, calculate route overlap percentages, and compute fair proportional cost-splits with deterministic geometric fallback.",
+    agenticHighlights: [
+      "GPT-4 Spatial Matcher: Ingests corridor endpoints, evaluates multi-stop overlaps, and generates optimal pickup coordinates.",
+      "Deterministic Geometric Fallback: Auto-switches to algorithmic haversine proximity routing if LLM latency exceeds SLAs.",
+      "Automated Ride Dispatch: Real-time seat allocation, OTP confirmation, and rider-driver match notifications.",
+    ],
+    tech: ["React (Vercel)", "Flask (Render)", "SQLAlchemy", "Azure OpenAI (GPT-4)", "JWT Auth", "Flask-RESTX (Swagger)"],
+  },
+  {
+    title: "Home Service App",
+    subtitle: "Enterprise Dispatch & Technician Booking Platform",
+    icon: Hammer,
+    accent: "iris",
+    status: "Hackathon Sprint",
+    image: "https://images.unsplash.com/photo-1505798577917-a65157d3320a?auto=format&fit=crop&w=800&q=70",
     desc: "End-to-end home-services booking with OTP-based auth, scheduling, technician dispatch, and SMS notifications — built as a .NET/Angular rework of the home-services concept for a hackathon sprint.",
+    agenticHighlights: [
+      "Technician Skill-Based Dispatch Engine: Matches home repair categories with available verified technicians.",
+      "Automated SMS Notifications: Twilio-powered dispatch updates with real-time status tracking.",
+    ],
     tech: [".NET Web API", "Angular", "SMS OTP", "SQL Server"],
-    image: "https://images.unsplash.com/photo-1505798577917-a65157d3320a?auto=format&fit=crop&w=800&q=70" },
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -187,15 +221,31 @@ export const collegeWork = [
 ];
 
 // ─────────────────────────────────────────────────────────────────────────
-// PERSONAL R&D
+// PERSONAL R&D & COGNITIVE ARENA
 // ─────────────────────────────────────────────────────────────────────────
 export const personalRD = [
-  { title: "Life-tracking assistant", icon: Wand2, status: null,
-    desc: "A personal chatbot built on Google Gemini that logs calories, expenses, study time, and trading activity through natural conversation — one source of truth for my day, backed by function calling into a Sheets-based store.",
-    tech: ["Google Gemini", "Function calling", "Sheets API"],
-    image: "https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?auto=format&fit=crop&w=800&q=70" },
-  { title: "Algo trading agent (MCP)", icon: LineChart, status: "In development",
+  {
+    title: "Duolingo 350-Day Streak & Chess Mastery",
+    icon: Trophy,
+    status: "350-Day Streak 🔥",
+    desc: "Daily cognitive training and multilingual discipline: 53,132+ Total XP in Duolingo's Diamond League with 16 Top-3 finishes. 710 Elo Rating in Duolingo Chess (24,077 XP) focusing on rapid tactical visualization, endgame calculations, and strategic pattern recognition.",
+    tech: ["350-Day Streak", "53,132 XP", "Diamond League 💎", "710 Chess Elo", "Japanese (14.2k XP)", "Hindi (10.8k XP)", "German (3.3k XP)"],
+    image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    title: "Tactical & Open-World Gaming Arena",
+    icon: Gamepad2,
+    status: "PC & Mobile",
+    desc: "Passionate gamer sharpening split-second reflexes, squad coordination, and spatial resource management across tactical and racing titles: BGMI (Battlegrounds Mobile India squad rotation & callouts), GTA 5 (complex open-world simulation), and Need for Speed: Most Wanted (high-speed pursuit mechanics).",
+    tech: ["BGMI (Squad Tactics)", "GTA 5", "NFS: Most Wanted", "Spatial Awareness", "Reflex Conditioning"],
+    image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=70",
+  },
+  {
+    title: "Algo trading agent (MCP)",
+    icon: LineChart,
+    status: "In development",
     desc: "A Claude-MCP agent for on-demand market-context analysis — VIX regime, open interest, sector heatmaps — surfaced through natural-language queries. Advisory only; live order execution stays deterministic and outside the agent's control.",
-    tech: ["Claude MCP", "Python", "Alice Blue API"],
-    image: "https://images.unsplash.com/photo-1560221328-12fe60f83ab8?auto=format&fit=crop&w=800&q=70" },
+    tech: ["Claude MCP", "Python", "FYERS API", "In-Memory Delta Engine"],
+    image: "https://images.unsplash.com/photo-1560221328-12fe60f83ab8?auto=format&fit=crop&w=800&q=70",
+  },
 ];

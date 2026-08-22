@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Terminal, Send, Check, Copy, Sparkles, ArrowRight, Zap } from "lucide-react";
+import { Terminal, Send, Check, Copy, Sparkles, ArrowRight, Zap, ExternalLink } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { Reveal } from "./Reveal.jsx";
 
@@ -7,16 +7,20 @@ export function TerminalPlayground() {
   const [history, setHistory] = useState([
     {
       cmd: "help",
-      out: "Available commands:\n  • quant-metrics   - Real-time trading engines (210+ stocks, 21 strategies)\n  • enterprise-rag  - 10L+ contract indexing architecture on Azure\n  • stack           - Full-stack & AI technologies summary\n  • contact         - Reach out via email, phone, or LinkedIn",
+      out: "Available commands:\n  • apps            - 4 Live deployed applications (Quant + AI)\n  • quant-metrics   - Real-time trading engines (210+ stocks, 21 strategies)\n  • enterprise-rag  - 10L+ contract indexing architecture on Azure\n  • hobbies         - Duolingo 350D streak, 710 Chess Elo & Gaming\n  • stack           - Full-stack & AI technologies summary\n  • contact         - Reach out via email, phone, or LinkedIn\n  • clear           - Clear terminal window",
     }
   ]);
   const [input, setInput] = useState("");
 
   const commandMap = {
-    help: "Available commands:\n  • quant-metrics   - Real-time trading engines (210+ stocks, 21 strategies)\n  • enterprise-rag  - 10L+ contract indexing architecture on Azure\n  • stack           - Full-stack & AI technologies summary\n  • contact         - Reach out via email, phone, or LinkedIn\n  • clear           - Clear terminal window",
+    help: "Available commands:\n  • apps            - 4 Live deployed applications (Quant + AI)\n  • quant-metrics   - Real-time trading engines (210+ stocks, 21 strategies)\n  • enterprise-rag  - 10L+ contract indexing architecture on Azure\n  • hobbies         - Duolingo 350D streak, 710 Chess Elo & Gaming\n  • stack           - Full-stack & AI technologies summary\n  • contact         - Reach out via email, phone, or LinkedIn\n  • clear           - Clear terminal window",
+    apps: "🚀 LIVE PRODUCTION APPLICATIONS:\n  1. PulseHunter (Institutional Momentum Scanner):\n     → https://trading-dashboard-1.duckdns.org/\n     → 210+ stocks, 250ms WebSocket delta stream, Google Gemini 3.6 Flash\n\n  2. NUKEBOX (Autonomous Options Simulator):\n     → https://trading-dashboard-1.duckdns.org/options-simulator/\n     → 21 strategies, 365-day backtest, Black-Scholes Greeks, Telegram risk controls\n\n  3. TheraBot (AI Therapeutic Companion):\n     → https://therabot-beryl.vercel.app/\n     → Real-time sentiment analysis, adaptive tone upon distress, Cosmos DB\n\n  4. BikeRideShare (Commuter Route Matcher):\n     → https://bike-ride-share.vercel.app/\n     → GPT-4 spatial corridor reasoning with deterministic haversine fallback",
     "quant-metrics": "⚡ QUANTITATIVE SYSTEMS PERFORMANCE MATRIX:\n  • PulseHunter: 210+ Stocks & HTML5 Canvas Charts, 250ms WebSocket Delta Stream, In-Memory IRS & ORB, Google Gemini 3.6 Flash Copilot\n  • NUKEBOX: 21 Deployed Intraday Strategies, 365-Day 1-Min Historical Backtest, Black-Scholes Greeks, Telegram Bot & Supabase Audit\n  • Security Boundary: 0 Client Credential Exposure (Server-Side FastAPI BFF Proxy)\n  • Live Terminals:\n    - https://trading-dashboard-1.duckdns.org/\n    - https://trading-dashboard-1.duckdns.org/options-simulator/",
     "enterprise-rag": "🏢 ENTERPRISE COGNIZANT GEN-AI PLATFORM:\n  • Contract Retrieval: 10,00,000+ contracts indexed with Hybrid Search (BM25 + text-embedding-3)\n  • RAG Chatbot: Azure OpenAI GPT-4o with cited source passages streamed in 3-5s\n  • PDF Compare Agent: Two-document semantic diff with Azure Service Bus async queuing\n  • SDLC Agentic Tool: Claude-based ticket-to-PR automated pipeline with Playwright",
-    stack: "🛠️ TECHNICAL STACK SUMMARY:\n  • Gen AI / LLM: Azure OpenAI, GPT-4/5, Claude, Gemini 3.6 Flash, RAG, Embeddings, Vector Search\n  • Quant / Low-Latency: FYERS API v3, WebSockets, In-Memory Delta Caches, Black-Scholes Greeks, Canvas 2D\n  • Full-Stack: Python (FastAPI, Flask), .NET (C#, MVC, Web API), React, Supabase, Cosmos DB\n  • DevOps & QA: Azure App Service, GitHub Actions, TeamCity, Octopus Deploy, Playwright, NUnit, PyTest",
+    hobbies: "🔥 COGNITIVE DISCIPLINE, CHESS & GAMING:\n  • Duolingo: 350-Day Streak 🔥 | 53,132 Total XP | Diamond League 💎 (16 Top-3 finishes)\n  • Duolingo Chess: 710 Elo Rating (24,077 XP) — tactical calculation & endgame foresight\n  • Languages: Japanese (14.2k XP), Hindi (10.8k XP), German (3.3k XP), Tamil, Telugu, English\n  • HackerRank: 5-Star Gold SQL Badge (★★★★★) & Verified SQL Skill Certificate\n  • Competitive Gaming: BGMI (Squad Tactics & Callouts), GTA 5 (Simulation), NFS Most Wanted (Reflexes)",
+    duolingo: "🔥 DUOLINGO STATS:\n  • 350-Day Continuous Streak\n  • 53,132 Total XP (Diamond League)\n  • Chess: 710 Elo (24,077 XP)\n  • Japanese: 14,199 XP | Hindi: 10,812 XP | German: 3,298 XP",
+    hackerrank: "🏆 HACKERRANK VERIFIED BADGES:\n  • SQL: 5-Star Gold Badge (★★★★★)\n  • SQL Skill: Verified Certificate\n  • Problem Solving: 3-Star (★★★)\n  • Python: 2-Star (★★)",
+    stack: "🛠️ TECHNICAL STACK SUMMARY:\n  • Gen AI / LLM: Azure OpenAI, GPT-4/5, Claude, Gemini 3.6 Flash, RAG, Embeddings, Vector Search\n  • Quant / Low-Latency: FYERS API v3, WebSockets, In-Memory Delta Caches, Black-Scholes Greeks, Canvas 2D\n  • Full-Stack: Python (FastAPI, Flask), .NET (C#, MVC, Web API), React, Supabase, Cosmos DB\n  • Cloud & Hosting: Azure App Service, Vercel, Render, Cloudflare Workers AI, GitHub Actions",
     contact: "📬 CONTACT CHANNELS:\n  • Email: parthisivaram45@gmail.com\n  • Phone: +91 9123591335\n  • LinkedIn: linkedin.com/in/parthibakannan-s\n  • GitHub: github.com/PARTHIBAKANNAN",
     hire: "✨ HIRING PARTHIBAKANNAN:\n  • Role: Open to Gen AI Engineer & Quantitative Systems Architect roles.\n  • Location: Chennai, India (open to remote/hybrid).\n  • Immediate response via email: parthisivaram45@gmail.com",
   };
@@ -37,95 +41,113 @@ export function TerminalPlayground() {
   }
 
   return (
-    <section className="section-tight" style={{ borderTop: "1px solid var(--line)", background: "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(31,199,192,0.04), transparent 70%)" }}>
+    <section id="terminal" className="section-tight" style={{ borderTop: "1px solid var(--line)" }}>
       <div className="container">
         <Reveal>
-          <div style={{ marginBottom: 28, maxWidth: 720 }}>
-            <div className="section-eyebrow" style={{ marginBottom: 12 }}>Interactive Developer Console</div>
-            <h2 className="font-display heading-huge" style={{ fontSize: "clamp(26px, 3.4vw, 36px)", margin: "0 0 12px", color: t.ink }}>
-              Interactive CLI Terminal.
-            </h2>
-            <p style={{ fontSize: 15, lineHeight: 1.65, color: t.inkMuted, margin: 0 }}>
-              Query real-time system performance (210+ stocks &amp; 21 strategies), enterprise RAG architectures, or contact details directly.
-            </p>
-          </div>
-        </Reveal>
-
-        {/* Terminal Container */}
-        <div style={{
-          borderRadius: 18, overflow: "hidden", border: "1px solid rgba(124,92,255,0.25)",
-          background: "linear-gradient(180deg, #101426, #090B14)",
-          boxShadow: "0 30px 70px -25px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.08)"
-        }}>
-          {/* Header */}
-          <div style={{
-            padding: "10px 18px", borderBottom: "1px solid rgba(255,255,255,0.07)",
-            background: "rgba(255,255,255,0.02)", display: "flex", alignItems: "center", justifyContent: "space-between"
-          }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ width: 11, height: 11, borderRadius: 6, background: "#FF5F56" }} />
-              <span style={{ width: 11, height: 11, borderRadius: 6, background: "#FFBD2E" }} />
-              <span style={{ width: 11, height: 11, borderRadius: 6, background: "#27C93F" }} />
-              <span className="font-mono" style={{ fontSize: 11.5, color: "var(--ink-dim)", marginLeft: 10 }}>parthi-cli — bash — 80x24</span>
+          <div style={{ marginBottom: 28, display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 16 }}>
+            <div>
+              <div className="section-eyebrow" style={{ marginBottom: 8 }}>Interactive CLI Sandbox</div>
+              <h2 className="font-display heading-huge" style={{ fontSize: "clamp(24px, 3.2vw, 32px)", fontWeight: 800, color: t.ink, margin: 0 }}>
+                Developer Terminal Playground
+              </h2>
             </div>
-            <div style={{ display: "flex", gap: 8 }}>
-              {["quant-metrics", "enterprise-rag", "stack", "contact"].map(chip => (
+            {/* Quick Command Pills */}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {["apps", "quant-metrics", "enterprise-rag", "hobbies", "stack", "contact"].map(c => (
                 <button
-                  key={chip}
-                  onClick={() => executeCommand(chip)}
+                  key={c}
+                  onClick={() => executeCommand(c)}
+                  className="font-mono"
                   style={{
-                    padding: "3px 10px", borderRadius: 6, background: "rgba(124,92,255,0.12)",
-                    border: "1px solid rgba(124,92,255,0.25)", color: t.auroraBright,
-                    fontFamily: "'JetBrains Mono', monospace", fontSize: 10.5, cursor: "pointer",
-                    transition: "all 0.15s"
+                    background: "rgba(124,92,255,0.08)", border: "1px solid rgba(124,92,255,0.22)",
+                    borderRadius: 8, padding: "5px 10px", fontSize: 11.5, color: t.irisBright,
+                    cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 4
                   }}
-                  onMouseEnter={e => { e.currentTarget.style.background = "rgba(124,92,255,0.25)"; e.currentTarget.style.color = "#fff"; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = "rgba(124,92,255,0.12)"; e.currentTarget.style.color = t.auroraBright; }}
                 >
-                  &gt; {chip}
+                  <Zap size={11} /> {c}
                 </button>
               ))}
             </div>
           </div>
+        </Reveal>
 
-          {/* Body */}
-          <div style={{ padding: "20px 24px", minHeight: 220, maxHeight: 380, overflowY: "auto", fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5, lineHeight: 1.65 }}>
-            {history.map((h, idx) => (
-              <div key={idx} style={{ marginBottom: 14 }}>
-                <div style={{ color: t.auroraBright, display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                  <span style={{ color: t.irisBright }}>guest@parthi-system:~$</span>
-                  <span style={{ color: "#fff", fontWeight: 600 }}>{h.cmd}</span>
+        {/* Terminal Window Card */}
+        <Reveal delay={80}>
+          <div className="glass-strong" style={{
+            borderRadius: 18, overflow: "hidden", border: "1px solid rgba(124,92,255,0.3)",
+            boxShadow: "0 28px 60px -20px rgba(0,0,0,0.6)"
+          }}>
+            {/* Title Bar */}
+            <div style={{
+              background: "linear-gradient(180deg, #181D33, #101426)", padding: "12px 18px",
+              display: "flex", alignItems: "center", justifyContent: "space-between",
+              borderBottom: "1px solid rgba(255,255,255,0.08)"
+            }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <span style={{ width: 10, height: 10, borderRadius: 5, background: "#FF5F56" }} />
+                  <span style={{ width: 10, height: 10, borderRadius: 5, background: "#FFBD2E" }} />
+                  <span style={{ width: 10, height: 10, borderRadius: 5, background: "#27C93F" }} />
                 </div>
-                <div style={{ color: "var(--ink-soft)", whiteSpace: "pre-wrap", paddingLeft: 12, borderLeft: "2px solid rgba(124,92,255,0.3)" }}>
-                  {h.out}
-                </div>
+                <span className="font-mono" style={{ fontSize: 11.5, color: "var(--ink-dim)", marginLeft: 8 }}>
+                  parthi@quant-core:~ (zsh)
+                </span>
               </div>
-            ))}
+              <span className="font-mono" style={{ fontSize: 10.5, color: t.auroraBright, display: "flex", alignItems: "center", gap: 5 }}>
+                <span style={{ width: 6, height: 6, borderRadius: 3, background: t.auroraBright, animation: "pulseSoft 1.5s infinite" }} />
+                FASTAPI &bull; AZURE READY
+              </span>
+            </div>
 
-            {/* Input Line */}
-            <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12 }}>
-              <span style={{ color: t.irisBright }}>guest@parthi-system:~$</span>
-              <input
-                type="text"
-                value={input}
-                onChange={e => setInput(e.target.value)}
-                onKeyDown={e => { if (e.key === "Enter") executeCommand(); }}
-                placeholder="Type 'help', 'quant-metrics', 'enterprise-rag'..."
-                style={{
-                  flex: 1, background: "transparent", border: "none", outline: "none",
-                  color: "#fff", fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5
-                }}
-                autoFocus
-              />
-              <button
-                onClick={() => executeCommand()}
-                style={{ background: "transparent", border: "none", color: t.auroraBright, cursor: "pointer", padding: "4px 8px" }}
+            {/* Terminal Body */}
+            <div style={{
+              background: "#0A0D1A", padding: "20px 24px", minHeight: 220, maxHeight: 380, overflowY: "auto",
+              fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5, color: "#E2E8F0", lineHeight: 1.6
+            }}>
+              {history.map((h, idx) => (
+                <div key={idx} style={{ marginBottom: 16 }}>
+                  <div style={{ color: t.auroraBright, display: "flex", alignItems: "center", gap: 6 }}>
+                    <span style={{ color: t.irisBright }}>parthi-cli $</span> {h.cmd}
+                  </div>
+                  <pre style={{
+                    margin: "6px 0 0", whiteSpace: "pre-wrap", color: "#C9D4E8", fontFamily: "inherit",
+                    fontSize: 12, lineHeight: 1.55
+                  }}>
+                    {h.out}
+                  </pre>
+                </div>
+              ))}
+
+              {/* Input Line */}
+              <form
+                onSubmit={(e) => { e.preventDefault(); executeCommand(); }}
+                style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12 }}
               >
-                <Send size={14} />
-              </button>
+                <span style={{ color: t.irisBright, fontWeight: 700 }}>parthi-cli $</span>
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="type a command (e.g. apps, quant-metrics, hobbies, hire, clear)..."
+                  style={{
+                    flex: 1, background: "transparent", border: "none", outline: "none",
+                    color: "#FFFFFF", fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5
+                  }}
+                />
+                <button
+                  type="submit"
+                  style={{
+                    background: "rgba(124,92,255,0.2)", border: "1px solid rgba(124,92,255,0.4)",
+                    borderRadius: 6, padding: "4px 10px", color: "#fff", cursor: "pointer",
+                    fontSize: 11, fontFamily: "inherit"
+                  }}
+                >
+                  <Send size={11} />
+                </button>
+              </form>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -140,10 +140,26 @@ export const productionWork = [
 // ─────────────────────────────────────────────────────────────────────────
 export const hackathonWork = [
   {
+    title: "J.A.R.V.I.S.",
+    subtitle: "Autonomous Personal AI Desktop Companion & Arc Reactor HUD",
+    icon: Bot,
+    accent: "iris",
+    status: "Personal Assistant",
+    github: "https://github.com/PARTHIBAKANNAN/JARVIS",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=70",
+    desc: "A futuristic, autonomous desktop AI companion built in PyQt6 featuring a Cyberpunk Lavender Iron Man Arc Reactor HUD, hands-free Voice Activity Detection (VAD), biometric speaker verification, <100ms instant Windows app launcher, and dual cognitive engine (Google Gemini 3.6 Flash + Ollama local LLM failover).",
+    agenticHighlights: [
+      "Cyberpunk Arc Reactor HUD & Voice VAD: Hardware-accelerated PyQt6 transparent HUD with real-time waveform spectrum and non-blocking sounddevice VAD listening.",
+      "Biometric Voice Auth: Spectral centroid & ZCR acoustic feature verification enrolling Parthi's voice profile with passcode challenge for unauthorized voices.",
+      "<100ms Windows App Finder & Dual Brain: Zero-latency Start Menu binary launcher with Gemini 3.6 Flash tool calling and automatic offline Ollama failover.",
+    ],
+    tech: ["PyQt6", "Google Gemini 3.6 Flash", "Ollama (Local LLM)", "Voice Biometrics", "VAD Audio", "Windows Control", "Python"],
+  },
+  {
     title: "TheraBot",
     subtitle: "AI Therapeutic & Mental Wellness Platform",
     icon: Heart,
-    accent: "iris",
+    accent: "aurora",
     status: "Live on Vercel + Render",
     liveUrl: "https://therabot-beryl.vercel.app/",
     github: "https://github.com/PARTHIBAKANNAN/therabot",

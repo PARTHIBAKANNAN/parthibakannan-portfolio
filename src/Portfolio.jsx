@@ -9,7 +9,6 @@ import { Credentials } from "./components/Credentials.jsx";
 import { Achievements } from "./components/Achievements.jsx";
 import { Experience } from "./components/Experience.jsx";
 import { SelectedWork } from "./components/SelectedWork.jsx";
-import { EngineeringTenets } from "./components/EngineeringTenets.jsx";
 import { Builds } from "./components/Builds.jsx";
 import { Foundations } from "./components/Foundations.jsx";
 import { Leadership } from "./components/Leadership.jsx";
@@ -136,8 +135,8 @@ body {
   box-shadow: inset 0 1px 0 var(--surface-sheen), 0 30px 60px -30px rgba(106,67,224,0.5);
 }
 
-.section { padding: 88px 0; position: relative; }
-.section-tight { padding: 56px 0; position: relative; }
+.section { padding: 64px 0; position: relative; }
+.section-tight { padding: 44px 0; position: relative; }
 .container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
 
 a { color: inherit; text-decoration: none; }
@@ -190,8 +189,8 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 980px) { .proj-grid { grid-template-columns: 1fr !important; gap: 26px !important; } }
 @media (max-width: 880px) {
-  .section { padding: 60px 0; }
-  .section-tight { padding: 42px 0; }
+  .section { padding: 48px 0; }
+  .section-tight { padding: 34px 0; }
   .container { padding: 0 20px; }
   .hide-mobile { display: none !important; }
   .show-mobile { display: flex; }
@@ -199,8 +198,8 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 420px) {
   .container { padding: 0 16px; }
-  .section { padding: 48px 0; }
-  .section-tight { padding: 32px 0; }
+  .section { padding: 36px 0; }
+  .section-tight { padding: 26px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .trace-line, .gear, .shine { animation: none !important; }
@@ -224,7 +223,6 @@ export default function Portfolio() {
         <TerminalPlayground />
         <Experience />
         <SelectedWork />
-        <EngineeringTenets />
         <Builds />
         <Foundations />
         <Leadership />

@@ -14,7 +14,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="mesh-bg" style={{ paddingTop: 130, paddingBottom: 68, position: "relative", overflow: "hidden" }}>
+    <section id="top" className="mesh-bg" style={{ paddingTop: 44, paddingBottom: 54, position: "relative", overflow: "hidden" }}>
       <div className="container">
         <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1.18fr 0.82fr", gap: 46, alignItems: "center" }}>
           

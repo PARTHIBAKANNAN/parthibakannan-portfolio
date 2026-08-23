@@ -64,7 +64,7 @@ export const stack = [
   { group: "AI / LLM & RAG", items: ["Google Gemini 3.6 Flash", "Azure OpenAI (GPT-4o)", "Claude 3.5 Sonnet", "Ollama (Local LLM)", "RAG (BM25 + text-embedding-3)", "Azure AI Search", "Agentic Tool Calling", "MediaPipe (Hand Landmarks)", "scikit-learn", "HuggingFace"] },
   { group: "Maps, Voice & Desktop AI", items: ["Leaflet.js", "OSRM Road Routing Engine", "Web Audio API (432Hz)", "Speech-to-Text / TTS", "PyQt6 Desktop GUI", "Voice Activity Detection (VAD)", "Voice Biometrics"] },
   { group: "Cloud & Platforms", items: ["Azure App Service", "Azure AI Studio", "Azure Service Bus", "Vercel", "Render", "Cloudflare Workers AI", "MongoDB Atlas", "Neon PostgreSQL", "Supabase", "Cosmos DB"] },
-  { group: "Backend", items: ["Python (FastAPI · Flask · Flask-RESTX)", ".NET (C# · MVC · Web API)", "SQLAlchemy", "JWT Authentication", "Node.js", "REST", "SSE", "WebSockets"] },
+  { group: "Backend", items: ["Python (FastAPI · Flask)", ".NET (C# · MVC · Web API)", "SQLAlchemy", "JWT Authentication", "Node.js", "REST", "SSE", "WebSockets"] },
   { group: "Frontend", items: ["React (Vite · TypeScript)", "Angular", "Vue.js", "HTML5 Canvas", "TailwindCSS", "Leaflet Maps"] },
   { group: "Data & Persistence", items: ["SQL Server", "MongoDB Atlas", "Neon PostgreSQL", "Supabase", "Cosmos DB", "SQLite", "In-Memory Delta Caches"] },
   { group: "DevOps & QA", items: ["Git", "GitHub Actions", "GitHub Pages", "TeamCity", "Octopus Deploy", "Playwright", "Selenium", "NUnit", "PyTest", "Snyk"] },

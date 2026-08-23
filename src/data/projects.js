@@ -264,15 +264,6 @@ export const collegeWork = [
 // ─────────────────────────────────────────────────────────────────────────
 export const personalRD = [
   {
-    title: "J.A.R.V.I.S. · Autonomous Desktop AI Companion",
-    icon: Bot,
-    status: "Personal Assistant",
-    desc: "Autonomous Iron Man Arc Reactor desktop AI companion built in PyQt6 with Voice Activity Detection (VAD), biometric speaker verification, <100ms instant Windows app launcher, and dual cognitive engine (Google Gemini 3.6 Flash + local Ollama failover).",
-    tech: ["PyQt6", "Google Gemini 3.6 Flash", "Ollama (Local LLM)", "Voice Biometrics", "VAD Audio", "Windows Control", "Python"],
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=70",
-    github: "https://github.com/PARTHIBAKANNAN/JARVIS",
-  },
-  {
     title: "Duolingo 350+ Day Streak & Chess Mastery",
     icon: Trophy,
     status: "350+ Day Streak 🔥",

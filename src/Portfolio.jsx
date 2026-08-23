@@ -160,10 +160,8 @@ a { color: inherit; text-decoration: none; }
 .scroll-x::-webkit-scrollbar { height: 6px; }
 .scroll-x::-webkit-scrollbar-track { background: rgba(20,24,42,0.04); border-radius: 3px; }
 .scroll-x::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: ${t.bgAlt}; }
-::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 6px; }
-::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
+html, body { -ms-overflow-style: none; scrollbar-width: none; }
 
 .trace-line { stroke-dasharray: 4 7; animation: dashFlow 2s linear infinite; }
 @keyframes dashFlow { to { stroke-dashoffset: -22; } }

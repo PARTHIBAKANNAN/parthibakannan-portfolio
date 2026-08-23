@@ -1,4 +1,4 @@
-import { Building2, Briefcase, Users, GraduationCap, Mic, ShieldCheck, Zap, Server, BrainCircuit, Trophy, Award, Gamepad2, Globe2 } from "lucide-react";
+import { Building2, Briefcase, Users, GraduationCap, Mic, ShieldCheck, Zap, Server, BrainCircuit, Trophy, Award, Gamepad2, Globe2, Bot } from "lucide-react";
 
 export const aboutSummary = "Microsoft-certified Azure AI Engineer, Gen AI Developer at Cognizant, and Quantitative Systems Architect with 2+ years building enterprise RAG pipelines, autonomous agents, and low-latency algorithmic trading terminals. Designed enterprise systems indexing 10L+ contracts for healthcare (CVS Health) and architected real-time institutional trading terminals powered by Google Gemini 3.6 Flash and high-frequency WebSocket streams. Full-stack across Python (FastAPI, Flask) and .NET (C#, MVC, Web API) with hands-on Azure, Vercel & Cloudflare deployment. IIT Madras Diploma in Programming.";
 
@@ -33,8 +33,13 @@ export const languages = [
   "German — Beginner (3,298 XP)"
 ];
 
+// Dynamically incrementing streak starting from base 350 days
+const streakBaseDate = new Date("2024-09-08").getTime();
+const daysSinceBase = Math.max(0, Math.floor((Date.now() - streakBaseDate) / (1000 * 60 * 60 * 24)));
+export const dynamicStreakDays = 350 + daysSinceBase;
+
 export const duolingoStats = {
-  streak: "350 Day Streak 🔥",
+  streak: `${dynamicStreakDays}+ Day Streak 🔥`,
   totalXp: "53,132 XP",
   league: "Diamond League 💎 (Week 2)",
   topFinishes: "16 Top 3 Finishes 🥇",
@@ -56,13 +61,13 @@ export const gamingInterests = [
 
 export const stack = [
   { group: "Quant & Real-Time Trading", items: ["FYERS API v3", "WebSockets (ms binary)", "Google Gemini 3.6 Flash Copilot", "Black-Scholes & Greeks Engine", "Intraday Relative Strength (IRS)", "ORB Engines", "Supabase", "Telegram Bot API", "HTML5 Canvas Rendering"] },
-  { group: "AI / LLM & RAG", items: ["Azure OpenAI", "GPT-4 / 5", "Claude", "Google Vertex AI", "AWS Bedrock", "RAG", "Embeddings", "Vector Search", "Agentic AI", "Prompt Engineering", "LangChain", "Ollama", "HuggingFace", "MediaPipe", "scikit-learn"] },
-  { group: "AI coding tools", items: ["Cursor", "GitHub Copilot", "Claude Code", "Claude CLI", "Codex", "Gemini Code Assist"] },
-  { group: "Cloud & platforms", items: ["Azure App Service", "Azure AI Studio", "Azure Agents", "Azure AI Search", "Azure Service Bus", "Vercel", "Render", "Cloudflare Workers AI", "AKeyless", "Cosmos DB"] },
-  { group: "Backend", items: [".NET (C# · MVC · Web API)", "Python", "FastAPI", "Flask", "Node.js", "Core Java", "REST", "SSE", "WebSockets"] },
-  { group: "Frontend", items: ["React", "Angular", "Vue.js", "HTML5 Canvas", "Jinja2", "TailwindCSS"] },
-  { group: "Data & Persistence", items: ["SQL Server", "Cosmos DB", "Supabase (PostgreSQL)", "SQLite", "Vector indexes", "In-Memory Delta Caches"] },
-  { group: "DevOps & QA", items: ["Git", "TeamCity", "Octopus Deploy", "GitHub Actions", "Playwright", "Selenium", "NUnit", "PyTest", "Snyk"] },
+  { group: "AI / LLM & RAG", items: ["Google Gemini 3.6 Flash", "Azure OpenAI (GPT-4o)", "Claude 3.5 Sonnet", "Ollama (Local LLM)", "RAG (BM25 + text-embedding-3)", "Azure AI Search", "Agentic Tool Calling", "MediaPipe (Hand Landmarks)", "scikit-learn", "HuggingFace"] },
+  { group: "Maps, Voice & Desktop AI", items: ["Leaflet.js", "OSRM Road Routing Engine", "Web Audio API (432Hz)", "Speech-to-Text / TTS", "PyQt6 Desktop GUI", "Voice Activity Detection (VAD)", "Voice Biometrics"] },
+  { group: "Cloud & Platforms", items: ["Azure App Service", "Azure AI Studio", "Azure Service Bus", "Vercel", "Render", "Cloudflare Workers AI", "MongoDB Atlas", "Neon PostgreSQL", "Supabase", "Cosmos DB"] },
+  { group: "Backend", items: ["Python (FastAPI · Flask · Flask-RESTX)", ".NET (C# · MVC · Web API)", "SQLAlchemy", "JWT Authentication", "Node.js", "REST", "SSE", "WebSockets"] },
+  { group: "Frontend", items: ["React (Vite · TypeScript)", "Angular", "Vue.js", "HTML5 Canvas", "TailwindCSS", "Leaflet Maps"] },
+  { group: "Data & Persistence", items: ["SQL Server", "MongoDB Atlas", "Neon PostgreSQL", "Supabase", "Cosmos DB", "SQLite", "In-Memory Delta Caches"] },
+  { group: "DevOps & QA", items: ["Git", "GitHub Actions", "GitHub Pages", "TeamCity", "Octopus Deploy", "Playwright", "Selenium", "NUnit", "PyTest", "Snyk"] },
 ];
 
 export const engineeringTenets = [

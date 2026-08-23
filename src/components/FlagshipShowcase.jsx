@@ -5,6 +5,7 @@ import { REDUCE } from "../lib/motion.js";
 import { Reveal } from "./Reveal.jsx";
 import { flagshipQuantWork } from "../data/projects.js";
 import { StrategySimulator } from "./StrategySimulator.jsx";
+import { PulseHunterScanner } from "./PulseHunterScanner.jsx";
 
 function QuantTrace({ stages }) {
   const NODE_W = 152, NODE_H = 108, GAP = 46, PAD = 20;
@@ -113,7 +114,7 @@ export function FlagshipShowcase() {
                 <span style={{ width: 8, height: 8, borderRadius: 999, background: isActive ? t.success : "var(--ink-dim)", boxShadow: isActive ? `0 0 8px ${t.success}` : "none" }} />
                 {p.title.split("·")[0]}
                 <span className="font-mono" style={{ fontSize: 11, opacity: 0.85, textTransform: "uppercase", color: isActive ? t.auroraBright : "inherit" }}>
-                  {p.id === "pulsehunter" ? "Momentum + Gemini AI" : "6-Strategy Derivatives"}
+                  {p.id === "pulsehunter" ? "210+ Stocks & Gemini AI" : "21 Deployed Strats · 365D"}
                 </span>
               </button>
             );
@@ -284,8 +285,12 @@ export function FlagshipShowcase() {
             </div>
           </div>
 
-          {/* Interactive Strategy Simulator Embedded Section */}
-          <StrategySimulator />
+          {/* DEDICATED EXPLORER SECTION: Conditional Render based on selected platform */}
+          {activeId === "pulsehunter" ? (
+            <PulseHunterScanner />
+          ) : (
+            <StrategySimulator />
+          )}
 
         </div>
       </div>

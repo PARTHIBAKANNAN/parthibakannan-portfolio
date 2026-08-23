@@ -2,7 +2,7 @@ import {
   FileText, Layers, Database, Search, FileSearch, MessageCircle, Boxes, BrainCircuit,
   Send, Diff, Filter, ShieldCheck, Zap, Notebook, Workflow, Code2, FlaskConical,
   GitCommit, Heart, Bike, Hammer, Hand, Music, Activity, Plane, Wand2, LineChart, BarChart3,
-  Cpu, Terminal, Radio, Gauge, Sparkles, Trophy, Gamepad2, Globe2, Compass
+  Cpu, Terminal, Radio, Gauge, Sparkles, Trophy, Gamepad2, Globe2, Compass, Bot, MapPin, Mic
 } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -136,57 +136,69 @@ export const productionWork = [
 ];
 
 // ─────────────────────────────────────────────────────────────────────────
-// HACKATHON & RAPID INNOVATION BUILDS (Deployed on Vercel + Render)
+// RAPID INNOVATION & DEPLOYED APPS (Vercel + Render + GitHub Pages)
 // ─────────────────────────────────────────────────────────────────────────
 export const hackathonWork = [
   {
     title: "TheraBot",
-    subtitle: "AI Therapeutic Companion & Emotional Intelligence Platform",
+    subtitle: "AI Therapeutic & Mental Wellness Platform",
     icon: Heart,
     accent: "iris",
     status: "Live on Vercel + Render",
     liveUrl: "https://therabot-beryl.vercel.app/",
     github: "https://github.com/PARTHIBAKANNAN/therabot",
-    videoUrl: "https://drive.google.com/file/d/1N5gZzYloBTSR6ikDFGc8NInlk8w0Cofm/preview",
     image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=70",
-    desc: "A full-stack therapeutic AI platform featuring dynamic real-time sentiment analysis, adaptive conversational tone upon distress detection, goal tracking, and safety-first crisis mitigation. Powered by GPT-4o with long-term memory across sessions.",
+    desc: "A clinical AI therapeutic companion engineered with Google Gemini, FastAPI, React TypeScript, and MongoDB Atlas. Features autonomous in-chat tool calling for CBT thought records and breathing pacing, bi-directional voice (STT/TTS), 432Hz harmonic soundscapes, somatic tension heatmaps, and a 1-touch Panic SOS system.",
     agenticHighlights: [
-      "Real-Time Sentiment Classifier: Evaluates emotional valence and shifts system temperature for high empathy during acute distress.",
-      "Goal-Aware Memory Agent: Tracks multi-week wellness goals with Cosmos DB persistence and proactive check-in suggestions.",
-      "Crisis Mitigation Triage: Safety-first rule gate detecting self-harm cues to route instant emergency helpline resources.",
+      "Autonomous Tool Calling: Triggers interactive UI widgets in-dialogue (`[AGENT_ACTION:BREATHE]`, `[AGENT_ACTION:THOUGHT_RECORD]`, `[AGENT_ACTION:SOMATIC]`).",
+      "Bi-Directional Voice & 432Hz Soundscapes: Speech-to-Text input with soothing calibrated Text-to-Speech playback and generative sleep acoustics.",
+      "Somatic Heatmap & CBT Record: Clickable 2D tension release guides and persistent 5-column cognitive restructuring worksheets.",
     ],
-    tech: ["React (Vercel)", "FastAPI (Render)", "GPT-4o", "Azure Cosmos DB", "Sentiment Analysis", "TypeScript", "JWT Auth"],
+    tech: ["Google Gemini", "FastAPI (Render)", "React (TypeScript)", "MongoDB Atlas", "Web Audio API", "STT / TTS", "TailwindCSS"],
   },
   {
-    title: "BikeRideShare",
-    subtitle: "Smart Commuter Ride Matcher & Autonomous Routing Platform",
+    title: "SmartRide Chennai (BikeRideShare)",
+    subtitle: "AI & Road Corridor-Powered Urban Bike Pooling Platform",
     icon: Bike,
     accent: "aurora",
     status: "Live on Vercel + Render",
     liveUrl: "https://bike-ride-share.vercel.app/",
     github: "https://github.com/PARTHIBAKANNAN/BikeRideShare",
     image: "https://images.unsplash.com/photo-1775127458582-7a601385d361?auto=format&fit=crop&w=800&q=70",
-    desc: "Autonomous bike ride-sharing optimizer for urban commuters. Uses GPT-4 spatial reasoning to analyze origin-destination corridor geometries, calculate route overlap percentages, and compute fair proportional cost-splits with deterministic geometric fallback.",
+    desc: "A daily office commute pooling platform tailored for Chennai's dense road corridors (OMR, GST Road, 100ft Road). Features turn-by-turn road polylines on Leaflet.js maps via OSRM, Google Gemini AI corridor vector matching, Women-Only Pink Rides, and 3-tap police SOS (112).",
     agenticHighlights: [
-      "GPT-4 Spatial Matcher: Ingests corridor endpoints, evaluates multi-stop overlaps, and generates optimal pickup coordinates.",
-      "Deterministic Geometric Fallback: Auto-switches to algorithmic haversine proximity routing if LLM latency exceeds SLAs.",
-      "Automated Ride Dispatch: Real-time seat allocation, OTP confirmation, and rider-driver match notifications.",
+      "Gemini AI Corridor Matcher: Evaluates road vector overlaps and calculates compatibility scores (0–100%) for zero-detour pickups.",
+      "Turn-by-Turn Leaflet & OSRM Engine: Renders real road network polylines across 25+ Chennai tech hubs with 0 API billing dependencies.",
+      "Women-Only Pink Rides & 3-Tap Police SOS: Safe commuter filter with direct 3-tap emergency call to 112 and 1-click WhatsApp ride sharing.",
     ],
-    tech: ["React (Vercel)", "Flask (Render)", "SQLAlchemy", "Azure OpenAI (GPT-4)", "JWT Auth", "Flask-RESTX (Swagger)"],
+    tech: ["Google Gemini AI", "Flask RESTX (Render)", "React (Vercel)", "Neon PostgreSQL", "Leaflet.js", "OSRM Engine", "JWT Auth"],
+  },
+  {
+    title: "Sign Language Recognition",
+    subtitle: "Real-Time Computer Vision & Hand Gesture Interpreter",
+    icon: Hand,
+    accent: "iris",
+    status: "Live on GitHub Pages",
+    liveUrl: "https://parthibakannan.github.io/SignLanguageRecognition/",
+    github: "https://github.com/PARTHIBAKANNAN/SignLanguageRecognition",
+    image: "https://images.unsplash.com/photo-1640550444366-b94e5752c479?auto=format&fit=crop&w=800&q=70",
+    desc: "An accessible real-time sign language interpreter translating webcam hand gestures into full A–Z alphabet characters and words. Uses Google MediaPipe for 21 3D hand landmark extraction combined with a trained Random Forest ML classifier for instantaneous visual feedback.",
+    agenticHighlights: [
+      "MediaPipe 21-Landmark Vector Pipeline: Extracts 3D hand coordinates (x, y, z) in real time at 30+ FPS.",
+      "Random Forest Gesture Classifier: Predicts alphabet letters with high accuracy across varying lighting conditions.",
+      "Interactive Browser Experience: Deployed live on GitHub Pages with instant webcam camera feeds.",
+    ],
+    tech: ["MediaPipe", "scikit-learn (Random Forest)", "OpenCV", "Python", "JavaScript", "HTML5 Canvas", "GitHub Pages"],
   },
   {
     title: "Home Service App",
     subtitle: "Enterprise Dispatch & Technician Booking Platform",
     icon: Hammer,
-    accent: "iris",
+    accent: "aurora",
     status: "Hackathon Sprint",
     image: "https://images.unsplash.com/photo-1505798577917-a65157d3320a?auto=format&fit=crop&w=800&q=70",
-    desc: "End-to-end home-services booking with OTP-based auth, scheduling, technician dispatch, and SMS notifications — built as a .NET/Angular rework of the home-services concept for a hackathon sprint.",
-    agenticHighlights: [
-      "Technician Skill-Based Dispatch Engine: Matches home repair categories with available verified technicians.",
-      "Automated SMS Notifications: Twilio-powered dispatch updates with real-time status tracking.",
-    ],
-    tech: [".NET Web API", "Angular", "SMS OTP", "SQL Server"],
+    desc: "End-to-end home-services booking platform featuring OTP-based authentication, interactive service scheduling calendars, technician category dispatch, and automated SMS notifications — built with .NET Web API, Angular, and SQL Server.",
+    tech: [".NET Web API", "Angular", "SMS OTP", "SQL Server", "RESTful Architecture"],
   },
 ];
 
@@ -194,30 +206,41 @@ export const hackathonWork = [
 // COLLEGE & FOUNDATIONAL WORK
 // ─────────────────────────────────────────────────────────────────────────
 export const collegeWork = [
-  { title: "CrewFix", icon: Workflow,
+  {
+    title: "Sign Language Recognition", icon: Hand,
+    desc: "Real-time sign-language interpreter for the full A–Z alphabet via webcam. A 21-landmark MediaPipe vector extraction pipeline paired with a Random Forest classifier deployed on GitHub Pages.",
+    tech: ["MediaPipe", "scikit-learn", "OpenCV", "Python", "GitHub Pages"],
+    image: "https://images.unsplash.com/photo-1640550444366-b94e5752c479?auto=format&fit=crop&w=800&q=70",
+    liveUrl: "https://parthibakannan.github.io/SignLanguageRecognition/",
+    github: "https://github.com/PARTHIBAKANNAN/SignLanguageRecognition"
+  },
+  {
+    title: "CrewFix", icon: Workflow,
     desc: "Home-services booking platform with a Flask backend and Vue.js calendars for scheduling. Twilio handles OTP verification and SMS notifications end-to-end, with Google Chat API integration for service-team coordination.",
     tech: ["Python", "Flask", "Vue.js", "Twilio", "Google Chat API"],
     image: "https://images.unsplash.com/photo-1505798577917-a65157d3320a?auto=format&fit=crop&w=800&q=70",
-    github: "https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp" },
-  { title: "Sign Language Recognition", icon: Hand,
-    desc: "Real-time sign-language interpreter for the full A–Z alphabet via webcam. A four-stage pipeline — collect images, build a landmark dataset with MediaPipe, train a Random Forest classifier, then run real-time inference — turns hand landmarks into letters with live visual feedback.",
-    tech: ["MediaPipe", "scikit-learn (Random Forest)", "OpenCV", "Python"],
-    image: "https://images.unsplash.com/photo-1640550444366-b94e5752c479?auto=format&fit=crop&w=800&q=70",
-    github: "https://github.com/PARTHIBAKANNAN/SignLanguageRecognition" },
-  { title: "Music Streaming App", icon: Music,
+    github: "https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp"
+  },
+  {
+    title: "Music Streaming App", icon: Music,
     desc: "Full-stack Flask streaming platform: users register, build playlists, and rate songs; creators upload albums and tracks. Server-rendered with Jinja2 templates and Flask-Login-backed auth, on SQLite.",
     tech: ["Python", "Flask", "Flask-SQLAlchemy", "Flask-Login", "Jinja2", "SQLite"],
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=70",
-    github: "https://github.com/PARTHIBAKANNAN/MusicStreamingApp" },
-  { title: "Heart Disease Prediction", icon: Activity,
+    github: "https://github.com/PARTHIBAKANNAN/MusicStreamingApp"
+  },
+  {
+    title: "Heart Disease Prediction", icon: Activity,
     desc: "Classical-ML classifier trained on clinical features (age, cholesterol, blood pressure, and related indicators) to flag heart-disease risk, with feature-importance and accuracy reporting to keep the model's reasoning inspectable.",
     tech: ["scikit-learn", "pandas", "Python"],
-    image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=70" },
-  { title: "Flight Booking Bot", icon: Plane,
+    image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=70"
+  },
+  {
+    title: "Flight Booking Bot", icon: Plane,
     desc: "Conversational flight-booking flow that extracts intent and entities (origin, destination, dates) from natural language via Dialogflow, then walks the user through a structured booking confirmation.",
     tech: ["Dialogflow", "Python", "REST"],
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=70",
-    github: "https://github.com/PARTHIBAKANNAN/FlightTicketBookingBot" },
+    github: "https://github.com/PARTHIBAKANNAN/FlightTicketBookingBot"
+  },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -225,11 +248,20 @@ export const collegeWork = [
 // ─────────────────────────────────────────────────────────────────────────
 export const personalRD = [
   {
-    title: "Duolingo 350-Day Streak & Chess Mastery",
+    title: "J.A.R.V.I.S. · Autonomous Desktop AI Companion",
+    icon: Bot,
+    status: "Personal Assistant",
+    desc: "Autonomous Iron Man Arc Reactor desktop AI companion built in PyQt6 with Voice Activity Detection (VAD), biometric speaker verification, <100ms instant Windows app launcher, and dual cognitive engine (Google Gemini 3.6 Flash + local Ollama failover).",
+    tech: ["PyQt6", "Google Gemini 3.6 Flash", "Ollama (Local LLM)", "Voice Biometrics", "VAD Audio", "Windows Control", "Python"],
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=70",
+    github: "https://github.com/PARTHIBAKANNAN/JARVIS",
+  },
+  {
+    title: "Duolingo 350+ Day Streak & Chess Mastery",
     icon: Trophy,
-    status: "350-Day Streak 🔥",
+    status: "350+ Day Streak 🔥",
     desc: "Daily cognitive training and multilingual discipline: 53,132+ Total XP in Duolingo's Diamond League with 16 Top-3 finishes. 710 Elo Rating in Duolingo Chess (24,077 XP) focusing on rapid tactical visualization, endgame calculations, and strategic pattern recognition.",
-    tech: ["350-Day Streak", "53,132 XP", "Diamond League 💎", "710 Chess Elo", "Japanese (14.2k XP)", "Hindi (10.8k XP)", "German (3.3k XP)"],
+    tech: ["350+ Day Streak 🔥", "53,132 XP", "Diamond League 💎", "710 Chess Elo", "Japanese (14.2k XP)", "Hindi (10.8k XP)", "German (3.3k XP)"],
     image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=800&q=70",
   },
   {
@@ -241,9 +273,9 @@ export const personalRD = [
     image: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=70",
   },
   {
-    title: "Algo trading agent (MCP)",
+    title: "Algo Trading Agent (MCP)",
     icon: LineChart,
-    status: "In development",
+    status: "In Development",
     desc: "A Claude-MCP agent for on-demand market-context analysis — VIX regime, open interest, sector heatmaps — surfaced through natural-language queries. Advisory only; live order execution stays deterministic and outside the agent's control.",
     tech: ["Claude MCP", "Python", "FYERS API", "In-Memory Delta Engine"],
     image: "https://images.unsplash.com/photo-1560221328-12fe60f83ab8?auto=format&fit=crop&w=800&q=70",

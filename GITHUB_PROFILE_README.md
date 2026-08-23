@@ -5,7 +5,7 @@
 
   <!-- Animated Dynamic Typing Headline -->
   <a href="https://parthibakannan-portfolio.pages.dev/">
-    <img src="https://readme-typing-svg.demolab.com?font=Plus+Jakarta+Sans&weight=700&size=20&duration=3000&pause=1000&color=1FC7C0&center=true&vCenter=true&multiline=false&width=650&height=40&lines=Gen+AI+Developer+%C2%B7+Cognizant;Quantitative+Systems+Architect+%C2%B7+Low-Latency;Creator+of+PulseHunter%2C+NUKEBOX%2C+TheraBot+%26+BikeRideShare;Microsoft+%26+Anthropic+Certified+AI+Engineer" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Plus+Jakarta+Sans&weight=700&size=20&duration=3000&pause=1000&color=1FC7C0&center=true&vCenter=true&multiline=false&width=680&height=40&lines=Gen+AI+Developer+%C2%B7+Cognizant;Quantitative+Systems+Architect+%C2%B7+Low-Latency;Creator+of+PulseHunter%2C+NUKEBOX%2C+TheraBot+%26+SmartRide;Creator+of+J.A.R.V.I.S.+Autonomous+Desktop+AI;Microsoft+%26+Anthropic+Certified+AI+Engineer" alt="Typing SVG" />
   </a>
 
   <!-- Sleek Uniform Action Badges -->
@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/badge/Award-Global_ADM_Star_2025-FFB800?style=flat&logo=trophy&logoColor=black" />
     <img src="https://img.shields.io/badge/IIT_Madras-Diploma_in_Programming-F5A623?style=flat" />
     <img src="https://img.shields.io/badge/HackerRank-5--Star_Gold_SQL-0FA968?style=flat&logo=hackerrank&logoColor=white" />
-    <img src="https://img.shields.io/badge/Duolingo-350--Day_Streak_🔥-FF4B4B?style=flat&logo=duolingo&logoColor=white" />
+    <img src="https://img.shields.io/badge/Duolingo-350%2B--Day_Streak_🔥-FF4B4B?style=flat&logo=duolingo&logoColor=white" />
     <img src="https://img.shields.io/badge/Duolingo_Chess-710_Elo-1FC7C0?style=flat" />
     <img src="https://img.shields.io/badge/Status-🟢_Open_to_Roles-0FA968?style=flat" />
   </p>
@@ -41,18 +41,22 @@ Enterprise:
 Deployed AI & Quantitative Platforms:
   PulseHunter: 210+ stocks & canvas charts · 250ms WebSocket delta stream · Gemini 3.6 Flash Copilot
   NUKEBOX: 21 deployed intraday strategies · 365-day backtests · Black-Scholes Greeks · Telegram risk gates
-  TheraBot: Full-stack therapeutic AI platform with real-time sentiment analysis & distress-adaptive tone (Vercel + Render)
-  BikeRideShare: Smart commuter ride-matcher with GPT-4 spatial reasoning & deterministic fallback (Vercel + Render)
+  TheraBot: Clinical AI therapeutic companion with autonomous tool calling & 432Hz acoustics (Vercel + Render + MongoDB)
+  SmartRide Chennai: Urban bike pooling with Gemini corridor matching & OSRM Leaflet maps (Vercel + Render + Neon DB)
+  SignLanguageRecognition: Real-time hand gesture interpreter via MediaPipe & Random Forest (GitHub Pages)
+
+Autonomous Desktop Intelligence:
+  JARVIS: Cyberpunk Lavender Arc Reactor HUD in PyQt6 with VAD voice biometrics & <100ms Windows app launcher
 
 Cognitive Discipline & Gaming:
-  Duolingo: 350-Day Streak 🔥 · 53,132 XP · Diamond League · 710 Elo Rating in Duolingo Chess
+  Duolingo: 350+ Day Streak 🔥 · 53,132 XP · Diamond League · 710 Elo in Duolingo Chess
   HackerRank: 5-Star Gold Badge in SQL (★★★★★) · Verified SQL Skill Certificate
   Gaming: BGMI (Squad Tactics & Callouts) · GTA 5 (Simulation) · Need for Speed: Most Wanted (Reflexes)
 ```
 
 ---
 
-### 🚀 4 Live Deployed Platforms
+### 🚀 Live Deployed Platforms
 
 <table>
   <tr>
@@ -97,35 +101,34 @@ Cognitive Discipline & Gaming:
     <td width="50%" valign="top">
       <div align="center">
         <h3>💖 TheraBot · AI Therapeutic Platform</h3>
-        <p><b>Real-Time Sentiment Analysis & Distress Triage</b></p>
+        <p><b>Autonomous Tool Calling & 432Hz Soundscapes</b></p>
         <p>
           <a href="https://therabot-beryl.vercel.app/"><img src="https://img.shields.io/badge/Live_App-0FA968?style=flat-square&logo=vercel&logoColor=white" /></a>
           <a href="https://github.com/PARTHIBAKANNAN/therabot"><img src="https://img.shields.io/badge/Source_Code-7C5CFF?style=flat-square&logo=github&logoColor=white" /></a>
-          <a href="https://drive.google.com/file/d/1N5gZzYloBTSR6ikDFGc8NInlk8w0Cofm/preview"><img src="https://img.shields.io/badge/Video_Demo-FF4B4B?style=flat-square&logo=youtube&logoColor=white" /></a>
         </p>
       </div>
       <ul>
-        <li>🧠 <b>Dynamic Sentiment Classifier</b> shifting empathy tone upon acute distress.</li>
-        <li>🎯 <b>Goal-Aware Memory Agent</b> persisting wellness progress on Azure Cosmos DB.</li>
-        <li>🛡️ <b>Crisis Mitigation Gate</b> routing emergency helpline resources.</li>
+        <li>🤖 <b>Autonomous In-Chat Tool Calling</b> (`[AGENT_ACTION:BREATHE]`, CBT records).</li>
+        <li>🎙️ <b>Bi-Directional Voice</b> (STT input + soothing calibrated TTS audio).</li>
+        <li>🫁 <b>432Hz Paced Breathing Orb</b>, Somatic Heatmap, and Panic SOS.</li>
       </ul>
-      <p align="center"><code>React (Vercel)</code> <code>FastAPI (Render)</code> <code>GPT-4o</code> <code>Cosmos DB</code></p>
+      <p align="center"><code>Google Gemini</code> <code>FastAPI (Render)</code> <code>React TypeScript</code> <code>MongoDB Atlas</code></p>
     </td>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🚲 BikeRideShare · Smart Ride Matcher</h3>
-        <p><b>Autonomous Commuter Route Optimization</b></p>
+        <h3>🚲 SmartRide Chennai (BikeRideShare)</h3>
+        <p><b>AI & Road Corridor-Powered Urban Pooling</b></p>
         <p>
           <a href="https://bike-ride-share.vercel.app/"><img src="https://img.shields.io/badge/Live_App-0FA968?style=flat-square&logo=vercel&logoColor=white" /></a>
           <a href="https://github.com/PARTHIBAKANNAN/BikeRideShare"><img src="https://img.shields.io/badge/Source_Code-7C5CFF?style=flat-square&logo=github&logoColor=white" /></a>
         </p>
       </div>
       <ul>
-        <li>🗺️ <b>GPT-4 Spatial Matcher</b> analyzing corridor route overlaps.</li>
-        <li>🔄 <b>Deterministic Proximity Fallback</b> ensuring sub-second SLA reliability.</li>
-        <li>📲 <b>Automated Booking & Dispatch</b> with OTP notifications.</li>
+        <li>🗺️ <b>Turn-by-Turn Leaflet Maps & OSRM</b> across 25+ Chennai tech hubs.</li>
+        <li>🤖 <b>Google Gemini AI Corridor Matcher</b> for zero-detour ride pairing.</li>
+        <li>🌸 <b>Women-Only Pink Rides</b> & 3-Tap Police SOS (112) direct call.</li>
       </ul>
-      <p align="center"><code>React (Vercel)</code> <code>Flask (Render)</code> <code>SQLAlchemy</code> <code>GPT-4</code></p>
+      <p align="center"><code>Google Gemini</code> <code>Flask RESTX (Render)</code> <code>React (Vercel)</code> <code>Neon DB</code></p>
     </td>
   </tr>
 </table>
@@ -134,16 +137,16 @@ Cognitive Discipline & Gaming:
 
 ### 📂 Curated Project Repositories
 
-| Project | Domain | Architecture & Agentic Highlights | Links |
+| Project | Domain | Architecture Highlights | Links |
 |:---|:---:|:---|:---:|
 | [**TradeDashBoard (PulseHunter)**](https://github.com/PARTHIBAKANNAN/TradeDashBoard) | Quant / AI | 210+ stocks momentum scanner, 250ms delta stream, Gemini 3.6 Flash Copilot | [Live Terminal](https://trading-dashboard-1.duckdns.org/) · [Repo](https://github.com/PARTHIBAKANNAN/TradeDashBoard) |
 | [**OptionsSimulator (NUKEBOX)**](https://github.com/PARTHIBAKANNAN/OptionsSimulator) | Derivatives | Autonomous options terminal, 21 strategies, 365-day backtest, Black-Scholes Greeks | [Live Terminal](https://trading-dashboard-1.duckdns.org/options-simulator/) · [Repo](https://github.com/PARTHIBAKANNAN/OptionsSimulator) |
-| [**TheraBot**](https://github.com/PARTHIBAKANNAN/therabot) | Healthcare AI | Therapeutic AI platform with distress-aware tone adaptation & Cosmos DB | [Live App](https://therabot-beryl.vercel.app/) · [Demo](https://drive.google.com/file/d/1N5gZzYloBTSR6ikDFGc8NInlk8w0Cofm/preview) · [Repo](https://github.com/PARTHIBAKANNAN/therabot) |
-| [**BikeRideShare**](https://github.com/PARTHIBAKANNAN/BikeRideShare) | AI Matching | Route segment overlap optimizer powered by GPT-4 with rule-based fallback | [Live App](https://bike-ride-share.vercel.app/) · [Repo](https://github.com/PARTHIBAKANNAN/BikeRideShare) |
+| [**TheraBot**](https://github.com/PARTHIBAKANNAN/therabot) | Healthcare AI | Clinical AI companion with Gemini tool calling, bi-directional voice, MongoDB Atlas | [Live App](https://therabot-beryl.vercel.app/) · [Repo](https://github.com/PARTHIBAKANNAN/therabot) |
+| [**SmartRide Chennai (BikeRideShare)**](https://github.com/PARTHIBAKANNAN/BikeRideShare) | AI Mobility | Urban corridor bike pooling with Gemini AI matching, Leaflet OSRM polylines, Pink Rides | [Live App](https://bike-ride-share.vercel.app/) · [Repo](https://github.com/PARTHIBAKANNAN/BikeRideShare) |
+| [**SignLanguageRecognition**](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) | CV / Vision | Real-time webcam sign interpreter via MediaPipe 21 landmarks & Random Forest | [Live App](https://parthibakannan.github.io/SignLanguageRecognition/) · [Repo](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) |
+| [**J.A.R.V.I.S.**](https://github.com/PARTHIBAKANNAN/JARVIS) | Desktop Agent | Cyberpunk Arc Reactor HUD (PyQt6), VAD voice biometrics, <100ms Windows app launcher | [Repo](https://github.com/PARTHIBAKANNAN/JARVIS) |
 | [**parthibakannan-portfolio**](https://github.com/PARTHIBAKANNAN/parthibakannan-portfolio) | Frontend / AI | Command center portfolio with Strategy Simulator, CLI sandbox, and AI Cyber-Pet | [Live Site](https://parthibakannan-portfolio.pages.dev/) · [Repo](https://github.com/PARTHIBAKANNAN/parthibakannan-portfolio) |
-| [**SignLanguageRecognition**](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) | CV / ML | Real-time A–Z webcam sign interpreter using MediaPipe landmarks & Random Forest | [Repo](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) |
-| [**CrewFix-HomeServiceApp**](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) | Full-Stack | Home services booking marketplace with Twilio OTP auth & Google Chat API | [Repo](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) |
-| [**MusicStreamingApp**](https://github.com/PARTHIBAKANNAN/MusicStreamingApp) | Backend | Flask music streaming platform with playlist curation & SQLite persistence | [Repo](https://github.com/PARTHIBAKANNAN/MusicStreamingApp) |
+| [**CrewFix-HomeServiceApp**](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) | Full-Stack | Home services booking marketplace with Flask, Vue.js, Twilio OTP & Google Chat API | [Repo](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) |
 
 ---
 
@@ -178,11 +181,12 @@ $$\Delta = \frac{\partial V}{\partial S}, \quad \Gamma = \frac{\partial^2 V}{\pa
 
 | Area | Stack & Tools |
 |:---|:---|
-| **AI / LLM & RAG** | `Azure OpenAI` `GPT-4o` `Claude` `Google Gemini 3.6 Flash` `RAG` `Embeddings` `Vector Search` `LangChain` `scikit-learn` |
+| **AI / LLM & RAG** | `Google Gemini 3.6 Flash` `Azure OpenAI (GPT-4o)` `Claude` `Ollama` `RAG` `Embeddings` `MediaPipe` `scikit-learn` |
+| **Maps & Desktop AI** | `Leaflet.js` `OSRM Road Engine` `Web Audio API (432Hz)` `PyQt6 GUI` `Voice Activity Detection (VAD)` |
 | **Quant & Low-Latency** | `FYERS API v3` `WebSockets (ms binary)` `In-Memory Delta Engine` `Black-Scholes Greeks` `Canvas 2D` |
-| **Backend & Cloud** | `Python (FastAPI, Flask)` `.NET (C#, MVC, Web API)` `Azure App Service` `Azure Service Bus` `Vercel` `Render` `Cloudflare Workers AI` |
-| **Databases** | `SQL Server` `Cosmos DB` `Supabase (PostgreSQL)` `SQLite` `Vector Indexes` |
-| **Frontend & DevOps** | `React` `Vue.js` `Angular` `TailwindCSS` `Git` `GitHub Actions` `TeamCity` `Octopus Deploy` `Playwright` |
+| **Backend & Cloud** | `Python (FastAPI, Flask)` `.NET (C#, MVC, Web API)` `Azure App Service` `Vercel` `Render` `Cloudflare Workers AI` |
+| **Databases** | `MongoDB Atlas` `Neon PostgreSQL` `SQL Server` `Cosmos DB` `Supabase` `SQLite` |
+| **Frontend & DevOps** | `React (TypeScript)` `Angular` `Vue.js` `TailwindCSS` `Git` `GitHub Actions` `GitHub Pages` `TeamCity` |
 
 </div>
 

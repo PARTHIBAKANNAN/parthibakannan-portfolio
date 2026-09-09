@@ -1,10 +1,67 @@
 import React from "react";
-import { Github, ArrowUpRight, Trophy, Gamepad2, Flame, Sparkles, Globe2, BookOpen } from "lucide-react";
+import { Github, ArrowUpRight, Trophy, Flame, Sparkles, Globe2, BookOpen } from "lucide-react";
 import { t } from "../lib/theme.js";
 import { Reveal } from "./Reveal.jsx";
 import { StatusBadge } from "./SelectedWork.jsx";
 import { personalRD } from "../data/projects.js";
-import { duolingoStats, hackerRankStats, gamingInterests, languages } from "../data/content.js";
+import { duolingoStats, hackerRankStats, languages } from "../data/content.js";
+
+// Clean SVG Country Flags that render reliably across Windows Chrome, macOS, and Linux
+function FlagUK() {
+  return (
+    <svg width="20" height="15" viewBox="0 0 60 30" style={{ borderRadius: 3, flexShrink: 0, boxShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
+      <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+      <clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+      <g clipPath="url(#s)">
+        <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+        <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#t)" stroke="#C8102E" strokeWidth="4"/>
+        <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
+        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
+      </g>
+    </svg>
+  );
+}
+
+function FlagIndia() {
+  return (
+    <svg width="20" height="15" viewBox="0 0 225 150" style={{ borderRadius: 3, flexShrink: 0, boxShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
+      <rect width="225" height="50" fill="#FF9933"/>
+      <rect y="50" width="225" height="50" fill="#FFFFFF"/>
+      <rect y="100" width="225" height="50" fill="#138808"/>
+      <circle cx="112.5" cy="75" r="20" fill="none" stroke="#000080" strokeWidth="3.5"/>
+      <circle cx="112.5" cy="75" r="4" fill="#000080"/>
+    </svg>
+  );
+}
+
+function FlagJapan() {
+  return (
+    <svg width="20" height="15" viewBox="0 0 900 600" style={{ borderRadius: 3, flexShrink: 0, boxShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
+      <rect width="900" height="600" fill="#FFFFFF"/>
+      <circle cx="450" cy="300" r="180" fill="#BC002D"/>
+    </svg>
+  );
+}
+
+function FlagGermany() {
+  return (
+    <svg width="20" height="15" viewBox="0 0 5 3" style={{ borderRadius: 3, flexShrink: 0, boxShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>
+      <rect width="5" height="1" y="0" fill="#000"/>
+      <rect width="5" height="1" y="1" fill="#D00"/>
+      <rect width="5" height="1" y="2" fill="#FFCE00"/>
+    </svg>
+  );
+}
+
+const languageDeck = [
+  { Flag: FlagUK, lang: "English", badge: "Fluent · Primary Work" },
+  { Flag: FlagIndia, lang: "Tamil", badge: "Native Proficiency" },
+  { Flag: FlagIndia, lang: "Telugu", badge: "Native Proficiency" },
+  { Flag: FlagJapan, lang: "Japanese", badge: "14,200+ XP" },
+  { Flag: FlagIndia, lang: "Hindi", badge: "10,800+ XP" },
+  { Flag: FlagGermany, lang: "German", badge: "3,300+ XP" },
+];
 
 export function AfterHours() {
   return (
@@ -12,15 +69,15 @@ export function AfterHours() {
       <div className="container">
         <Reveal>
           <div style={{ marginBottom: 26, display: "flex", alignItems: "center", gap: 14 }}>
-            <div className="section-eyebrow">Cognitive Arena &amp; Personal R&amp;D</div>
+            <div className="section-eyebrow">Continuous Discipline &amp; Multilingual Grit</div>
             <div style={{ flex: 1, height: 1, background: "linear-gradient(90deg, var(--line), transparent)" }} />
           </div>
-          <div style={{ maxWidth: 740, marginBottom: 28 }}>
+          <div style={{ maxWidth: 780, marginBottom: 28 }}>
             <h2 className="font-display heading-huge" style={{ fontSize: "clamp(24px, 3.2vw, 32px)", fontWeight: 800, color: t.ink, margin: "0 0 10px", lineHeight: 1.2 }}>
-              Consistency, Tactical Foresight &amp; Languages.
+              Daily Consistency, Multilingual Grit &amp; MCP Agents.
             </h2>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: t.inkMuted, margin: 0 }}>
-              What fuels the engineering mindset beyond production code — daily multilingual discipline, strategic chess tactics, and gaming arena reflex conditioning.
+              The daily habits that reinforce engineering discipline — 368+ days of daily multilingual study, verified 5-star SQL problem-solving, and experimental Model Context Protocol (MCP) agents.
             </p>
           </div>
         </Reveal>
@@ -28,8 +85,8 @@ export function AfterHours() {
         {/* Highlighted Duolingo & HackerRank Stats Ribbon */}
         <Reveal delay={60}>
           <div style={{
-            display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14,
-            marginBottom: 28, padding: "20px 24px", borderRadius: 18,
+            display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14,
+            marginBottom: 24, padding: "20px 24px", borderRadius: 18,
             background: "linear-gradient(135deg, rgba(124,92,255,0.06), rgba(31,199,192,0.06))",
             border: "1px solid var(--surface-border)"
           }}>
@@ -38,18 +95,8 @@ export function AfterHours() {
                 <Flame size={20} color={t.amberBright} />
               </div>
               <div>
-                <div className="font-display" style={{ fontSize: 18, fontWeight: 800, color: t.amberBright }}>350-Day Streak 🔥</div>
-                <div className="font-mono" style={{ fontSize: 10, color: "var(--ink-dim)", textTransform: "uppercase" }}>Duolingo Discipline</div>
-              </div>
-            </div>
-
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(31,199,192,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <Trophy size={20} color={t.auroraBright} />
-              </div>
-              <div>
-                <div className="font-display" style={{ fontSize: 18, fontWeight: 800, color: t.auroraBright }}>710 Elo · 24k XP</div>
-                <div className="font-mono" style={{ fontSize: 10, color: "var(--ink-dim)", textTransform: "uppercase" }}>Duolingo Chess</div>
+                <div className="font-display" style={{ fontSize: 18, fontWeight: 800, color: t.amberBright }}>{duolingoStats.streak}</div>
+                <div className="font-mono" style={{ fontSize: 10, color: "var(--ink-dim)", textTransform: "uppercase" }}>Continuous Language Streak</div>
               </div>
             </div>
 
@@ -58,8 +105,8 @@ export function AfterHours() {
                 <Sparkles size={20} color={t.irisBright} />
               </div>
               <div>
-                <div className="font-display" style={{ fontSize: 18, fontWeight: 800, color: t.irisBright }}>53,132 Total XP</div>
-                <div className="font-mono" style={{ fontSize: 10, color: "var(--ink-dim)", textTransform: "uppercase" }}>Diamond League 💎</div>
+                <div className="font-display" style={{ fontSize: 18, fontWeight: 800, color: t.irisBright }}>{duolingoStats.totalXp}</div>
+                <div className="font-mono" style={{ fontSize: 10, color: "var(--ink-dim)", textTransform: "uppercase" }}>Diamond League (16 Top 3)</div>
               </div>
             </div>
 
@@ -71,6 +118,47 @@ export function AfterHours() {
                 <div className="font-display" style={{ fontSize: 18, fontWeight: 800, color: t.success }}>5-Star Gold ★★★★★</div>
                 <div className="font-mono" style={{ fontSize: 10, color: "var(--ink-dim)", textTransform: "uppercase" }}>HackerRank SQL Badge</div>
               </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Multilingual Fluency Shelf */}
+        <Reveal delay={100}>
+          <div className="glass" style={{
+            padding: "18px 22px", borderRadius: 18, marginBottom: 28,
+            border: "1px solid rgba(124,92,255,0.18)"
+          }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <Globe2 size={16} color={t.auroraBright} />
+                <span className="font-mono" style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700, color: t.auroraBright }}>
+                  Multilingual Fluency &amp; Daily Practice
+                </span>
+              </div>
+              <span className="font-mono" style={{ fontSize: 10.5, color: t.amberBright, background: "rgba(245,166,35,0.12)", padding: "3px 10px", borderRadius: 999, fontWeight: 700 }}>
+                6 Active Languages
+              </span>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10 }}>
+              {languageDeck.map(l => {
+                const FlagComponent = l.Flag;
+                return (
+                  <div
+                    key={l.lang}
+                    style={{
+                      padding: "10px 14px", borderRadius: 12, background: "var(--chip-bg)",
+                      border: "1px solid var(--chip-border)", display: "flex", alignItems: "center", gap: 10
+                    }}
+                  >
+                    <FlagComponent />
+                    <div style={{ minWidth: 0 }}>
+                      <div className="font-display" style={{ fontSize: 13, fontWeight: 700, color: t.ink, lineHeight: 1.2 }}>{l.lang}</div>
+                      <div className="font-mono" style={{ fontSize: 10, color: t.irisBright, fontWeight: 600, marginTop: 2 }}>{l.badge}</div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </Reveal>

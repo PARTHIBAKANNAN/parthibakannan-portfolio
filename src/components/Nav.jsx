@@ -19,11 +19,9 @@ export function Nav() {
   const openChat = () => { window.dispatchEvent(new CustomEvent("portfolio:open-chat")); setMenuOpen(false); };
 
   const links = [
-    { href: "#trading", label: "Flagship Quant", highlight: true },
     { href: "#experience", label: "Experience" },
-    { href: "#work", label: "Enterprise AI" },
-    { href: "#builds", label: "Builds" },
-    { href: "#stack", label: "Stack" },
+    { href: "#projects", label: "Projects", highlight: true },
+    { href: "#skills", label: "Skills" },
     { onClick: openChat, label: "Ask AI" },
     { href: "#contact", label: "Contact" },
   ];

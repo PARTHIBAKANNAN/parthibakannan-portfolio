@@ -76,19 +76,20 @@ export function FlagshipShowcase() {
   const project = flagshipQuantWork.find(p => p.id === activeId) || flagshipQuantWork[0];
 
   return (
-    <section id="trading" className="section soft-bg" style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
+    <section id="projects" className="section soft-bg" style={{ borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
+      <div id="systems" />
       <div className="container">
         <Reveal>
-          <div style={{ marginBottom: 36, maxWidth: 820 }}>
+          <div style={{ marginBottom: 36, maxWidth: 840 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "5px 12px", borderRadius: 999, background: "rgba(31,199,192,0.12)", border: "1px solid rgba(31,199,192,0.3)", marginBottom: 14 }}>
               <span style={{ width: 7, height: 7, borderRadius: 999, background: t.success, boxShadow: `0 0 8px ${t.success}` }} />
-              <span className="font-mono" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: t.auroraBright }}>Flagship Quant &amp; AI Terminals</span>
+              <span className="font-mono" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: t.auroraBright }}>High-Throughput Systems &amp; Real-Time Architectures</span>
             </div>
-            <h2 className="font-display heading-huge" style={{ fontSize: "clamp(30px, 4.2vw, 44px)", margin: "0 0 16px", color: t.ink }}>
-              High-frequency momentum &amp; autonomous derivatives.
+            <h2 className="font-display heading-huge" style={{ fontSize: "clamp(28px, 4vw, 42px)", margin: "0 0 16px", color: t.ink }}>
+              Low-latency WebSocket streaming &amp; autonomous derivatives.
             </h2>
-            <p style={{ fontSize: 16.5, lineHeight: 1.65, color: t.inkMuted, margin: 0 }}>
-              Live production trading systems engineered with low-latency Python FastAPI backends, FYERS v3 millisecond WebSocket binary ticks, in-memory delta calculations, and embedded <strong>Google Gemini 3.6 Flash AI Copilot</strong> intelligence.
+            <p style={{ fontSize: 16, lineHeight: 1.65, color: t.inkMuted, margin: 0 }}>
+              Production-grade distributed platforms demonstrating high concurrency: Python FastAPI backends, FYERS v3 millisecond WebSocket binary ticks, in-memory math, and real-time <strong>Google Gemini 3.6 Flash</strong> market regime synthesis.
             </p>
           </div>
         </Reveal>
@@ -114,7 +115,7 @@ export function FlagshipShowcase() {
                 <span style={{ width: 8, height: 8, borderRadius: 999, background: isActive ? t.success : "var(--ink-dim)", boxShadow: isActive ? `0 0 8px ${t.success}` : "none" }} />
                 {p.title.split("·")[0]}
                 <span className="font-mono" style={{ fontSize: 11, opacity: 0.85, textTransform: "uppercase", color: isActive ? t.auroraBright : "inherit" }}>
-                  {p.id === "pulsehunter" ? "210+ Stocks & Gemini AI" : "21 Deployed Strats · 365D"}
+                  {p.id === "pulsehunter" ? "212+ Stocks & Gemini AI" : "44 Deployed Strats · Multi-Index"}
                 </span>
               </button>
             );

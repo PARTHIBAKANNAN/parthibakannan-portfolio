@@ -14,7 +14,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="mesh-bg" style={{ paddingTop: 44, paddingBottom: 54, position: "relative", overflow: "hidden" }}>
+    <section id="top" className="mesh-bg" style={{ paddingTop: 104, paddingBottom: 54, position: "relative", overflow: "hidden" }}>
       <div className="container">
         <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1.18fr 0.82fr", gap: 46, alignItems: "center" }}>
           
@@ -28,52 +28,50 @@ export function Hero() {
               <span className="chip hero-chip"><MapPin size={11} /> Chennai, India</span>
               <span className="chip chip-aurora hero-chip">Gen AI Developer · Cognizant</span>
               <span className="chip chip-amber hero-chip"><Trophy size={11} /> Best GenC Star 2025</span>
-              <span className="chip" style={{ background: "rgba(31,199,192,0.12)", borderColor: "rgba(31,199,192,0.35)", color: t.auroraBright, fontWeight: 700 }}>
-                <span style={{ width: 6, height: 6, borderRadius: 3, background: t.auroraBright, animation: REDUCE ? "none" : "pulseSoft 1.5s infinite" }} /> 2 Live Quant Terminals
+              <span className="chip" style={{ background: "rgba(124,92,255,0.12)", borderColor: "rgba(124,92,255,0.35)", color: t.irisBright, fontWeight: 700 }}>
+                <Sparkles size={11} /> Claude &amp; Azure Certified
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="font-display hero-title" style={{ fontSize: "clamp(32px, 4.8vw, 56px)", fontWeight: 800, lineHeight: 1.08, margin: "0 0 18px", color: t.ink, letterSpacing: "-0.03em" }}>
+            <h1 className="font-display hero-title" style={{ fontSize: "clamp(32px, 4.8vw, 54px)", fontWeight: 800, lineHeight: 1.1, margin: "0 0 18px", color: t.ink, letterSpacing: "-0.03em" }}>
               Architecting Enterprise Gen AI &amp;<br />
               <span style={{
                 background: `linear-gradient(120deg, ${t.irisBright} 0%, ${t.auroraBright} 60%, ${t.amberBright} 100%)`,
                 WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text"
               }}>
-                Real-Time Quant Terminals.
+                Distributed Autonomous Systems.
               </span>
             </h1>
 
             {/* Bio */}
-            <p className="hero-subtitle" style={{ fontSize: 16, lineHeight: 1.62, color: t.inkSoft, maxWidth: 580, margin: "0 0 28px", fontWeight: 500 }}>
-              Microsoft-certified Azure AI Engineer at Cognizant building enterprise RAG pipelines (indexing 10L+ contracts for healthcare) and creator of <strong>PulseHunter</strong> (210+ stocks &amp; canvas charts) and <strong>NUKEBOX</strong> (21 deployed autonomous strategies with 365-day backtests) — powered by FYERS v3 WebSockets and Google Gemini 3.6 Flash.
+            <p className="hero-subtitle" style={{ fontSize: 16, lineHeight: 1.65, color: t.inkSoft, maxWidth: 600, margin: "0 0 28px", fontWeight: 500 }}>
+              Microsoft &amp; Anthropic certified AI Engineer at Cognizant building enterprise RAG pipelines indexing <strong>10,00,000+ contracts for CVS Health</strong>, autonomous developer agents, and high-concurrency real-time systems (FastAPI, WebSockets, .NET 8, and Google Gemini).
             </p>
 
             {/* Launchpad CTA Deck */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 32, alignItems: "center" }}>
               <a
-                href="https://trading-dashboard-1.duckdns.org/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={RESUME_PDF}
+                download="Parthibakannan_Resume.pdf"
                 className="btn-primary"
                 style={{
                   background: `linear-gradient(135deg, ${t.irisBright}, ${t.aurora})`,
-                  color: "#fff", fontWeight: 700, padding: "12px 20px", fontSize: 13.5
+                  color: "#fff", fontWeight: 700, padding: "12px 22px", fontSize: 14,
+                  boxShadow: "0 14px 30px -10px rgba(106,67,224,0.55)"
                 }}
               >
-                <Zap size={15} /> PulseHunter (210+ Stocks) ↗
+                <Download size={16} /> Download Resume
+              </a>
+              <a href="#work" className="btn-ghost" style={{ padding: "12px 20px", fontSize: 13.5, fontWeight: 700 }}>
+                Enterprise AI <ArrowRight size={14} />
               </a>
               <a
-                href="https://trading-dashboard-1.duckdns.org/options-simulator/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#systems"
                 className="btn-ghost"
-                style={{ borderColor: "rgba(31,199,192,0.35)", color: t.auroraBright, fontWeight: 700, padding: "12px 20px", fontSize: 13.5 }}
+                style={{ borderColor: "rgba(31,199,192,0.35)", color: t.auroraBright, fontWeight: 700, padding: "12px 18px", fontSize: 13.5 }}
               >
-                <Activity size={15} /> NUKEBOX (21 Strats) ↗
-              </a>
-              <a href="#work" className="btn-ghost" style={{ padding: "12px 18px", fontSize: 13.5 }}>
-                Enterprise AI <ArrowRight size={14} />
+                <Activity size={15} /> Real-Time Systems ↗
               </a>
               <button
                 type="button"
@@ -81,7 +79,7 @@ export function Hero() {
                 className="btn-ghost"
                 style={{ padding: "12px 18px", fontSize: 13.5 }}
               >
-                <Bot size={15} /> Ask Copilot
+                <Bot size={15} /> Ask AI Copilot
               </button>
             </div>
 
@@ -91,8 +89,8 @@ export function Hero() {
               padding: "16px 20px", borderRadius: 14, background: "rgba(124,92,255,0.04)", border: "1px solid rgba(124,92,255,0.14)"
             }}>
               {[
-                { n: "210+ Stocks", l: "PulseHunter Live Charts", accent: t.auroraBright },
-                { n: "21 Strategies", l: "NUKEBOX 365D Backtested", accent: t.irisBright },
+                { n: "212+ Stocks", l: "PulseHunter Live Charts", accent: t.auroraBright },
+                { n: "44 Strategies", l: "NUKEBOX Multi-Index Engine", accent: t.irisBright },
                 { n: "10,00,000+", l: "Contracts Indexed", accent: t.amberBright },
                 { n: "4 Certs", l: "Microsoft · Anthropic", accent: t.success },
               ].map(s => (

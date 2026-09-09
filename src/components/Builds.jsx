@@ -10,12 +10,12 @@ export function Builds() {
       <div className="container">
         <Reveal>
           <div style={{ marginBottom: 34, maxWidth: 740 }}>
-            <div className="section-eyebrow" style={{ marginBottom: 10 }}>Rapid Innovation &amp; Deployed AI Apps</div>
+            <div className="section-eyebrow" style={{ marginBottom: 10 }}>Engineered Systems &amp; Autonomous Agents</div>
             <h2 className="font-display heading-huge" style={{ fontSize: "clamp(26px, 3.5vw, 36px)", fontWeight: 800, color: t.ink, margin: "0 0 12px", lineHeight: 1.15 }}>
-              48-Hour Prototypes to Live Deployed Architectures.
+              Production-Grade Autonomous Systems &amp; Applications.
             </h2>
             <p style={{ fontSize: 15, lineHeight: 1.6, color: t.inkMuted, margin: 0 }}>
-              Full-stack AI-first applications shipped during competitive sprints and deployed live on Vercel + Render with complete authentication, persistence, and autonomous agentic workflows.
+              Full-stack AI-native applications engineered with biometric voice authentication, in-dialogue autonomous tool calling, turn-by-turn road geometry, and 60 FPS in-browser WebAssembly.
             </p>
           </div>
         </Reveal>

@@ -4,10 +4,10 @@ import { Activity, Radio, Zap, Sparkles, Filter, BarChart3, LineChart, TrendingU
 
 export function PulseHunterScanner() {
   const filterTiers = [
-    { id: "all", label: "All 210+ Stocks" },
-    { id: "orb-bull", label: "ORB C1 Breakouts" },
-    { id: "rs-leaders", label: "Intraday RS > 70" },
-    { id: "volume-surge", label: "Volume > 2.5x Avg" },
+    { id: "all", label: "All 212+ Equities" },
+    { id: "orb-bull", label: "ORB C0.5 / C1 Breakouts" },
+    { id: "rs-leaders", label: "Intraday RS vs NIFTY > 70" },
+    { id: "volume-surge", label: "Volume > 2.5x 20-D Avg" },
     { id: "range-expansion", label: "Day Range > 80%" },
   ];
 
@@ -16,37 +16,37 @@ export function PulseHunterScanner() {
       symbol: "RELIANCE.EQ",
       sector: "Energy / Conglomerate",
       irsScore: "+84.2",
-      orbStatus: "ORB C1 Triggered",
+      orbStatus: "ORB C1 Validated (09:45 IST)",
       volumeMultiplier: "3.4x",
       rangePct: "92%",
-      geminiInsight: "Heavy institutional block accumulation at 15-min Opening Range High. Sector RS outperforming NIFTY 50 by 1.8x.",
+      geminiInsight: "Signal Audit [CONFIRM]: Heavy institutional block accumulation at 15-min Opening Range High. Zero red flags detected. Sector RS outperforming NIFTY 50 by 1.8x.",
     },
     {
       symbol: "HDFCBANK.EQ",
       sector: "Banking & Finance",
       irsScore: "+76.5",
-      orbStatus: "ORB C1 Validated",
+      orbStatus: "ORB C0.5 Early-Fire (09:30 IST)",
       volumeMultiplier: "2.8x",
       rangePct: "88%",
-      geminiInsight: "Order book delta positive (+18.4k contracts). Bullish momentum continuation across BankNIFTY constituents.",
+      geminiInsight: "Signal Audit [CONFIRM]: Order book delta positive (+18.4k contracts). Bullish momentum continuation across BankNIFTY constituents. High conviction confirmation.",
     },
     {
       symbol: "INFY.EQ",
       sector: "Information Technology",
       irsScore: "+71.0",
-      orbStatus: "Consolidation Breakout",
+      orbStatus: "VWAP POC Breakout",
       volumeMultiplier: "2.6x",
       rangePct: "85%",
-      geminiInsight: "Breakout above yesterday's VWAP with expanding 1-minute delta ticks. Gemini AI regime: High-Probability Trend Continuation.",
+      geminiInsight: "Signal Audit [SKIP_TRAP]: Immediate resistance band detected within 0.3% of entry price. Pre-market US tech cues negative. Trade flagged to avoid whipsaw.",
     },
     {
       symbol: "TATASTEEL.EQ",
       sector: "Metals & Mining",
       irsScore: "+69.4",
-      orbStatus: "ORB C2 Continuation",
+      orbStatus: "ORB C2 Continuation (10:15 IST)",
       volumeMultiplier: "2.9x",
       rangePct: "81%",
-      geminiInsight: "Commodities cycle rotation with strong delivery volume. 250ms WebSocket state stream confirms uninterrupted bid depth.",
+      geminiInsight: "Signal Audit [CONFIRM]: Commodities rotation with strong delivery volume. 250ms WebSocket state broadcaster confirms uninterrupted bid depth.",
     },
   ];
 
@@ -66,7 +66,7 @@ export function PulseHunterScanner() {
           <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 4 }}>
             <Radio size={16} color={t.auroraBright} />
             <span className="font-mono" style={{ fontSize: 11, color: t.auroraBright, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 700 }}>
-              210+ Indian Equities · 5-Tier Filter Matrix
+              212+ Indian Equities · 5-Tier Filter Matrix
             </span>
           </div>
           <h4 className="font-display" style={{ fontSize: 18, fontWeight: 700, color: "var(--ink)", margin: 0 }}>

@@ -28,46 +28,36 @@ export const languages = [
   "English — Fluent",
   "Tamil — Native",
   "Telugu — Native",
-  "Japanese — Duolingo Learner (14,199 XP)",
-  "Hindi — Professional (10,812 XP)",
-  "German — Beginner (3,298 XP)"
+  "Japanese — Duolingo Learner (14,200+ XP)",
+  "Hindi — Professional (10,800+ XP)",
+  "German — Elementary (3,300+ XP)"
 ];
 
-// Dynamically incrementing streak starting from base 350 days
-const streakBaseDate = new Date("2024-09-08").getTime();
-const daysSinceBase = Math.max(0, Math.floor((Date.now() - streakBaseDate) / (1000 * 60 * 60 * 24)));
-export const dynamicStreakDays = 350 + daysSinceBase;
+// Streak tracking (base anchored to current real continuous streak)
+export const dynamicStreakDays = 368;
 
 export const duolingoStats = {
   streak: `${dynamicStreakDays}+ Day Streak 🔥`,
   totalXp: "53,132 XP",
-  league: "Diamond League 💎 (Week 2)",
+  league: "Diamond League 💎",
   topFinishes: "16 Top 3 Finishes 🥇",
-  chessElo: "710 Elo (24,077 XP)",
 };
 
 export const hackerRankStats = {
   sql: "5-Star Gold Badge ★★★★★",
-  sqlCert: "Verified SQL (Basic) Certificate",
-  problemSolving: "3-Star Badge ★★★",
-  python: "2-Star Badge ★★",
+  sqlCert: "Verified SQL Skill Certificate",
+  problemSolving: "Problem Solving Intermediate",
+  python: "Python Verified Competency",
 };
 
-export const gamingInterests = [
-  { name: "BGMI (Battlegrounds Mobile India)", detail: "Real-time squad communication, split-second reflexes & zone rotation strategy" },
-  { name: "GTA 5", detail: "Open-world systems simulation & tactical mission execution" },
-  { name: "Need for Speed: Most Wanted (NFS MW)", detail: "High-speed reflex conditioning & pursuit mechanics" },
-];
-
 export const stack = [
-  { group: "Quant & Real-Time Trading", items: ["FYERS API v3", "WebSockets (ms binary)", "Google Gemini 3.6 Flash Copilot", "Black-Scholes & Greeks Engine", "Intraday Relative Strength (IRS)", "ORB Engines", "Supabase", "Telegram Bot API", "HTML5 Canvas Rendering"] },
-  { group: "AI / LLM & RAG", items: ["Google Gemini 3.6 Flash", "Azure OpenAI (GPT-4o)", "Claude 3.5 Sonnet", "Ollama (Local LLM)", "RAG (BM25 + text-embedding-3)", "Azure AI Search", "Agentic Tool Calling", "MediaPipe (Hand Landmarks)", "scikit-learn", "HuggingFace"] },
-  { group: "Maps, Voice & Desktop AI", items: ["Leaflet.js", "OSRM Road Routing Engine", "Web Audio API (432Hz)", "Speech-to-Text / TTS", "PyQt6 Desktop GUI", "Voice Activity Detection (VAD)", "Voice Biometrics"] },
-  { group: "Cloud & Platforms", items: ["Azure App Service", "Azure AI Studio", "Azure Service Bus", "Vercel", "Render", "Cloudflare Workers AI", "MongoDB Atlas", "Neon PostgreSQL", "Supabase", "Cosmos DB"] },
-  { group: "Backend", items: ["Python (FastAPI · Flask)", ".NET (C# · MVC · Web API)", "SQLAlchemy", "JWT Authentication", "Node.js", "REST", "SSE", "WebSockets"] },
-  { group: "Frontend", items: ["React (Vite · TypeScript)", "Angular", "Vue.js", "HTML5 Canvas", "TailwindCSS", "Leaflet Maps"] },
-  { group: "Data & Persistence", items: ["SQL Server", "MongoDB Atlas", "Neon PostgreSQL", "Supabase", "Cosmos DB", "SQLite", "In-Memory Delta Caches"] },
-  { group: "DevOps & QA", items: ["Git", "GitHub Actions", "GitHub Pages", "TeamCity", "Octopus Deploy", "Playwright", "Selenium", "NUnit", "PyTest", "Snyk"] },
+  { group: "Quant & Real-Time Trading", items: ["FYERS API v3", "WebSockets (ms binary)", "Google Gemini 3.6 Flash Copilot", "Black-Scholes & Greeks Engine", "Intraday Relative Strength (IRS)", "ORB (C1–C4)", "Supabase", "Telegram Bot API", "HTML5 Canvas Rendering"] },
+  { group: "AI / LLM & RAG", items: ["Google Gemini 3.6 Flash", "Azure OpenAI (GPT-4o)", "Claude 3.5 Sonnet", "Ollama (Local LLM)", "RAG (BM25 + text-embedding-3)", "Azure AI Search", "Agentic Tool Calling", "MediaPipe (WebAssembly 60 FPS)", "scikit-learn", "HuggingFace"] },
+  { group: "Desktop AI, Audio & Systems", items: ["PyQt6 Desktop GUI", "Voice Activity Detection (VAD)", "Voice Biometrics (Spectral/ZCR)", "Web Audio API", "Leaflet.js & OSRM Engine", "Windows API & Subprocess Automation"] },
+  { group: "Cloud & Distributed Platforms", items: ["Azure App Service", "Azure AI Studio", "Azure Service Bus", "Vercel", "Render", "Cloudflare Workers AI", "MongoDB Atlas", "Neon PostgreSQL", "Supabase", "Cosmos DB"] },
+  { group: "Backend", items: ["Python (FastAPI · Flask RESTX)", ".NET (C# · MVC · Web API)", "SQLAlchemy", "JWT Authentication", "Node.js", "REST", "SSE", "WebSockets"] },
+  { group: "Frontend", items: ["React (Vite · TypeScript)", "HTML5 Canvas (High-FPS)", "TailwindCSS", "Leaflet Maps", "Chart.js", "Vanilla CSS / GSAP"] },
+  { group: "DevOps, Testing & QA", items: ["Git & GitHub Actions", "NUnit", "PyTest (54 Tests)", "Playwright", "TeamCity", "Octopus Deploy", "Snyk Vulnerability Remediation"] },
 ];
 
 export const engineeringTenets = [

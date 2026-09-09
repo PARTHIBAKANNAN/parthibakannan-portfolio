@@ -9,7 +9,7 @@ export function AIChatbot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([{
     role: "assistant",
-    content: "Hi — I'm an AI assistant trained on Parthi's work. Ask me about his live trading terminals (PulseHunter & NUKEBOX), enterprise RAG systems at Cognizant, tech stack, certifications, or how to reach out."
+    content: "Hi — I'm an AI assistant trained on Parthi's engineering work. Ask me about his enterprise RAG systems at Cognizant (10L+ contracts for CVS Health), high-concurrency quant systems (PulseHunter with 212+ stocks & NUKEBOX with 44 strategies), autonomous agents (J.A.R.V.I.S. & TheraBot), or certifications."
   }]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,10 +24,11 @@ export function AIChatbot() {
   }, []);
 
   const suggestions = [
-    "How does PulseHunter use Gemini AI?",
-    "Tell me about NUKEBOX options simulator.",
-    "What did he build at Cognizant?",
-    "Why is the IIT Madras diploma relevant?",
+    "Tell me about the 10L+ contracts RAG pipeline at Cognizant.",
+    "How does PulseHunter audit trades with Gemini & 250ms WebSocket deltas?",
+    "How does NUKEBOX execute 44 strategies with Black-Scholes Greeks?",
+    "How does J.A.R.V.I.S. implement voice biometrics & <50ms OS dispatch?",
+    "What are his credentials from IIT Madras, Anthropic & Microsoft?",
     "How do I get in touch?"
   ];
 

@@ -20,6 +20,8 @@
     <img src="https://img.shields.io/badge/Cognizant-Gen_AI_Developer-0033A0?style=flat&logo=cognizant&logoColor=white" />
     <img src="https://img.shields.io/badge/Award-Global_ADM_Star_2025-FFB800?style=flat&logo=trophy&logoColor=black" />
     <img src="https://img.shields.io/badge/IIT_Madras-Diploma_in_Programming-F5A623?style=flat" />
+    <img src="https://img.shields.io/badge/Microsoft-Certified_Azure_AI-0078D4?style=flat&logo=microsoft&logoColor=white" />
+    <img src="https://img.shields.io/badge/Anthropic-Claude_Architect-8A2BE2?style=flat" />
     <img src="https://img.shields.io/badge/HackerRank-5--Star_Gold_SQL-0FA968?style=flat&logo=hackerrank&logoColor=white" />
     <img src="https://img.shields.io/badge/Duolingo-350%2B--Day_Streak_🔥-FF4B4B?style=flat&logo=duolingo&logoColor=white" />
     <img src="https://img.shields.io/badge/Duolingo_Chess-710_Elo-1FC7C0?style=flat" />
@@ -38,7 +40,7 @@ Enterprise:
   Scale: 10,00,000+ contracts indexed with Hybrid RAG for healthcare (CVS Health)
   Production: 3 shipped systems (Contract Search, RAG Chatbot, PDF Compare Agent)
 
-Deployed AI & Quantitative Platforms:
+Deployed Quantitative & AI Platforms:
   PulseHunter: 210+ stocks & canvas charts · 250ms WebSocket delta stream · Gemini 3.6 Flash Copilot
   NUKEBOX: 21 deployed intraday strategies · 365-day backtests · Black-Scholes Greeks · Telegram risk gates
   TheraBot: Clinical AI therapeutic companion with autonomous tool calling & 432Hz acoustics (Vercel + Render + MongoDB)
@@ -181,12 +183,12 @@ $$\Delta = \frac{\partial V}{\partial S}, \quad \Gamma = \frac{\partial^2 V}{\pa
 
 | Area | Stack & Tools |
 |:---|:---|
-| **AI / LLM & RAG** | `Google Gemini 3.6 Flash` `Azure OpenAI (GPT-4o)` `Claude` `Ollama` `RAG` `Embeddings` `MediaPipe` `scikit-learn` |
-| **Maps & Desktop AI** | `Leaflet.js` `OSRM Road Engine` `Web Audio API (432Hz)` `PyQt6 GUI` `Voice Activity Detection (VAD)` |
+| **AI / LLM & RAG** | `Google Gemini 3.6 Flash` `Azure OpenAI (GPT-4o)` `Claude 3.5 Sonnet` `Ollama` `RAG` `Embeddings` `MediaPipe` `scikit-learn` |
+| **Maps & Desktop AI** | `Leaflet.js` `OSRM Road Engine` `Web Audio API (432Hz)` `PyQt6 GUI` `Voice Activity Detection (VAD)` `Voice Biometrics` |
 | **Quant & Low-Latency** | `FYERS API v3` `WebSockets (ms binary)` `In-Memory Delta Engine` `Black-Scholes Greeks` `Canvas 2D` |
-| **Backend & Cloud** | `Python (FastAPI, Flask)` `.NET (C#, MVC, Web API)` `Azure App Service` `Vercel` `Render` `Cloudflare Workers AI` |
+| **Backend & Cloud** | `Python (FastAPI, Flask)` `.NET (C#, MVC, Web API)` `Azure App Service` `Azure Service Bus` `Vercel` `Render` `Cloudflare Workers AI` |
 | **Databases** | `MongoDB Atlas` `Neon PostgreSQL` `SQL Server` `Cosmos DB` `Supabase` `SQLite` |
-| **Frontend & DevOps** | `React (TypeScript)` `Angular` `Vue.js` `TailwindCSS` `Git` `GitHub Actions` `GitHub Pages` `TeamCity` |
+| **Frontend & DevOps** | `React (TypeScript)` `Angular` `Vue.js` `TailwindCSS` `Git` `GitHub Actions` `GitHub Pages` `TeamCity` `Playwright` |
 
 </div>
 

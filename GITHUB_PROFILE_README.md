@@ -5,7 +5,7 @@
 
   <!-- Animated Dynamic Typing Headline -->
   <a href="https://parthibakannan-portfolio.pages.dev/">
-    <img src="https://readme-typing-svg.demolab.com?font=Plus+Jakarta+Sans&weight=700&size=20&duration=3000&pause=1000&color=1FC7C0&center=true&vCenter=true&multiline=false&width=680&height=40&lines=Gen+AI+Developer+%C2%B7+Cognizant;Quantitative+Systems+Architect+%C2%B7+Low-Latency;Creator+of+PulseHunter%2C+NUKEBOX%2C+TheraBot+%26+SmartRide;Creator+of+J.A.R.V.I.S.+Autonomous+Desktop+AI;Microsoft+%26+Anthropic+Certified+AI+Engineer" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Plus+Jakarta+Sans&weight=700&size=20&duration=3000&pause=1000&color=1FC7C0&center=true&vCenter=true&multiline=false&width=720&height=40&lines=Gen+AI+Developer+%C2%B7+Cognizant;Quantitative+Systems+Architect+%C2%B7+Low-Latency;PulseHunter+(212%2B+Stocks+%C2%B7+Gemini+AI)+%26+NUKEBOX+(44+Strats);TheraBot%2C+SmartRide+Chennai+%26+J.A.R.V.I.S.+Desktop+AI;Microsoft+%26+Anthropic+Certified+AI+Engineer" alt="Typing SVG" />
   </a>
 
   <!-- Sleek Uniform Action Badges -->
@@ -32,28 +32,31 @@
 
 ---
 
-### ⚡ What I Build
+### ⚡ Engineering Overview
 
 ```yaml
-Enterprise:
+Enterprise Gen AI (Cognizant / Healthcare):
   Role: Gen AI Developer at Cognizant (.NET & Python)
-  Scale: 10,00,000+ contracts indexed with Hybrid RAG for healthcare (CVS Health)
-  Production: 3 shipped systems (Contract Search, RAG Chatbot, PDF Compare Agent)
+  Scale: 10,00,000+ contracts indexed with Hybrid RAG on Azure AI Search (BM25 + text-embedding-3)
+  Shipped Systems: Contract Keyword Search, RAG Chatbot (GPT-4o streaming in 3–5s), Contract PDF Compare Agent, SDLC Agentic Tool (Claude + Playwright)
 
-Deployed Quantitative & AI Platforms:
-  PulseHunter: 210+ stocks & canvas charts · 250ms WebSocket delta stream · Gemini 3.6 Flash Copilot
-  NUKEBOX: 21 deployed intraday strategies · 365-day backtests · Black-Scholes Greeks · Telegram risk gates
-  TheraBot: Clinical AI therapeutic companion with autonomous tool calling & 432Hz acoustics (Vercel + Render + MongoDB)
-  SmartRide Chennai: Urban bike pooling with Gemini corridor matching & OSRM Leaflet maps (Vercel + Render + Neon DB)
-  SignLanguageRecognition: Real-time hand gesture interpreter via MediaPipe & Random Forest (GitHub Pages)
+Flagship Quantitative Terminals:
+  PulseHunter: Real-time market research terminal tracking 212+ stocks & canvas charts · 5-tier filter matrix (ORB C0.5/C1-C4, IRS vs NIFTY > 70) · Google Gemini 3.6 Flash signal audit copilot · 250ms WebSocket deltas via FastAPI BFF
+  NUKEBOX: Paper-trading derivatives research terminal · 44 intraday strategy variants (14 NIFTY, 15 SENSEX, 15 BANKNIFTY) · 365-day backtest matrix · Black-Scholes Greeks sensitivity engine · 08:50 AM IST Gemini pre-market catalyst · Telegram risk gates
+
+Rapid AI Systems & Computer Vision:
+  TheraBot: AI wellness companion prototype with autonomous in-dialogue tool calling ([AGENT_ACTION:BREATHE], CBT records), bi-directional voice (STT/TTS), 432Hz harmonic soundscapes & somatic tension heatmap (Vercel + Render + MongoDB Atlas)
+  SmartRide Chennai: Urban bike pooling for Chennai tech corridors (OMR, GST Road) with Gemini AI corridor vector matching, turn-by-turn Leaflet OSRM road polylines, Pink Rides & 3-tap 112 police SOS (Vercel + Render + Neon PostgreSQL)
+  Sign Language Recognition: 60 FPS in-browser WebAssembly sign interpreter translating webcam hand gestures to A–Z alphabet via MediaPipe 21 landmarks + Random Forest with Web Speech API voice synthesis (GitHub Pages)
 
 Autonomous Desktop Intelligence:
-  JARVIS: Cyberpunk Lavender Arc Reactor HUD in PyQt6 with VAD voice biometrics & <100ms Windows app launcher
+  J.A.R.V.I.S.: Iron Man Arc Reactor desktop AI companion in PyQt6 with Voice Activity Detection (VAD), biometric voice authentication, <100ms instant Windows app launcher, and dual cognitive engine (Google Gemini 3.6 Flash + Ollama local LLM failover)
 
 Cognitive Discipline & Gaming:
-  Duolingo: 350+ Day Streak 🔥 · 53,132 XP · Diamond League · 710 Elo in Duolingo Chess
+  Duolingo: 350+ Day Continuous Streak 🔥 · 53,132 XP · Diamond League (Week 2) · 710 Elo in Duolingo Chess (24,077 XP)
+  Languages: English (Fluent), Tamil (Native), Telugu (Native), Japanese (14.2k XP), Hindi (10.8k XP), German (3.3k XP)
   HackerRank: 5-Star Gold Badge in SQL (★★★★★) · Verified SQL Skill Certificate
-  Gaming: BGMI (Squad Tactics & Callouts) · GTA 5 (Simulation) · Need for Speed: Most Wanted (Reflexes)
+  Gaming: BGMI (Squad Tactics & Rotations) · GTA 5 (Simulation) · Need for Speed: Most Wanted (Reflexes)
 ```
 
 ---
@@ -65,44 +68,44 @@ Cognitive Discipline & Gaming:
     <td width="50%" valign="top">
       <div align="center">
         <h3>⚡ PulseHunter · TradeDashBoard</h3>
-        <p><b>Institutional Momentum Scanner & AI Copilot</b></p>
+        <p><b>Real-Time Market Research Terminal & AI Copilot</b></p>
         <p>
           <a href="https://trading-dashboard-1.duckdns.org/"><img src="https://img.shields.io/badge/Live_Terminal-0FA968?style=flat-square&logo=googlechrome&logoColor=white" /></a>
           <a href="https://github.com/PARTHIBAKANNAN/TradeDashBoard"><img src="https://img.shields.io/badge/Source_Code-7C5CFF?style=flat-square&logo=github&logoColor=white" /></a>
         </p>
       </div>
       <ul>
-        <li>📊 <b>210+ Indian Equities</b> with real-time HTML5 canvas charts.</li>
+        <li>📊 <b>212+ Indian Equities</b> with real-time HTML5 canvas charts.</li>
         <li>⚡ <b>FYERS v3 ms binary WebSockets</b> with 0 client secret exposure.</li>
-        <li>🧮 <b>In-Memory Math</b> calculating IRS & ORB C1–C4 ranges.</li>
-        <li>🤖 <b>Google Gemini 3.6 Flash Copilot</b> for live regime analysis.</li>
-        <li>📡 <b>250ms Thread-Safe Delta Streams</b> to React UI.</li>
+        <li>🧮 <b>In-Memory Math</b> calculating Intraday RS & ORB C0.5, C1–C4 ranges.</li>
+        <li>🤖 <b>Google Gemini 3.6 Flash Copilot</b> with Red-Flag filter (<code>SKIP_TRAP</code> vs <code>CONFIRM</code>).</li>
+        <li>📡 <b>250ms Thread-Safe State Deltas</b> streamed to React canvas UI.</li>
       </ul>
-      <p align="center"><code>Python</code> <code>FastAPI</code> <code>WebSockets</code> <code>Gemini AI</code> <code>React Canvas</code></p>
+      <p align="center"><code>Google Gemini 3.6 Flash</code> <code>FYERS API v3</code> <code>FastAPI (Python)</code> <code>WebSockets</code> <code>React Canvas</code></p>
     </td>
     <td width="50%" valign="top">
       <div align="center">
         <h3>📊 NUKEBOX · OptionsSimulator</h3>
-        <p><b>Autonomous Quantitative Derivatives Execution Engine</b></p>
+        <p><b>Paper-Trading Derivatives Research Terminal</b></p>
         <p>
           <a href="https://trading-dashboard-1.duckdns.org/options-simulator/"><img src="https://img.shields.io/badge/Live_Terminal-0FA968?style=flat-square&logo=googlechrome&logoColor=white" /></a>
           <a href="https://github.com/PARTHIBAKANNAN/OptionsSimulator"><img src="https://img.shields.io/badge/Source_Code-7C5CFF?style=flat-square&logo=github&logoColor=white" /></a>
         </p>
       </div>
       <ul>
-        <li>🎯 <b>21 Deployed Strategies</b> (Breakouts, IV Crush, Gamma Scalps).</li>
-        <li>🗓️ <b>365-Day Backtest Matrix</b> on 1-minute historical data.</li>
+        <li>🎯 <b>44 Strategy Variants</b> (14 NIFTY, 15 SENSEX, 15 BANKNIFTY).</li>
+        <li>🗓️ <b>365-Day Backtest Matrix</b> across multi-index historical candles.</li>
         <li>📐 <b>Black-Scholes Greeks Engine</b> (Delta, Gamma, Theta, Vega).</li>
-        <li>🛡️ <b>Automated Risk Gates</b>: Stop-Loss, Take-Profit, Time-Exit.</li>
-        <li>📱 <b>Telegram Bot Approval</b> & Supabase audit logging.</li>
+        <li>🧠 <b>08:50 AM IST Catalyst Synthesis</b> via Gemini 3.6 Flash.</li>
+        <li>📱 <b>Simulated Risk Gates (SL/TP/Time)</b> + Telegram notifications & Supabase audit logging.</li>
       </ul>
-      <p align="center"><code>Python</code> <code>FastAPI</code> <code>Black-Scholes</code> <code>Telegram API</code> <code>Supabase</code></p>
+      <p align="center"><code>Python</code> <code>FastAPI</code> <code>Black-Scholes Engine</code> <code>Telegram API</code> <code>Supabase</code> <code>React</code></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>💖 TheraBot · AI Therapeutic Platform</h3>
+        <h3>💖 TheraBot · AI Wellness Prototype</h3>
         <p><b>Autonomous Tool Calling & 432Hz Soundscapes</b></p>
         <p>
           <a href="https://therabot-beryl.vercel.app/"><img src="https://img.shields.io/badge/Live_App-0FA968?style=flat-square&logo=vercel&logoColor=white" /></a>
@@ -110,27 +113,27 @@ Cognitive Discipline & Gaming:
         </p>
       </div>
       <ul>
-        <li>🤖 <b>Autonomous In-Chat Tool Calling</b> (`[AGENT_ACTION:BREATHE]`, CBT records).</li>
-        <li>🎙️ <b>Bi-Directional Voice</b> (STT input + soothing calibrated TTS audio).</li>
-        <li>🫁 <b>432Hz Paced Breathing Orb</b>, Somatic Heatmap, and Panic SOS.</li>
+        <li>🤖 <b>Autonomous Tool Calling</b>: Triggers in-chat widgets (<code>[AGENT_ACTION:BREATHE]</code>, CBT records, somatic heatmap).</li>
+        <li>🎙️ <b>Bi-Directional Voice</b>: STT input with calibrated soothing TTS audio.</li>
+        <li>🫁 <b>432Hz Harmonic Soundscapes</b>, Somatic body tension heatmap & 1-touch Panic SOS.</li>
       </ul>
-      <p align="center"><code>Google Gemini</code> <code>FastAPI (Render)</code> <code>React TypeScript</code> <code>MongoDB Atlas</code></p>
+      <p align="center"><code>Google Gemini</code> <code>FastAPI (Render)</code> <code>React TypeScript</code> <code>MongoDB Atlas</code> <code>Web Audio API</code></p>
     </td>
     <td width="50%" valign="top">
       <div align="center">
         <h3>🚲 SmartRide Chennai (BikeRideShare)</h3>
-        <p><b>AI & Road Corridor-Powered Urban Pooling</b></p>
+        <p><b>AI & Road Corridor-Powered Urban Bike Pooling</b></p>
         <p>
           <a href="https://bike-ride-share.vercel.app/"><img src="https://img.shields.io/badge/Live_App-0FA968?style=flat-square&logo=vercel&logoColor=white" /></a>
           <a href="https://github.com/PARTHIBAKANNAN/BikeRideShare"><img src="https://img.shields.io/badge/Source_Code-7C5CFF?style=flat-square&logo=github&logoColor=white" /></a>
         </p>
       </div>
       <ul>
-        <li>🗺️ <b>Turn-by-Turn Leaflet Maps & OSRM</b> across 25+ Chennai tech hubs.</li>
-        <li>🤖 <b>Google Gemini AI Corridor Matcher</b> for zero-detour ride pairing.</li>
+        <li>🗺️ <b>Turn-by-Turn Leaflet & OSRM Engine</b>: Real road network polylines across 25+ Chennai tech hubs with 0 API billing fees.</li>
+        <li>🤖 <b>Google Gemini AI Corridor Matcher</b>: Vector route overlap scoring (0–100%) for zero-detour pickups.</li>
         <li>🌸 <b>Women-Only Pink Rides</b> & 3-Tap Police SOS (112) direct call.</li>
       </ul>
-      <p align="center"><code>Google Gemini</code> <code>Flask RESTX (Render)</code> <code>React (Vercel)</code> <code>Neon DB</code></p>
+      <p align="center"><code>Google Gemini AI</code> <code>Flask RESTX (Render)</code> <code>React (Vercel)</code> <code>Neon PostgreSQL</code> <code>Leaflet.js</code></p>
     </td>
   </tr>
 </table>
@@ -141,14 +144,14 @@ Cognitive Discipline & Gaming:
 
 | Project | Domain | Architecture Highlights | Links |
 |:---|:---:|:---|:---:|
-| [**TradeDashBoard (PulseHunter)**](https://github.com/PARTHIBAKANNAN/TradeDashBoard) | Quant / AI | 210+ stocks momentum scanner, 250ms delta stream, Gemini 3.6 Flash Copilot | [Live Terminal](https://trading-dashboard-1.duckdns.org/) · [Repo](https://github.com/PARTHIBAKANNAN/TradeDashBoard) |
-| [**OptionsSimulator (NUKEBOX)**](https://github.com/PARTHIBAKANNAN/OptionsSimulator) | Derivatives | Autonomous options terminal, 21 strategies, 365-day backtest, Black-Scholes Greeks | [Live Terminal](https://trading-dashboard-1.duckdns.org/options-simulator/) · [Repo](https://github.com/PARTHIBAKANNAN/OptionsSimulator) |
-| [**TheraBot**](https://github.com/PARTHIBAKANNAN/therabot) | Healthcare AI | Clinical AI companion with Gemini tool calling, bi-directional voice, MongoDB Atlas | [Live App](https://therabot-beryl.vercel.app/) · [Repo](https://github.com/PARTHIBAKANNAN/therabot) |
-| [**SmartRide Chennai (BikeRideShare)**](https://github.com/PARTHIBAKANNAN/BikeRideShare) | AI Mobility | Urban corridor bike pooling with Gemini AI matching, Leaflet OSRM polylines, Pink Rides | [Live App](https://bike-ride-share.vercel.app/) · [Repo](https://github.com/PARTHIBAKANNAN/BikeRideShare) |
-| [**SignLanguageRecognition**](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) | CV / Vision | Real-time webcam sign interpreter via MediaPipe 21 landmarks & Random Forest | [Live App](https://parthibakannan.github.io/SignLanguageRecognition/) · [Repo](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) |
-| [**J.A.R.V.I.S.**](https://github.com/PARTHIBAKANNAN/JARVIS) | Desktop Agent | Cyberpunk Arc Reactor HUD (PyQt6), VAD voice biometrics, <100ms Windows app launcher | [Repo](https://github.com/PARTHIBAKANNAN/JARVIS) |
-| [**parthibakannan-portfolio**](https://github.com/PARTHIBAKANNAN/parthibakannan-portfolio) | Frontend / AI | Command center portfolio with Strategy Simulator, CLI sandbox, and AI Cyber-Pet | [Live Site](https://parthibakannan-portfolio.pages.dev/) · [Repo](https://github.com/PARTHIBAKANNAN/parthibakannan-portfolio) |
-| [**CrewFix-HomeServiceApp**](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) | Full-Stack | Home services booking marketplace with Flask, Vue.js, Twilio OTP & Google Chat API | [Repo](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) |
+| [**TradeDashBoard (PulseHunter)**](https://github.com/PARTHIBAKANNAN/TradeDashBoard) | Quant / AI | 212+ stocks momentum scanner, 250ms delta stream, Gemini 3.6 Flash Copilot with Red-Flag filter | [Live Terminal](https://trading-dashboard-1.duckdns.org/) · [Repo](https://github.com/PARTHIBAKANNAN/TradeDashBoard) |
+| [**OptionsSimulator (NUKEBOX)**](https://github.com/PARTHIBAKANNAN/OptionsSimulator) | Derivatives | 44 intraday strategy variants (NIFTY, SENSEX, BANKNIFTY), 365-day backtest, Black-Scholes Greeks | [Live Terminal](https://trading-dashboard-1.duckdns.org/options-simulator/) · [Repo](https://github.com/PARTHIBAKANNAN/OptionsSimulator) |
+| [**TheraBot**](https://github.com/PARTHIBAKANNAN/therabot) | Healthcare AI | AI wellness prototype with Gemini tool calling, bi-directional voice, 432Hz soundscapes, MongoDB Atlas | [Live App](https://therabot-beryl.vercel.app/) · [Repo](https://github.com/PARTHIBAKANNAN/therabot) |
+| [**SmartRide Chennai (BikeRideShare)**](https://github.com/PARTHIBAKANNAN/BikeRideShare) | AI Mobility | Chennai bike pooling with Gemini corridor matching, Leaflet OSRM road polylines, Pink Rides | [Live App](https://bike-ride-share.vercel.app/) · [Repo](https://github.com/PARTHIBAKANNAN/BikeRideShare) |
+| [**SignLanguageRecognition**](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) | CV / Vision | 60 FPS in-browser WebAssembly MediaPipe 21 landmark extraction, Random Forest classifier & Web Speech TTS | [Live App](https://parthibakannan.github.io/SignLanguageRecognition/) · [Repo](https://github.com/PARTHIBAKANNAN/SignLanguageRecognition) |
+| [**J.A.R.V.I.S.**](https://github.com/PARTHIBAKANNAN/JARVIS) | Desktop Agent | Cyberpunk Arc Reactor HUD (PyQt6), VAD voice biometrics, <100ms Windows launcher, Gemini + Ollama | [Repo](https://github.com/PARTHIBAKANNAN/JARVIS) |
+| [**parthibakannan-portfolio**](https://github.com/PARTHIBAKANNAN/parthibakannan-portfolio) | Frontend / AI | Command center portfolio with Strategy Simulator, 212+ stock scanner, CLI sandbox, and AI Cyber-Pet | [Live Site](https://parthibakannan-portfolio.pages.dev/) · [Repo](https://github.com/PARTHIBAKANNAN/parthibakannan-portfolio) |
+| [**CrewFix-HomeServiceApp**](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) | Full-Stack | Home services booking marketplace with Flask, Vue.js, Twilio OTP auth & Google Chat API | [Repo](https://github.com/PARTHIBAKANNAN/CrewFix-HomeServiceApp) |
 
 ---
 
@@ -160,19 +163,19 @@ Cognitive Discipline & Gaming:
 
 - **10L+ Contract Search**: Hybrid RAG pipeline combining BM25 keyword search with Azure OpenAI vector embeddings on Azure AI Search. Sub-second queries with citation-backed snippets.
 - **Contract Chatbot**: Conversational GPT-4o layer over the contract search index with Server-Sent Events (SSE) streaming answers in 3–5 seconds.
-- **PDF Compare Agent**: Semantic difference analyzer running asynchronous document diffs through Azure Service Bus queues with automated severity classification.
+- **Contract PDF Compare Agent**: Semantic difference analyzer running asynchronous document diffs through Azure Service Bus queues with automated severity classification.
 - **SDLC Agentic AI Tool**: Autonomous Claude-powered development agent that ingests JIRA user stories, plans subtasks, writes patches, runs Playwright end-to-end tests, and opens PRs.
 </details>
 
 <details>
-<summary><b>📐 Black-Scholes Greeks Engine & Risk Controls — Click to Expand</b></summary>
+<summary><b>📐 Black-Scholes Greeks Sensitivity Engine & Risk Controls — Click to Expand</b></summary>
 <br />
 
 $$\Delta = \frac{\partial V}{\partial S}, \quad \Gamma = \frac{\partial^2 V}{\partial S^2}, \quad \Theta = -\frac{\partial V}{\partial t}, \quad \mathcal{V} = \frac{\partial V}{\partial \sigma}$$
 
-- In-memory pure mathematical calculation of first- and second-order options Greeks.
-- Real-time IV curve tracking with automated Stop-Loss, Take-Profit, and 15:15 IST Expiry auto-square-off gates.
-- Server-side Telegram Bot authorization dispatch before order simulation.
+- In-memory pure mathematical calculation of first- and second-order options Greeks for 44 strategy variants across NIFTY, SENSEX, and BANKNIFTY.
+- Real-time IV tracking with automated Stop-Loss, Take-Profit, and 15:15 IST Expiry auto-square-off simulated gates.
+- Server-side Telegram Bot notification dispatch and Supabase audit logging.
 </details>
 
 ---
@@ -183,12 +186,12 @@ $$\Delta = \frac{\partial V}{\partial S}, \quad \Gamma = \frac{\partial^2 V}{\pa
 
 | Area | Stack & Tools |
 |:---|:---|
-| **AI / LLM & RAG** | `Google Gemini 3.6 Flash` `Azure OpenAI (GPT-4o)` `Claude 3.5 Sonnet` `Ollama` `RAG` `Embeddings` `MediaPipe` `scikit-learn` |
-| **Maps & Desktop AI** | `Leaflet.js` `OSRM Road Engine` `Web Audio API (432Hz)` `PyQt6 GUI` `Voice Activity Detection (VAD)` `Voice Biometrics` |
-| **Quant & Low-Latency** | `FYERS API v3` `WebSockets (ms binary)` `In-Memory Delta Engine` `Black-Scholes Greeks` `Canvas 2D` |
+| **AI / LLM & RAG** | `Google Gemini 3.6 Flash` `Azure OpenAI (GPT-4o)` `Claude 3.5 Sonnet` `Ollama (Local LLM)` `RAG (BM25 + text-embedding-3)` `Azure AI Search` `MediaPipe` `scikit-learn` |
+| **Maps, Voice & Desktop AI** | `Leaflet.js` `OSRM Road Routing Engine` `Web Audio API (432Hz)` `Web Speech API (TTS)` `PyQt6 Desktop GUI` `Voice Activity Detection (VAD)` `Voice Biometrics` |
+| **Quant & Low-Latency** | `FYERS API v3` `WebSockets (ms binary)` `In-Memory Delta Engine` `Black-Scholes Greeks` `HTML5 Canvas 2D` |
 | **Backend & Cloud** | `Python (FastAPI, Flask)` `.NET (C#, MVC, Web API)` `Azure App Service` `Azure Service Bus` `Vercel` `Render` `Cloudflare Workers AI` |
 | **Databases** | `MongoDB Atlas` `Neon PostgreSQL` `SQL Server` `Cosmos DB` `Supabase` `SQLite` |
-| **Frontend & DevOps** | `React (TypeScript)` `Angular` `Vue.js` `TailwindCSS` `Git` `GitHub Actions` `GitHub Pages` `TeamCity` `Playwright` |
+| **Frontend & DevOps** | `React (Vite · TypeScript)` `Angular` `Vue.js` `TailwindCSS` `Git` `GitHub Actions` `GitHub Pages` `TeamCity` `Playwright` |
 
 </div>
 

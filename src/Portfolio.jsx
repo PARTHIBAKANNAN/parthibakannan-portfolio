@@ -3,14 +3,12 @@ import { t, cssThemeBlock } from "./lib/theme.js";
 import { Nav } from "./components/Nav.jsx";
 import { Hero } from "./components/Hero.jsx";
 import { FlagshipShowcase } from "./components/FlagshipShowcase.jsx";
-import { TerminalPlayground } from "./components/TerminalPlayground.jsx";
 import { Credentials } from "./components/Credentials.jsx";
 import { Achievements } from "./components/Achievements.jsx";
 import { Experience } from "./components/Experience.jsx";
 import { SelectedWork } from "./components/SelectedWork.jsx";
 import { Builds } from "./components/Builds.jsx";
 import { Leadership } from "./components/Leadership.jsx";
-import { AfterHours } from "./components/AfterHours.jsx";
 import { AIChatbot } from "./components/AIChatbot.jsx";
 import { Stack } from "./components/Stack.jsx";
 import { Contact } from "./components/Contact.jsx";
@@ -18,8 +16,6 @@ import { Footer } from "./components/Footer.jsx";
 
 const globalStyles = `
 ${cssThemeBlock}
-
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -209,15 +205,13 @@ export default function Portfolio() {
       <Nav />
       <main id="main-content">
         <Hero />
-        <Credentials />
-        <Achievements />
-        <FlagshipShowcase />
-        <TerminalPlayground />
         <Experience />
         <SelectedWork />
+        <FlagshipShowcase />
+        <Credentials />
+        <Achievements />
         <Builds />
         <Leadership />
-        <AfterHours />
         <Stack />
         <Contact />
       </main>

@@ -1,16 +1,16 @@
 import { Building2, Briefcase, Users, GraduationCap, Mic, ShieldCheck, Zap, Server, BrainCircuit, Trophy, Award, Gamepad2, Globe2, Bot } from "lucide-react";
 
-export const aboutSummary = "Microsoft-certified Azure AI Engineer, Gen AI Developer at Cognizant, and Quantitative Systems Architect with 2+ years building enterprise RAG pipelines, autonomous agents, and low-latency algorithmic trading terminals. Designed enterprise systems indexing 10L+ contracts for healthcare (CVS Health) and architected real-time institutional trading terminals powered by Google Gemini 3.6 Flash and high-frequency WebSocket streams. Full-stack across Python (FastAPI, Flask) and .NET (C#, MVC, Web API) with hands-on Azure, Vercel & Cloudflare deployment. IIT Madras Diploma in Programming.";
+export const aboutSummary = "Microsoft-certified Azure AI Engineer and Gen AI / .NET Developer at Cognizant with 2+ years of experience building enterprise document-search and AI features. Works across Azure AI Search, Azure OpenAI, .NET, and Python, with hands-on delivery in testing, release management, and cloud deployment. Also builds real-time Python tools and personal AI experiments.";
 
 export const experience = [
   {
     company: "Cognizant Technology Solutions", role: "Gen AI Developer · .NET Developer",
     period: "Oct 2024 – Present", location: "Chennai", current: true, icon: Building2,
     points: [
-      "Shipped 3 production Generative AI systems on Azure OpenAI — contract search, a RAG chatbot, and a PDF-compare agent — live on a healthcare platform serving CVS Health.",
+      "Contributed to three production Generative AI capabilities on Azure OpenAI — contract search, a RAG chatbot, and a PDF-compare workflow — for a healthcare platform serving CVS Health.",
       "Engineered a hybrid (BM25 + vector) RAG pipeline on Azure AI Search that indexes 10L+ enterprise contracts and returns cited answers in seconds.",
       "Embedded LLM-powered features — semantic search, document understanding, automated contract comparison — into a production .NET MVC app with zero disruption to existing architecture.",
-      "Own delivery end-to-end on Azure App Service + Cosmos DB: NUnit test coverage, Snyk vulnerability remediation, and release management via TeamCity, Octopus Deploy, and GitHub Actions.",
+      "Contributed across Azure App Service + Cosmos DB delivery, including NUnit test coverage, Snyk vulnerability remediation, and releases via TeamCity, Octopus Deploy, and GitHub Actions.",
     ],
   },
   {
@@ -74,7 +74,7 @@ export const engineeringTenets = [
   {
     icon: BrainCircuit,
     title: "Grounded LLM Reasoning",
-    desc: "LLMs are strictly guided by bounded context windows, hybrid vector search citations, and schema-enforced function calling to eliminate hallucinations in production.",
+    desc: "Uses bounded context windows, hybrid retrieval with citations, and schema-enforced function calling to reduce hallucination risk and make AI outputs easier to verify.",
   },
   {
     icon: Server,

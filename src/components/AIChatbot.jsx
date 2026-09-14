@@ -14,14 +14,28 @@ export function AIChatbot() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const endRef = useRef(null);
+  const inputRef = useRef(null);
+  const openerRef = useRef(null);
 
   useEffect(() => { if (open && endRef.current) endRef.current.scrollIntoView({ behavior: "smooth" }); }, [messages, loading, open]);
 
   useEffect(() => {
-    const onOpen = () => setOpen(true);
+    const onOpen = () => { openerRef.current = document.activeElement; setOpen(true); };
     window.addEventListener("portfolio:open-chat", onOpen);
     return () => window.removeEventListener("portfolio:open-chat", onOpen);
   }, []);
+
+  useEffect(() => {
+    if (open) inputRef.current?.focus();
+    else openerRef.current?.focus?.();
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKeyDown = (event) => { if (event.key === "Escape") setOpen(false); };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   const suggestions = [
     "Tell me about the 10L+ contracts RAG pipeline at Cognizant.",
@@ -44,7 +58,7 @@ export function AIChatbot() {
         body: JSON.stringify({ messages: apiMessages }),
       });
       const data = await res.json();
-      const reply = (data.reply || "").trim()
+      const reply = (data.reply || data.response || "").trim()
         || "Sorry — I couldn't reach the model just now. Try again, or email parthisivaram45@gmail.com.";
       setMessages(prev => [...prev, { role: "assistant", content: reply }]);
     } catch (e) {
@@ -55,7 +69,7 @@ export function AIChatbot() {
   return (
     <>
       <button
-        onClick={() => setOpen(o => !o)}
+        onClick={() => { openerRef.current = document.activeElement; setOpen(o => !o); }}
         aria-label={open ? "Close assistant" : "Open assistant"}
         style={{
           position: "fixed", right: 22, bottom: 22, zIndex: 200,
@@ -76,6 +90,7 @@ export function AIChatbot() {
         <div
           id="ask"
           role="dialog"
+          aria-modal="true"
           aria-label="Portfolio assistant"
           style={{
             position: "fixed", right: 22, bottom: 96, zIndex: 199,
@@ -97,7 +112,7 @@ export function AIChatbot() {
               <div className="font-display" style={{ fontSize: 13, fontWeight: 700, color: t.darkText }}>Parthi · portfolio assistant</div>
               <div className="font-mono" style={{ fontSize: 10, color: t.auroraBright, marginTop: 2 }}>● online · Cloudflare AI</div>
             </div>
-            <button onClick={() => setOpen(false)} aria-label="Close"
+            <button onClick={() => setOpen(false)} aria-label="Close assistant"
               style={{ background: "transparent", border: "none", color: t.darkSoft, cursor: "pointer", padding: 6, borderRadius: 6, display: "flex", alignItems: "center", transition: "background 0.15s" }}
               onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "transparent"; }}>
@@ -139,7 +154,8 @@ export function AIChatbot() {
           )}
 
           <div style={{ padding: 12, borderTop: "1px solid rgba(255,255,255,0.07)", display: "flex", gap: 8 }}>
-            <input type="text" value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => { if (e.key === "Enter") send(); }} placeholder="Ask about PulseHunter, NUKEBOX, or RAG systems…"
+            <label htmlFor="portfolio-assistant-input" style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0, 0, 0, 0)", whiteSpace: "nowrap", border: 0 }}>Ask the portfolio assistant</label>
+            <input ref={inputRef} id="portfolio-assistant-input" type="text" maxLength={1000} value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => { if (e.key === "Enter") send(); }} placeholder="Ask about PulseHunter, NUKEBOX, or RAG systems…"
               style={{ flex: 1, padding: "10px 14px", borderRadius: 10, background: "rgba(0,0,0,0.3)", border: "1px solid rgba(255,255,255,0.1)", color: t.darkText, fontSize: 13.5, fontFamily: "inherit", outline: "none", transition: "border-color 0.15s" }}
               onFocus={e => { e.currentTarget.style.borderColor = "rgba(124,92,255,0.5)"; }} onBlur={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; }} />
             <button onClick={() => send()} disabled={!input.trim() || loading} className="btn-primary" style={{ padding: "10px 14px", opacity: (!input.trim() || loading) ? 0.5 : 1, cursor: (!input.trim() || loading) ? "not-allowed" : "pointer" }}>

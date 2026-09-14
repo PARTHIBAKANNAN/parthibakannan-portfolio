@@ -126,6 +126,7 @@ export function TerminalPlayground() {
               >
                 <span style={{ color: t.irisBright, fontWeight: 700 }}>parthi-cli $</span>
                 <input
+                  aria-label="Terminal command"
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}

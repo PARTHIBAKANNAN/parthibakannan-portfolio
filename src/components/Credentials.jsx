@@ -57,7 +57,7 @@ export function Credentials() {
       <div className="container">
         <Reveal><div className="section-eyebrow" style={{ marginBottom: 20, textAlign: "center" }}>Certifications &amp; Education</div></Reveal>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 14 }}>
-          {items.map((it, i) => <Reveal key={it.key} delay={i * 60} style={{ height: "100%" }}><CredCard {...it} /></Reveal>)}
+          {items.map(({ key, ...it }, i) => <Reveal key={key} delay={i * 60} style={{ height: "100%" }}><CredCard {...it} /></Reveal>)}
         </div>
       </div>
     </section>

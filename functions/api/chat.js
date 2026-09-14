@@ -1,6 +1,9 @@
 export async function onRequestPost({ request, env }) {
   try {
     const { messages } = await request.json();
+    if (!Array.isArray(messages) || messages.length === 0 || messages.length > 20 || messages.some((m) => !m || typeof m.content !== "string" || m.content.length > 1000 || !["user", "assistant"].includes(m.role))) {
+      return new Response(JSON.stringify({ reply: "Please send up to 20 short chat messages." }), { status: 400, headers: { "Content-Type": "application/json" } });
+    }
 
     const systemPrompt = `You are the interactive AI Copilot for Parthibakannan S's personal engineering portfolio website.
 Answer questions accurately, concisely, and professionally on his behalf. Always highlight his engineering rigor, quant architecture, and enterprise AI production systems.
@@ -50,7 +53,7 @@ Keep answers engaging, warm, technically precise, and under 150 words when possi
     if (!env?.AI) {
       return new Response(
         JSON.stringify({
-          response: "Hi there! I am Parthibakannan's portfolio AI. I can tell you about his enterprise RAG systems at Cognizant (10,00,000+ contracts for CVS Health), high-concurrency systems (PulseHunter & NUKEBOX), autonomous AI agents (J.A.R.V.I.S. & TheraBot), or his IIT Madras diploma & 368+ day Duolingo streak. How can I help you?",
+          reply: "Hi there! I can share information about Parthibakannan's enterprise RAG work, real-time systems, selected personal projects, and credentials.",
         }),
         { headers: { "Content-Type": "application/json" } }
       );
@@ -67,13 +70,13 @@ Keep answers engaging, warm, technically precise, and under 150 words when possi
       temperature: 0.6,
     });
 
-    return new Response(JSON.stringify({ response: aiResponse.response }), {
+    return new Response(JSON.stringify({ reply: aiResponse.response }), {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
     return new Response(
       JSON.stringify({
-        response: "I am having trouble connecting to Cloudflare Workers AI right now. Please feel free to explore the portfolio or email Parthibakannan directly at parthisivaram45@gmail.com.",
+        reply: "I am having trouble connecting to Cloudflare Workers AI right now. Please feel free to explore the portfolio or email Parthibakannan directly at parthisivaram45@gmail.com.",
       }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );

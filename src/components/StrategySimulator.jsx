@@ -120,14 +120,14 @@ export function StrategySimulator() {
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 4 }}>
             <Activity size={16} color={t.auroraBright} />
-            <span className="font-mono" style={{ fontSize: 11, color: t.auroraBright, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 700 }}>21 Deployed Strategies · 365-Day Backtest Matrix</span>
+            <span className="font-mono" style={{ fontSize: 11, color: t.auroraBright, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 700 }}>Paper-trading strategy explorer · 365-day backtest matrix</span>
           </div>
           <h4 className="font-display" style={{ fontSize: 18, fontWeight: 700, color: "var(--ink)", margin: 0 }}>
-            NUKEBOX Algorithmic Execution &amp; 1-Year Backtest Explorer
+            NUKEBOX Paper-Trading &amp; Backtest Explorer
           </h4>
         </div>
         <div className="font-mono" style={{ fontSize: 11, color: t.success, background: "rgba(15,169,104,0.15)", padding: "4px 12px", borderRadius: 999, border: "1px solid rgba(15,169,104,0.3)" }}>
-          ● 21 COMPILED (365-DAY TESTED)
+          ● PAPER-TRADING RESEARCH
         </div>
       </div>
 

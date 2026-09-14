@@ -35,18 +35,18 @@ export function Hero() {
 
             {/* Headline */}
             <h1 className="font-display hero-title" style={{ fontSize: "clamp(32px, 4.8vw, 54px)", fontWeight: 800, lineHeight: 1.1, margin: "0 0 18px", color: t.ink, letterSpacing: "-0.03em" }}>
-              Architecting Enterprise Gen AI &amp;<br />
+              Building reliable Gen AI &amp;<br />
               <span style={{
                 background: `linear-gradient(120deg, ${t.irisBright} 0%, ${t.auroraBright} 60%, ${t.amberBright} 100%)`,
                 WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text"
               }}>
-                Distributed Autonomous Systems.
+                .NET systems.
               </span>
             </h1>
 
             {/* Bio */}
             <p className="hero-subtitle" style={{ fontSize: 16, lineHeight: 1.65, color: t.inkSoft, maxWidth: 600, margin: "0 0 28px", fontWeight: 500 }}>
-              Microsoft &amp; Anthropic certified AI Engineer at Cognizant building enterprise RAG pipelines indexing <strong>10,00,000+ contracts for CVS Health</strong>, autonomous developer agents, and high-concurrency real-time systems (FastAPI, WebSockets, .NET 8, and Google Gemini).
+              Gen AI &amp; .NET Developer at Cognizant building Azure-based document search and grounded AI experiences. Experience across Azure AI Search, Azure OpenAI, .NET, and Python—with hands-on work on systems indexing <strong>10,00,000+ enterprise contracts</strong>.
             </p>
 
             {/* Launchpad CTA Deck */}
@@ -64,14 +64,14 @@ export function Hero() {
                 <Download size={16} /> Download Resume
               </a>
               <a href="#work" className="btn-ghost" style={{ padding: "12px 20px", fontSize: 13.5, fontWeight: 700 }}>
-                Enterprise AI <ArrowRight size={14} />
+                Enterprise AI work <ArrowRight size={14} />
               </a>
               <a
                 href="#systems"
                 className="btn-ghost"
                 style={{ borderColor: "rgba(31,199,192,0.35)", color: t.auroraBright, fontWeight: 700, padding: "12px 18px", fontSize: 13.5 }}
               >
-                <Activity size={15} /> Real-Time Systems ↗
+                <Activity size={15} /> Selected systems ↗
               </a>
               <button
                 type="button"
@@ -89,8 +89,8 @@ export function Hero() {
               padding: "16px 20px", borderRadius: 14, background: "rgba(124,92,255,0.04)", border: "1px solid rgba(124,92,255,0.14)"
             }}>
               {[
-                { n: "212+ Stocks", l: "PulseHunter Live Charts", accent: t.auroraBright },
-                { n: "44 Strategies", l: "NUKEBOX Multi-Index Engine", accent: t.irisBright },
+                { n: "Azure AI", l: "Search · OpenAI · .NET", accent: t.auroraBright },
+                { n: "Python", l: "FastAPI · real-time tooling", accent: t.irisBright },
                 { n: "10,00,000+", l: "Contracts Indexed", accent: t.amberBright },
                 { n: "4 Certs", l: "Microsoft · Anthropic", accent: t.success },
               ].map(s => (

@@ -89,7 +89,7 @@ export function FlagshipShowcase() {
               Low-latency WebSocket streaming &amp; autonomous derivatives.
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.65, color: t.inkMuted, margin: 0 }}>
-              Production-grade distributed platforms demonstrating high concurrency: Python FastAPI backends, FYERS v3 millisecond WebSocket binary ticks, in-memory math, and real-time <strong>Google Gemini 3.6 Flash</strong> market regime synthesis.
+              Selected personal systems exploring Python FastAPI backends, FYERS v3 WebSocket ticks, in-memory calculations, and Gemini-assisted market research. These tools are for research and paper trading, not investment advice.
             </p>
           </div>
         </Reveal>
@@ -101,6 +101,7 @@ export function FlagshipShowcase() {
             return (
               <button
                 key={p.id}
+                aria-pressed={isActive}
                 onClick={() => setActiveId(p.id)}
                 style={{
                   padding: "11px 22px", borderRadius: 999, cursor: "pointer", fontSize: 14, fontWeight: 700,

@@ -84,11 +84,11 @@ export function SelectedWork() {
           </div>
         </Reveal>
 
-        <div style={{ display: "flex", gap: 8, marginBottom: 28, flexWrap: "wrap" }}>
+        <div role="tablist" aria-label="Selected Cognizant projects" style={{ display: "flex", gap: 8, marginBottom: 28, flexWrap: "wrap" }}>
           {productionWork.map(p => {
             const isActive = p.id === active;
             return (
-              <button key={p.id} onClick={() => setActive(p.id)} style={{
+              <button key={p.id} role="tab" aria-selected={isActive} aria-controls="selected-project-panel" onClick={() => setActive(p.id)} style={{
                 padding: "10px 18px", borderRadius: 11, cursor: "pointer", fontSize: 13.5, fontWeight: 600, transition: "all 0.18s",
                 border: isActive ? `1px solid ${t.iris}` : "1px solid var(--ghost-border)",
                 background: isActive ? "linear-gradient(180deg, #8366FF, #6A43E0)" : "var(--ghost-bg)",
@@ -99,7 +99,7 @@ export function SelectedWork() {
           })}
         </div>
 
-        <div className="glass-strong" style={{ overflow: "hidden" }}>
+        <div id="selected-project-panel" role="tabpanel" className="glass-strong" style={{ overflow: "hidden" }}>
           <div key={project.id} style={{ animation: REDUCE ? "none" : "popIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both" }}>
             {/* Cover illustration band */}
             <div style={{ position: "relative", background: "linear-gradient(120deg, rgba(124,92,255,0.10), rgba(31,199,192,0.08))", borderBottom: "1px solid var(--surface-border)", overflow: "hidden" }}>
